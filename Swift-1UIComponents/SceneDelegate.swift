@@ -10,13 +10,25 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: HomeCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        let injection = Injection.shared
+        let container = injection.getContainer()
+        
+        let navController = UINavigationController()
+        coordinator = HomeCoordinator(navigationController: navController, container: container)
+        Injection.shared.controllerProvider.inject(homeCoordinator: coordinator)
+        coordinator?.start()
+        
+        // Configure the window
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
+        self.window = window
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
