@@ -10,7 +10,6 @@
 		38F1B30341A7483BE4244B30 /* Pods_Swift_1UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B4FB16FC67B82D54E4C1D9 /* Pods_Swift_1UIComponents.framework */; };
 		7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38512A00C5EE00F24809 /* AppDelegate.swift */; };
 		7F0E38542A00C5EE00F24809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38532A00C5EE00F24809 /* SceneDelegate.swift */; };
-		7F0E38562A00C5EE00F24809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38552A00C5EE00F24809 /* ViewController.swift */; };
 		7F0E385B2A00C5F100F24809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E385A2A00C5F100F24809 /* Assets.xcassets */; };
 		7F0E385E2A00C5F100F24809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E385C2A00C5F100F24809 /* LaunchScreen.storyboard */; };
 		7F0E386E2A00C9E000F24809 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E386D2A00C9E000F24809 /* Coordinator.swift */; };
@@ -28,6 +27,9 @@
 		7F0E38912A00CF0600F24809 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38902A00CF0600F24809 /* HomeViewController.swift */; };
 		7F0E38942A00CF7400F24809 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38932A00CF7400F24809 /* HomeViewModel.swift */; };
 		7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38962A00D04B00F24809 /* HomeModule.swift */; };
+		7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38992A00D28000F24809 /* HomeTableViewCell.swift */; };
+		7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */; };
+		7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E389F2A00D90400F24809 /* UiConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,6 @@
 		7F0E384E2A00C5EE00F24809 /* Swift-1UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-1UIComponents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E38512A00C5EE00F24809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0E38532A00C5EE00F24809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F0E38552A00C5EE00F24809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F0E385A2A00C5F100F24809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F0E385D2A00C5F100F24809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F0E385F2A00C5F100F24809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		7F0E38902A00CF0600F24809 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F0E38932A00CF7400F24809 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7F0E38962A00D04B00F24809 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		7F0E38992A00D28000F24809 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		7F0E389F2A00D90400F24809 /* UiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiConstants.swift; sourceTree = "<group>"; };
 		A4B4FB16FC67B82D54E4C1D9 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F330D0861AE3CF74D3FAE044 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,11 +108,6 @@
 				7F0E38672A00C95600F24809 /* Utils */,
 				7F0E38662A00C95200F24809 /* AppLife */,
 				7F0E38652A00C94000F24809 /* AppModules */,
-				7F0E38512A00C5EE00F24809 /* AppDelegate.swift */,
-				7F0E38532A00C5EE00F24809 /* SceneDelegate.swift */,
-				7F0E38552A00C5EE00F24809 /* ViewController.swift */,
-				7F0E385A2A00C5F100F24809 /* Assets.xcassets */,
-				7F0E385C2A00C5F100F24809 /* LaunchScreen.storyboard */,
 				7F0E385F2A00C5F100F24809 /* Info.plist */,
 			);
 			path = "Swift-1UIComponents";
@@ -126,6 +125,8 @@
 		7F0E38662A00C95200F24809 /* AppLife */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E38512A00C5EE00F24809 /* AppDelegate.swift */,
+				7F0E38532A00C5EE00F24809 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
 			sourceTree = "<group>";
@@ -133,6 +134,8 @@
 		7F0E38672A00C95600F24809 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E389E2A00D8FA00F24809 /* Constants */,
+				7F0E389B2A00D31800F24809 /* Extensions */,
 				7F0E386C2A00C9D500F24809 /* Protocols */,
 			);
 			path = Utils;
@@ -141,6 +144,7 @@
 		7F0E386A2A00C9AA00F24809 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E385A2A00C5F100F24809 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 		7F0E38852A00CCB000F24809 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E385C2A00C5F100F24809 /* LaunchScreen.storyboard */,
 				7F0E38862A00CD1800F24809 /* LoaderView.swift */,
 				7F0E38882A00CD5200F24809 /* ProgressBarView.swift */,
 			);
@@ -231,6 +236,7 @@
 		7F0E388F2A00CEF400F24809 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F0E38982A00D26600F24809 /* Cell */,
 				7F0E38902A00CF0600F24809 /* HomeViewController.swift */,
 			);
 			path = View;
@@ -250,6 +256,30 @@
 				7F0E38962A00D04B00F24809 /* HomeModule.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		7F0E38982A00D26600F24809 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E38992A00D28000F24809 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7F0E389B2A00D31800F24809 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F0E389E2A00D8FA00F24809 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7F0E389F2A00D90400F24809 /* UiConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C5B02507A72496418FA94B16 /* Pods */ = {
@@ -377,11 +407,12 @@
 			files = (
 				7F0E38942A00CF7400F24809 /* HomeViewModel.swift in Sources */,
 				7F0E386E2A00C9E000F24809 /* Coordinator.swift in Sources */,
-				7F0E38562A00C5EE00F24809 /* ViewController.swift in Sources */,
 				7F0E38822A00CC0300F24809 /* BaseViewController.swift in Sources */,
 				7F0E38872A00CD1800F24809 /* LoaderView.swift in Sources */,
+				7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */,
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
+				7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */,
 				7F0E38712A00CA2800F24809 /* CoordinatorProtocol.swift in Sources */,
 				7F0E38842A00CC0D00F24809 /* BaseViewModel.swift in Sources */,
 				7F0E38752A00CA7F00F24809 /* MainControllerProvider.swift in Sources */,
@@ -389,6 +420,7 @@
 				7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */,
 				7F0E387B2A00CAD100F24809 /* NotificationCenterWrapperImpl.swift in Sources */,
 				7F0E38912A00CF0600F24809 /* HomeViewController.swift in Sources */,
+				7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */,
 				7F0E38772A00CAA900F24809 /* MainModule.swift in Sources */,
 				7F0E388B2A00CDBD00F24809 /* HomeCoordinator.swift in Sources */,
 				7F0E38542A00C5EE00F24809 /* SceneDelegate.swift in Sources */,
