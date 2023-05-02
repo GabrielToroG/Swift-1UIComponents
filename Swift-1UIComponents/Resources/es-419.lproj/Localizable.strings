@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Swift-1UIComponents
+
+  Created by Gabriel Alonso Toro Guzmán on 02-05-23.
+  
+*/
+
+// Home
+"home_label_option" = "Etiquetas";
+"home_image_option" = "Imagenes";

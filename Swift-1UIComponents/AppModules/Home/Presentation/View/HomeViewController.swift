@@ -11,8 +11,8 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     // MARK: - Properties
     let dataSource: [UiHomeOption] = [
-        UiHomeOption(icon: "home.label.option", title: "Opción 1"),
-        UiHomeOption(icon: "home.image.option", title: "Opcion 2")
+        UiHomeOption(icon: "home.label.option", title: "home_label_option".localized()),
+        UiHomeOption(icon: "home.image.option", title: "home_image_option".localized())
     ]
     
     // MARK: - Outlets
