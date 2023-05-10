@@ -11,13 +11,22 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     // MARK: - Properties
     let dataSource: [UiHomeOption] = [
-        UiHomeOption(icon: "home.label.option", title: "home_label_option".localized()),
-        UiHomeOption(icon: "home.image.option", title: "home_image_option".localized())
+        UiHomeOption(icon: "home.label.option", title: "home.label.option".localized()),
+        UiHomeOption(icon: "home.image.option", title: "home.image.option".localized()),
+        UiHomeOption(icon: "home.view.option", title: "home.view.option".localized()),
+        UiHomeOption(icon: "home.button.option", title: "home.button.option".localized()),
+        UiHomeOption(icon: "home.textfield.option", title: "home.textfield.option".localized()),
+        UiHomeOption(icon: "home.table.option", title: "home.table.option".localized()),
+        UiHomeOption(icon: "home.collection.option", title: "home.collection.option".localized()),
+        UiHomeOption(icon: "home.web.option", title: "home.web.option".localized()),
+        UiHomeOption(icon: "home.switch.option", title: "home.switch.option".localized()),
+        UiHomeOption(icon: "home.toast.option", title: "home.toast.option".localized()),
     ]
     
     // MARK: - Outlets
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
