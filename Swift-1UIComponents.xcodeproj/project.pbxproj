@@ -32,6 +32,14 @@
 		7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E389F2A00D90400F24809 /* UiConstants.swift */; };
 		7F0E38A42A00DFC000F24809 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E38A62A00DFC000F24809 /* Localizable.strings */; };
 		7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38A82A00E0AE00F24809 /* StringExtension.swift */; };
+		7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F24D2A0C0A5500062E8A /* LabelViewModel.swift */; };
+		7F33F2502A0C0A7D00062E8A /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F24F2A0C0A7D00062E8A /* LabelViewController.swift */; };
+		7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F2512A0C0F6A00062E8A /* LabelsModule.swift */; };
+		7F33F2592A0C585F00062E8A /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2542A0C585F00062E8A /* Montserrat-Light.ttf */; };
+		7F33F25A2A0C585F00062E8A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2552A0C585F00062E8A /* Montserrat-Bold.ttf */; };
+		7F33F25B2A0C585F00062E8A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2562A0C585F00062E8A /* Montserrat-Regular.ttf */; };
+		7F33F25C2A0C585F00062E8A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2572A0C585F00062E8A /* Montserrat-SemiBold.ttf */; };
+		7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F25E2A0C682000062E8A /* UIFontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +71,14 @@
 		7F0E38A52A00DFC000F24809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7F0E38A72A00DFD400F24809 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7F0E38A82A00E0AE00F24809 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7F33F24D2A0C0A5500062E8A /* LabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewModel.swift; sourceTree = "<group>"; };
+		7F33F24F2A0C0A7D00062E8A /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		7F33F2512A0C0F6A00062E8A /* LabelsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsModule.swift; sourceTree = "<group>"; };
+		7F33F2542A0C585F00062E8A /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		7F33F2552A0C585F00062E8A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		7F33F2562A0C585F00062E8A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7F33F2572A0C585F00062E8A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		7F33F25E2A0C682000062E8A /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		A4B4FB16FC67B82D54E4C1D9 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F330D0861AE3CF74D3FAE044 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +139,7 @@
 			children = (
 				7F0E387C2A00CB2300F24809 /* Core */,
 				7F0E388C2A00CED700F24809 /* Home */,
+				7F33F2482A0C0A1500062E8A /* Labels */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -149,6 +166,7 @@
 		7F0E386A2A00C9AA00F24809 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F33F2532A0C585500062E8A /* Font */,
 				7F0E385A2A00C5F100F24809 /* Assets.xcassets */,
 				7F0E38A62A00DFC000F24809 /* Localizable.strings */,
 			);
@@ -277,6 +295,7 @@
 			children = (
 				7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */,
 				7F0E38A82A00E0AE00F24809 /* StringExtension.swift */,
+				7F33F25E2A0C682000062E8A /* UIFontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +306,59 @@
 				7F0E389F2A00D90400F24809 /* UiConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		7F33F2482A0C0A1500062E8A /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F2492A0C0A2000062E8A /* DI */,
+				7F33F24A2A0C0A2900062E8A /* Presentation */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		7F33F2492A0C0A2000062E8A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F2512A0C0F6A00062E8A /* LabelsModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F33F24A2A0C0A2900062E8A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F24B2A0C0A3D00062E8A /* ViewModel */,
+				7F33F24C2A0C0A4200062E8A /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F33F24B2A0C0A3D00062E8A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F24D2A0C0A5500062E8A /* LabelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F33F24C2A0C0A4200062E8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F24F2A0C0A7D00062E8A /* LabelViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F33F2532A0C585500062E8A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7F33F2542A0C585F00062E8A /* Montserrat-Light.ttf */,
+				7F33F2562A0C585F00062E8A /* Montserrat-Regular.ttf */,
+				7F33F2572A0C585F00062E8A /* Montserrat-SemiBold.ttf */,
+				7F33F2552A0C585F00062E8A /* Montserrat-Bold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		C5B02507A72496418FA94B16 /* Pods */ = {
@@ -359,6 +431,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F33F25B2A0C585F00062E8A /* Montserrat-Regular.ttf in Resources */,
+				7F33F25A2A0C585F00062E8A /* Montserrat-Bold.ttf in Resources */,
+				7F33F2592A0C585F00062E8A /* Montserrat-Light.ttf in Resources */,
+				7F33F25C2A0C585F00062E8A /* Montserrat-SemiBold.ttf in Resources */,
 				7F0E385E2A00C5F100F24809 /* LaunchScreen.storyboard in Resources */,
 				7F0E38A42A00DFC000F24809 /* Localizable.strings in Resources */,
 				7F0E385B2A00C5F100F24809 /* Assets.xcassets in Resources */,
@@ -421,11 +497,15 @@
 				7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */,
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
+				7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */,
 				7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */,
 				7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */,
 				7F0E38712A00CA2800F24809 /* CoordinatorProtocol.swift in Sources */,
+				7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */,
 				7F0E38842A00CC0D00F24809 /* BaseViewModel.swift in Sources */,
 				7F0E38752A00CA7F00F24809 /* MainControllerProvider.swift in Sources */,
+				7F33F2502A0C0A7D00062E8A /* LabelViewController.swift in Sources */,
+				7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */,
 				7F0E38732A00CA5200F24809 /* Injection.swift in Sources */,
 				7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */,
 				7F0E387B2A00CAD100F24809 /* NotificationCenterWrapperImpl.swift in Sources */,

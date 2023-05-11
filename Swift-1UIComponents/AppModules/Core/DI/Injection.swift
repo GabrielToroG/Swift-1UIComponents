@@ -22,6 +22,7 @@ final class Injection {
     private func injectDependencies() {
         MainModule.register(container: container)
         HomeModule.register(container: container)
+        LabelsModule.register(container: container)
     }
     
     func getContainer() -> Container {
