@@ -12,9 +12,9 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     // MARK: - Properties
     let dataSource: [UiHomeOption] = [
         UiHomeOption(icon: "home.label.option", title: "home.label.option".localized()),
+        UiHomeOption(icon: "home.button.option", title: "home.button.option".localized()),
         UiHomeOption(icon: "home.image.option", title: "home.image.option".localized()),
         UiHomeOption(icon: "home.view.option", title: "home.view.option".localized()),
-        UiHomeOption(icon: "home.button.option", title: "home.button.option".localized()),
         UiHomeOption(icon: "home.textfield.option", title: "home.textfield.option".localized()),
         UiHomeOption(icon: "home.table.option", title: "home.table.option".localized()),
         UiHomeOption(icon: "home.collection.option", title: "home.collection.option".localized()),
@@ -79,6 +79,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             coordinator.pushViewController(newViewControllerType: LabelsViewController.self)
+        case 1:
+            coordinator.pushViewController(newViewControllerType: ButtonsViewController.self)
         default:
             print("")
         }

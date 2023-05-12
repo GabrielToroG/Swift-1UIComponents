@@ -9,7 +9,7 @@ import Foundation
 import Swinject
 
 class LabelsModule {
-    static func register(container: Container) {
+    static func register(_ container: Container) {
         container.register(LabelsViewModel.self) { _ in
             LabelsViewModel()
         }

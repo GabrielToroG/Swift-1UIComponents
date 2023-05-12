@@ -9,7 +9,7 @@ import Foundation
 import Swinject
 
 class MainModule {
-    static func register(container: Container) {
+    static func register(_ container: Container) {
         container.register(Coordinator.self) { _ in
             .init(container: container)
         }

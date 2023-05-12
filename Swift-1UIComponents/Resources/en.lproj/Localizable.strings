@@ -7,5 +7,26 @@
 */
 
 // Home
-"home_label_option" = "Label";
-"home_image_option" = "Image";
+"home.label.option" = "Labels";
+"home.image.option" = "Images";
+"home.view.option" = "Views";
+"home.button.option" = "Buttons";
+"home.textfield.option" = "Text Fields";
+"home.table.option" = "Table Views";
+"home.collection.option" = "Collection Views";
+"home.web.option" = "Web Views";
+"home.switch.option" = "Switchs";
+"home.toast.option" = "Toasts";
+
+// Labels
+"label.title" = "Labels";
+"label.strikethrough" = "Strikethrough";
+"label.max.width.left" = "Left text";
+"label.max.width.right" = "Right text";
+"label.different.styles.first" = "Different Style on label";
+"label.different.styles.second" = " on label";
+
+// Buttons
+"button.title" = "Buttons";
+"button.left.image.button" = "Back";
+"button.right.image.button" = "Back";

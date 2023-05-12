@@ -9,7 +9,7 @@ import Foundation
 import Swinject
 
 class HomeModule {
-    static func register(container: Container) {
+    static func register(_ container: Container) {
         container.register(HomeViewModel.self) { _ in
             HomeViewModel()
         }

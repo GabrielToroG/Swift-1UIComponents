@@ -7,5 +7,26 @@
 */
 
 // Home
-"home_label_option" = "Etiquetas";
-"home_image_option" = "Imagenes";
+"home.label.option" = "Etiquetas";
+"home.image.option" = "Imagenes";
+"home.view.option" = "Vistas";
+"home.button.option" = "Botones";
+"home.textfield.option" = "Text Fields";
+"home.table.option" = "Table Views";
+"home.collection.option" = "Collection Views";
+"home.web.option" = "Vistas Web";
+"home.switch.option" = "Switchs";
+"home.toast.option" = "Toasts";
+
+// Labels
+"label.title" = "Etiquetas";
+"label.strikethrough" = "Tachado";
+"label.max.width.left" = "Texto izquierdo";
+"label.max.width.right" = "Texto derecho";
+"label.different.styles.first" = "Etiqueta con";
+"label.different.styles.second" = " diferentes éstilos";
+
+// Buttons
+"button.title" = "Botones";
+"button.left.image.button" = "Atrás";
+"button.right.image.button" = "Atrás";

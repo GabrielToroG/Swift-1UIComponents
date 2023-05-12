@@ -32,6 +32,9 @@
 		7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E389F2A00D90400F24809 /* UiConstants.swift */; };
 		7F0E38A42A00DFC000F24809 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E38A62A00DFC000F24809 /* Localizable.strings */; };
 		7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38A82A00E0AE00F24809 /* StringExtension.swift */; };
+		7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB91C2A0E98F700CC2BE9 /* ButtonsModule.swift */; };
+		7F1BB9222A0E997E00CC2BE9 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB9212A0E997E00CC2BE9 /* ButtonsViewController.swift */; };
+		7F1BB9242A0E999500CC2BE9 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB9232A0E999500CC2BE9 /* ButtonsViewModel.swift */; };
 		7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F24D2A0C0A5500062E8A /* LabelViewModel.swift */; };
 		7F33F2502A0C0A7D00062E8A /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F24F2A0C0A7D00062E8A /* LabelViewController.swift */; };
 		7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F2512A0C0F6A00062E8A /* LabelsModule.swift */; };
@@ -40,6 +43,9 @@
 		7F33F25B2A0C585F00062E8A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2562A0C585F00062E8A /* Montserrat-Regular.ttf */; };
 		7F33F25C2A0C585F00062E8A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F33F2572A0C585F00062E8A /* Montserrat-SemiBold.ttf */; };
 		7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33F25E2A0C682000062E8A /* UIFontExtension.swift */; };
+		7F45309C2A0F027900A91782 /* TextFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45309B2A0F027900A91782 /* TextFieldsViewModel.swift */; };
+		7F45309E2A0F028B00A91782 /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45309D2A0F028B00A91782 /* TextFieldsViewController.swift */; };
+		7F4530A02A0F02A300A91782 /* TextFieldsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45309F2A0F02A300A91782 /* TextFieldsModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +77,9 @@
 		7F0E38A52A00DFC000F24809 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7F0E38A72A00DFD400F24809 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7F0E38A82A00E0AE00F24809 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7F1BB91C2A0E98F700CC2BE9 /* ButtonsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModule.swift; sourceTree = "<group>"; };
+		7F1BB9212A0E997E00CC2BE9 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		7F1BB9232A0E999500CC2BE9 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		7F33F24D2A0C0A5500062E8A /* LabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewModel.swift; sourceTree = "<group>"; };
 		7F33F24F2A0C0A7D00062E8A /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		7F33F2512A0C0F6A00062E8A /* LabelsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsModule.swift; sourceTree = "<group>"; };
@@ -79,6 +88,9 @@
 		7F33F2562A0C585F00062E8A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7F33F2572A0C585F00062E8A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F33F25E2A0C682000062E8A /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		7F45309B2A0F027900A91782 /* TextFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsViewModel.swift; sourceTree = "<group>"; };
+		7F45309D2A0F028B00A91782 /* TextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
+		7F45309F2A0F02A300A91782 /* TextFieldsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModule.swift; sourceTree = "<group>"; };
 		A4B4FB16FC67B82D54E4C1D9 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F330D0861AE3CF74D3FAE044 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +152,8 @@
 				7F0E387C2A00CB2300F24809 /* Core */,
 				7F0E388C2A00CED700F24809 /* Home */,
 				7F33F2482A0C0A1500062E8A /* Labels */,
+				7F1BB91A2A0E98DB00CC2BE9 /* Buttons */,
+				7F4530962A0F025200A91782 /* TextFields */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -308,6 +322,48 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		7F1BB91A2A0E98DB00CC2BE9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB91B2A0E98ED00CC2BE9 /* DI */,
+				7F1BB91E2A0E996000CC2BE9 /* Presentation */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7F1BB91B2A0E98ED00CC2BE9 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB91C2A0E98F700CC2BE9 /* ButtonsModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F1BB91E2A0E996000CC2BE9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB9202A0E996F00CC2BE9 /* ViewModel */,
+				7F1BB91F2A0E996A00CC2BE9 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F1BB91F2A0E996A00CC2BE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB9212A0E997E00CC2BE9 /* ButtonsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F1BB9202A0E996F00CC2BE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB9232A0E999500CC2BE9 /* ButtonsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7F33F2482A0C0A1500062E8A /* Labels */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +415,48 @@
 				7F33F2552A0C585F00062E8A /* Montserrat-Bold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		7F4530962A0F025200A91782 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				7F4530972A0F025B00A91782 /* DI */,
+				7F4530982A0F026000A91782 /* Presentation */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		7F4530972A0F025B00A91782 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F45309F2A0F02A300A91782 /* TextFieldsModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F4530982A0F026000A91782 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F45309A2A0F026B00A91782 /* ViewModel */,
+				7F4530992A0F026700A91782 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F4530992A0F026700A91782 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F45309D2A0F028B00A91782 /* TextFieldsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F45309A2A0F026B00A91782 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F45309B2A0F027900A91782 /* TextFieldsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C5B02507A72496418FA94B16 /* Pods */ = {
@@ -499,18 +597,24 @@
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
 				7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */,
 				7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */,
+				7F45309C2A0F027900A91782 /* TextFieldsViewModel.swift in Sources */,
+				7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */,
 				7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */,
 				7F0E38712A00CA2800F24809 /* CoordinatorProtocol.swift in Sources */,
 				7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */,
+				7F4530A02A0F02A300A91782 /* TextFieldsModule.swift in Sources */,
 				7F0E38842A00CC0D00F24809 /* BaseViewModel.swift in Sources */,
 				7F0E38752A00CA7F00F24809 /* MainControllerProvider.swift in Sources */,
 				7F33F2502A0C0A7D00062E8A /* LabelViewController.swift in Sources */,
+				7F1BB9242A0E999500CC2BE9 /* ButtonsViewModel.swift in Sources */,
 				7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */,
 				7F0E38732A00CA5200F24809 /* Injection.swift in Sources */,
 				7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */,
 				7F0E387B2A00CAD100F24809 /* NotificationCenterWrapperImpl.swift in Sources */,
 				7F0E38912A00CF0600F24809 /* HomeViewController.swift in Sources */,
 				7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */,
+				7F45309E2A0F028B00A91782 /* TextFieldsViewController.swift in Sources */,
+				7F1BB9222A0E997E00CC2BE9 /* ButtonsViewController.swift in Sources */,
 				7F0E38772A00CAA900F24809 /* MainModule.swift in Sources */,
 				7F0E388B2A00CDBD00F24809 /* HomeCoordinator.swift in Sources */,
 				7F0E38542A00C5EE00F24809 /* SceneDelegate.swift in Sources */,
