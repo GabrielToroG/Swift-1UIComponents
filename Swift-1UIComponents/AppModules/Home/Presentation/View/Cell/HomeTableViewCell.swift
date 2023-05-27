@@ -21,7 +21,6 @@ class HomeTableViewCell: UITableViewCell {
         }
         enum Label {
             enum Option {
-                static let text: String = "Opción 1"
                 static let font: UIFont = .montserratRegular16
                 static let textColor: UIColor = .blackColor
             }
@@ -36,7 +35,7 @@ class HomeTableViewCell: UITableViewCell {
     // MARK: - Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .brandColor
+        view.backgroundColor = Constants.View.Container.color
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -48,13 +47,11 @@ class HomeTableViewCell: UITableViewCell {
     }()
     private lazy var optionLabel: UILabel = {
         let label = UILabel()
-        label.text = Constants.Label.Option.text
         label.font = Constants.Label.Option.font
         label.textColor = Constants.Label.Option.textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
 
     // MARK: - Properties
     var item: UiHomeOption? {
@@ -65,7 +62,6 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
 
-
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -75,7 +71,6 @@ class HomeTableViewCell: UITableViewCell {
         super.init(coder: coder)
         configUI()
     }
-
 
     // MARK: - UI Functions
     private func configUI() {
