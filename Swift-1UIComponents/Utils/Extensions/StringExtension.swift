@@ -20,6 +20,17 @@ extension String {
     var mutableAttribute: NSMutableAttributedString {
         NSMutableAttributedString(string: self)
     }
+    
+    /// Recibe un patrón regex y lo valida
+    func hasValidPattern(pattern: String) -> Bool {
+        let stringPred = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return stringPred.evaluate(with: self)
+    }
+    
+    /// Elimina el caracter de espacio al principio y final de la cadena
+    func removeSpaceAtBeginEnd() -> String {
+        return self.trimmingCharacters(in: CharacterSet(charactersIn: " "))
+    }
 }
 
 extension NSMutableAttributedString {

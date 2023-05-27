@@ -106,12 +106,20 @@ extension UIFont {
         return UIFont(name: UIFont.montserratSemiBoldName, size: 16.0)!
     }
 
+    static var montserratSemibold17: UIFont {
+        return UIFont(name: UIFont.montserratSemiBoldName, size: 17.0)!
+    }
+
     static var montserratSemibold18: UIFont {
         return UIFont(name: UIFont.montserratSemiBoldName, size: 18.0)!
     }
 
     static var montserratSemibold20: UIFont {
         return UIFont(name: UIFont.montserratSemiBoldName, size: 20.0)!
+    }
+
+    static var montserratSemibold30: UIFont {
+        return UIFont(name: UIFont.montserratSemiBoldName, size: 30.0)!
     }
 
     static var montserratSemiBoldFontMetrics: UIFont {

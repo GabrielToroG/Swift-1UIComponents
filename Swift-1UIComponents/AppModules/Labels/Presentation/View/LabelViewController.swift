@@ -75,7 +75,7 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .brandColor
         configUI()
     }
     
@@ -134,21 +134,21 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
         let strikethroughLabelConstraints = [
             strikethroughLabel.topAnchor.constraint(
                 equalTo: containerView.topAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             strikethroughLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             strikethroughLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalMargin)
+                constant: -UiConstants.normalSpace)
         ]
         let maxWidthLeftLabelConstraints = [
             maxWidthLeftLabel.topAnchor.constraint(
                 equalTo: strikethroughLabel.bottomAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             maxWidthLeftLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             maxWidthLeftLabel.widthAnchor.constraint(
                 lessThanOrEqualToConstant: UiConstants.normalWidth)
         ]
@@ -157,21 +157,21 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
                 equalTo: maxWidthLeftLabel.centerYAnchor),
             maxWidthRightLabel.leadingAnchor.constraint(
                 equalTo: maxWidthLeftLabel.trailingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             maxWidthRightLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalMargin)
+                constant: -UiConstants.normalSpace)
         ]
         let differentStyleLabelConstraints = [
             differentStyleLabel.topAnchor.constraint(
                 equalTo: maxWidthLeftLabel.bottomAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             differentStyleLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             differentStyleLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: UiConstants.normalMargin)
+                constant: UiConstants.normalSpace)
         ]
 
         NSLayoutConstraint.activate(

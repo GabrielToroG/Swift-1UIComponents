@@ -13,29 +13,49 @@ struct UiHomeOption {
 }
 
 class HomeTableViewCell: UITableViewCell {
+    private enum Constants {
+        enum View {
+            enum Container {
+                static let color: UIColor = .brandColor
+            }
+        }
+        enum Label {
+            enum Option {
+                static let text: String = "Opción 1"
+                static let font: UIFont = .montserratRegular16
+                static let textColor: UIColor = .blackColor
+            }
+        }
+        enum ImageView {
+            enum Option {
+                static let color: UIColor = .blackColor
+            }
+        }
+    }
 
     // MARK: - Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .brandColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     private lazy var optionImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.tintColor = .label
+        imageView.tintColor = Constants.ImageView.Option.color
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     private lazy var optionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Opcion 1"
-        label.font = .systemFont(ofSize: 16)
-        label.textColor = .label
+        label.text = Constants.Label.Option.text
+        label.font = Constants.Label.Option.font
+        label.textColor = Constants.Label.Option.textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    
+
+
     // MARK: - Properties
     var item: UiHomeOption? {
         didSet {
@@ -44,8 +64,8 @@ class HomeTableViewCell: UITableViewCell {
             optionLabel.text = item.title
         }
     }
-    
-    
+
+
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,8 +75,8 @@ class HomeTableViewCell: UITableViewCell {
         super.init(coder: coder)
         configUI()
     }
-    
-    
+
+
     // MARK: - UI Functions
     private func configUI() {
         configConstraints()
@@ -78,30 +98,30 @@ class HomeTableViewCell: UITableViewCell {
         ]
         let optionImageViewConstraints = [
             optionImageView.widthAnchor.constraint(
-                equalToConstant: 30),
+                equalToConstant: UiConstants.bigXLSpace),
             optionImageView.heightAnchor.constraint(
-                equalToConstant: 30),
+                equalToConstant: UiConstants.bigXLSpace),
             optionImageView.topAnchor.constraint(
                 equalTo: containerView.topAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             optionImageView.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             optionImageView.bottomAnchor.constraint(
                 equalTo: containerView.bottomAnchor,
-                constant: -UiConstants.normalMargin)
+                constant: -UiConstants.normalSpace)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(
                 equalTo: optionImageView.centerYAnchor),
             optionLabel.leadingAnchor.constraint(
                 equalTo: optionImageView.trailingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             optionLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalMargin)
+                constant: -UiConstants.normalSpace)
         ]
-        
+
         NSLayoutConstraint.activate(
             containerViewConstraints +
             optionImageViewConstraints +

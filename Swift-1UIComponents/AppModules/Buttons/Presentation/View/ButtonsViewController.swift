@@ -13,14 +13,14 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
             enum LeftImage {
                 static let text: String = "button.left.image.button".localized()
                 static let image: UIImage? = UIImage(systemName: "chevron.left")
-                static let imagePadding: CGFloat = UiConstants.tinyMargin
+                static let imagePadding: CGFloat = UiConstants.tinySpace
                 static let textColor: UIColor = .systemGray
                 static let color: UIColor = .clear
             }
             enum RightImage {
                 static let text: String = "button.right.image.button".localized()
                 static let image: UIImage? = UIImage(systemName: "chevron.right")
-                static let imagePadding: CGFloat = UiConstants.tinyMargin
+                static let imagePadding: CGFloat = UiConstants.tinySpace
                 static let textColor: UIColor = .systemGray
                 static let color: UIColor = .clear
             }
@@ -33,7 +33,7 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
-        stackView.spacing = UiConstants.normalMargin
+        stackView.spacing = UiConstants.normalSpace
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -89,10 +89,10 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
                 equalTo: view.safeAreaLayoutGuide.topAnchor),
             mainStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                constant: UiConstants.normalMargin),
+                constant: UiConstants.normalSpace),
             mainStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-                constant: -UiConstants.normalMargin)
+                constant: -UiConstants.normalSpace)
         ]
 
         NSLayoutConstraint.activate(mainStackViewConstraints)

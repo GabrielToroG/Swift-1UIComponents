@@ -7,6 +7,7 @@
 */
 
 // Home
+"home.title" = "Componentes de UI";
 "home.label.option" = "Etiquetas";
 "home.image.option" = "Imagenes";
 "home.view.option" = "Vistas";
