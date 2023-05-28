@@ -60,4 +60,12 @@ extension UIViewController {
         self.navigationController?.navigationBar.standardAppearance = standardAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
     }
+    
+    func configBasic(
+        _ title: String = "",
+        _ backgroundColor: UIColor
+    ) {
+        self.title = title
+        self.view.backgroundColor = backgroundColor
+    }
 }

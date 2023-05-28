@@ -9,6 +9,12 @@ import UIKit
 
 class LabelsViewController: BaseViewController<LabelsViewModel> {
     private enum Constants {
+        enum Base {
+            enum General {
+                static let text: String = "label.title".localized()
+                static let color: UIColor = .brandColor
+            }
+        }
         enum Label {
             enum Strikethrough {
                 static let text: String = "label.strikethrough".localized()
@@ -75,20 +81,19 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brandColor
         configUI()
     }
-    
+
     // MARK: - UI Functions
     private func configUI() {
-        configHeader()
-        configDifferentStyles()
-        configStroke()
+        configBasic(Constants.Base.General.text, Constants.Base.General.color)
+        configLabels()
         configConstraints()
     }
 
-    private func configHeader() {
-        title = "label.title".localized()
+    private func configLabels() {
+        configDifferentStyles()
+        configStroke()
     }
 
     private func configStroke() {

@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Configure UINavigationController
         let navController = UINavigationController()
         configNavigationController(navController)
+        
 
         // Dependency injection
         coordinator = HomeCoordinator(navigationController: navController, container: container)
@@ -39,18 +40,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.black,
-            NSAttributedString.Key.font: UIFont.montserratSemibold16
+            NSAttributedString.Key.font: UIFont.montserratSemibold16,
         ]
         standardAppearance.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.blackColor,
-            NSAttributedString.Key.font: UIFont.montserratSemibold30
+            NSAttributedString.Key.font: UIFont.montserratSemibold30,
         ]
-        standardAppearance.configureWithOpaqueBackground()
+        standardAppearance.configureWithOpaqueBackground()          // So that it does not become lighter
         standardAppearance.backgroundColor = UIColor.brandColor
-        standardAppearance.shadowColor = .clear
+        standardAppearance.shadowColor = .clear                     // delete border bottom
         navController.navigationBar.standardAppearance = standardAppearance
         navController.navigationBar.scrollEdgeAppearance = standardAppearance
         navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.tintColor = UIColor.blackColor  // change color to left header, when large titles
     }
 }
 

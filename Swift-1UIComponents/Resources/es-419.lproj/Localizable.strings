@@ -7,12 +7,12 @@
 */
 
 // Home
-"home.title" = "Componentes de UI";
+"home.title" = "Componentes UI";
 "home.label.option" = "Etiquetas";
 "home.image.option" = "Imagenes";
 "home.view.option" = "Vistas";
 "home.button.option" = "Botones";
-"home.textfield.option" = "Text Fields";
+"home.textfield.option" = "Campos de textos";
 "home.table.option" = "Table Views";
 "home.collection.option" = "Collection Views";
 "home.web.option" = "Vistas Web";
@@ -29,5 +29,10 @@
 
 // Buttons
 "button.title" = "Botones";
+"button.primary" = "Botón primario";
+"button.secondary" = "Botón secundario";
 "button.left.image.button" = "Atrás";
 "button.right.image.button" = "Atrás";
+
+// Text fields
+"textfield.title" = "Entradas";

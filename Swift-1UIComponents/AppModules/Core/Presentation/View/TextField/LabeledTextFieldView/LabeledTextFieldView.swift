@@ -34,11 +34,11 @@ class LabeledTextFieldView: UIView {
     private enum Constants {
         enum Label {
             enum Title {
-                static let textColor: UIColor = .black
+                static let textColor: UIColor = .blackColor
                 static let font: UIFont = .montserratRegular16
             }
             enum Description {
-                static let textColor: UIColor = .black
+                static let textColor: UIColor = .blackColor
                 static let font: UIFont = .montserratRegular12
             }
         }
@@ -62,7 +62,7 @@ class LabeledTextFieldView: UIView {
     private lazy var containerHeader: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemYellow
+        view.backgroundColor = .clear
         view.isUserInteractionEnabled = true
         return view
     }()
@@ -238,7 +238,7 @@ class LabeledTextFieldView: UIView {
         containerHeader.addSubview(horizontalFieldStackView)
         horizontalFieldStackView.addArrangedSubview(leftTextField)
         horizontalFieldStackView.addArrangedSubview(rightTextField)
-    
+
         let containerHeaderConstraints = [
             containerHeader.topAnchor.constraint(
                 equalTo: topAnchor),

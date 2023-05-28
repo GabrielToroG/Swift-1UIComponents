@@ -9,7 +9,19 @@ import UIKit
 
 class ButtonsViewController: BaseViewController<ButtonsViewModel> {
     private enum Constants {
+        enum Base {
+            enum General {
+                static let text: String = "button.title".localized()
+                static let color: UIColor = .brandColor
+            }
+        }
         enum Button {
+            enum Primary {
+                static let text: String = "button.primary".localized()
+            }
+            enum Secondary {
+                static let text: String = "button.secondary".localized()
+            }
             enum LeftImage {
                 static let text: String = "button.left.image.button".localized()
                 static let image: UIImage? = UIImage(systemName: "chevron.left")
@@ -31,11 +43,23 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.distribution = .fillEqually
         stackView.spacing = UiConstants.normalSpace
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
+    }()
+    private lazy var primaryButton: FillerButton = {
+        let button = FillerButton()
+        button.item = .init(
+            title: Constants.Button.Primary.text)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    private lazy var secondaryButton: BorderButton = {
+        let button = BorderButton()
+        button.item = .init(
+            title: Constants.Button.Primary.text)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     private lazy var leftImageButton: UIButton = {
         var config = UIButton.Configuration.plain()
@@ -65,22 +89,19 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
         configUI()
     }
 
     // MARK: - UI Functions
     private func configUI() {
-        configHeader()
+        configBasic(Constants.Base.General.text, Constants.Base.General.color)
         configConstraints()
-    }
-
-    private func configHeader() {
-        title = "button.title".localized()
     }
 
     private func configConstraints() {
         view.addSubview(mainStackView)
+        mainStackView.addArrangedSubview(primaryButton)
+        mainStackView.addArrangedSubview(secondaryButton)
         mainStackView.addArrangedSubview(leftImageButton)
         mainStackView.addArrangedSubview(rightImageButton)
 

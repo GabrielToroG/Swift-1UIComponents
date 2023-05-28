@@ -33,6 +33,11 @@
 		7F0E38A42A00DFC000F24809 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0E38A62A00DFC000F24809 /* Localizable.strings */; };
 		7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0E38A82A00E0AE00F24809 /* StringExtension.swift */; };
 		7F13090B2A22B7A60063174D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13090A2A22B7A60063174D /* UIColorExtension.swift */; };
+		7F1309122A22ED380063174D /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1309112A22ED380063174D /* ImagesViewController.swift */; };
+		7F1309142A22EDE70063174D /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1309132A22EDE70063174D /* ImagesViewModel.swift */; };
+		7F1309162A22EE0B0063174D /* ImagesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1309152A22EE0B0063174D /* ImagesModule.swift */; };
+		7F13091A2A22FC900063174D /* FillerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1309192A22FC900063174D /* FillerButton.swift */; };
+		7F13091C2A22FD580063174D /* FillerButtonArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F13091B2A22FD580063174D /* FillerButtonArgs.swift */; };
 		7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB91C2A0E98F700CC2BE9 /* ButtonsModule.swift */; };
 		7F1BB9222A0E997E00CC2BE9 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB9212A0E997E00CC2BE9 /* ButtonsViewController.swift */; };
 		7F1BB9242A0E999500CC2BE9 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BB9232A0E999500CC2BE9 /* ButtonsViewModel.swift */; };
@@ -54,6 +59,8 @@
 		7F4530A02A0F02A300A91782 /* TextFieldsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45309F2A0F02A300A91782 /* TextFieldsModule.swift */; };
 		7F4530A42A0F2EC600A91782 /* LabeledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4530A32A0F2EC600A91782 /* LabeledTextFieldView.swift */; };
 		7F4530A62A0F34F200A91782 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4530A52A0F34F200A91782 /* UITextFieldExtension.swift */; };
+		7FACF3532A2338DF006E6D24 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACF3522A2338DF006E6D24 /* BorderButton.swift */; };
+		7FACF3552A233C30006E6D24 /* BorderButtonArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACF3542A233C30006E6D24 /* BorderButtonArgs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +93,11 @@
 		7F0E38A72A00DFD400F24809 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7F0E38A82A00E0AE00F24809 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7F13090A2A22B7A60063174D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7F1309112A22ED380063174D /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		7F1309132A22EDE70063174D /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
+		7F1309152A22EE0B0063174D /* ImagesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModule.swift; sourceTree = "<group>"; };
+		7F1309192A22FC900063174D /* FillerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillerButton.swift; sourceTree = "<group>"; };
+		7F13091B2A22FD580063174D /* FillerButtonArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillerButtonArgs.swift; sourceTree = "<group>"; };
 		7F1BB91C2A0E98F700CC2BE9 /* ButtonsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModule.swift; sourceTree = "<group>"; };
 		7F1BB9212A0E997E00CC2BE9 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		7F1BB9232A0E999500CC2BE9 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
@@ -107,6 +119,8 @@
 		7F45309F2A0F02A300A91782 /* TextFieldsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsModule.swift; sourceTree = "<group>"; };
 		7F4530A32A0F2EC600A91782 /* LabeledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldView.swift; sourceTree = "<group>"; };
 		7F4530A52A0F34F200A91782 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		7FACF3522A2338DF006E6D24 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		7FACF3542A233C30006E6D24 /* BorderButtonArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButtonArgs.swift; sourceTree = "<group>"; };
 		A4B4FB16FC67B82D54E4C1D9 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F330D0861AE3CF74D3FAE044 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +184,7 @@
 				7F33F2482A0C0A1500062E8A /* Labels */,
 				7F1BB91A2A0E98DB00CC2BE9 /* Buttons */,
 				7F4530962A0F025200A91782 /* TextFields */,
+				7F13090C2A22ECFA0063174D /* Images */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -263,6 +278,7 @@
 			children = (
 				7F2EEA532A20118C002255D4 /* Launch */,
 				7F4530A12A0F2E7000A91782 /* Loader */,
+				7F1309172A22FC650063174D /* Button */,
 				7F4530A22A0F2E7800A91782 /* TextField */,
 			);
 			path = View;
@@ -338,6 +354,75 @@
 				7F0E389F2A00D90400F24809 /* UiConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		7F13090C2A22ECFA0063174D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7F13090D2A22ED0D0063174D /* DI */,
+				7F13090E2A22ED130063174D /* Presentation */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7F13090D2A22ED0D0063174D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F1309152A22EE0B0063174D /* ImagesModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F13090E2A22ED130063174D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F13090F2A22ED200063174D /* ViewModel */,
+				7F1309102A22ED270063174D /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F13090F2A22ED200063174D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1309132A22EDE70063174D /* ImagesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F1309102A22ED270063174D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F1309112A22ED380063174D /* ImagesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F1309172A22FC650063174D /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				7F13091D2A2338A10063174D /* BorderButton */,
+				7F1309182A22FC790063174D /* FillerButton */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		7F1309182A22FC790063174D /* FillerButton */ = {
+			isa = PBXGroup;
+			children = (
+				7F1309192A22FC900063174D /* FillerButton.swift */,
+				7F13091B2A22FD580063174D /* FillerButtonArgs.swift */,
+			);
+			path = FillerButton;
+			sourceTree = "<group>";
+		};
+		7F13091D2A2338A10063174D /* BorderButton */ = {
+			isa = PBXGroup;
+			children = (
+				7FACF3522A2338DF006E6D24 /* BorderButton.swift */,
+				7FACF3542A233C30006E6D24 /* BorderButtonArgs.swift */,
+			);
+			path = BorderButton;
 			sourceTree = "<group>";
 		};
 		7F1BB91A2A0E98DB00CC2BE9 /* Buttons */ = {
@@ -678,7 +763,9 @@
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
 				7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */,
+				7F1309122A22ED380063174D /* ImagesViewController.swift in Sources */,
 				7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */,
+				7F13091C2A22FD580063174D /* FillerButtonArgs.swift in Sources */,
 				7F45309C2A0F027900A91782 /* TextFieldsViewModel.swift in Sources */,
 				7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */,
 				7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */,
@@ -688,19 +775,24 @@
 				7F4530A62A0F34F200A91782 /* UITextFieldExtension.swift in Sources */,
 				7F0E38842A00CC0D00F24809 /* BaseViewModel.swift in Sources */,
 				7F0E38752A00CA7F00F24809 /* MainControllerProvider.swift in Sources */,
+				7FACF3552A233C30006E6D24 /* BorderButtonArgs.swift in Sources */,
 				7F2EEA562A20132D002255D4 /* LabeledTextFieldPickerView.swift in Sources */,
 				7F33F2502A0C0A7D00062E8A /* LabelViewController.swift in Sources */,
 				7F1BB9242A0E999500CC2BE9 /* ButtonsViewModel.swift in Sources */,
+				7F13091A2A22FC900063174D /* FillerButton.swift in Sources */,
 				7F1F25A22A1C0C9C0030C0D7 /* RutHelper.swift in Sources */,
 				7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */,
 				7F2EEA582A2023F2002255D4 /* LabeledTextFieldPickerViewArgs.swift in Sources */,
 				7F13090B2A22B7A60063174D /* UIColorExtension.swift in Sources */,
 				7F0E38732A00CA5200F24809 /* Injection.swift in Sources */,
+				7F1309162A22EE0B0063174D /* ImagesModule.swift in Sources */,
 				7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */,
 				7F0E387B2A00CAD100F24809 /* NotificationCenterWrapperImpl.swift in Sources */,
+				7F1309142A22EDE70063174D /* ImagesViewModel.swift in Sources */,
 				7F0E38912A00CF0600F24809 /* HomeViewController.swift in Sources */,
 				7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */,
 				7F45309E2A0F028B00A91782 /* TextFieldsViewController.swift in Sources */,
+				7FACF3532A2338DF006E6D24 /* BorderButton.swift in Sources */,
 				7F1BB9222A0E997E00CC2BE9 /* ButtonsViewController.swift in Sources */,
 				7F0E38772A00CAA900F24809 /* MainModule.swift in Sources */,
 				7F0E388B2A00CDBD00F24809 /* HomeCoordinator.swift in Sources */,

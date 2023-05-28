@@ -29,5 +29,10 @@
 
 // Buttons
 "button.title" = "Buttons";
+"button.primary" = "Primary Button";
+"button.secondary" = "Secondary Button";
 "button.left.image.button" = "Back";
 "button.right.image.button" = "Back";
+
+// Text fields
+"textfield.title" = "Text Fields";

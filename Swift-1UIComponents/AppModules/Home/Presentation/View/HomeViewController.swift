@@ -52,14 +52,9 @@ class HomeViewController: BaseViewController<HomeViewModel> {
 
     // MARK: - UI Functions
     private func configUI() {
-        configBasic()
+        configBasic(Constants.Base.General.text, Constants.Base.General.color)
         configTableView()
         configConstraints()
-    }
-
-    private func configBasic() {
-        view.backgroundColor = Constants.Base.General.color
-        title = Constants.Base.General.text
     }
 
     private func configConstraints() {
@@ -105,6 +100,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             coordinator.pushViewController(newViewControllerType: ButtonsViewController.self)
         case 2:
             coordinator.pushViewController(newViewControllerType: TextFieldsViewController.self)
+        case 3:
+            coordinator.pushViewController(newViewControllerType: ImagesViewController.self)
         default:
             print("")
         }

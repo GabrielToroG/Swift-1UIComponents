@@ -14,6 +14,14 @@ import UIKit
 import Combine
 
 class TextFieldsViewController: BaseViewController<TextFieldsViewModel> {
+    private enum Constants {
+        enum Base {
+            enum General {
+                static let text: String = "textfield.title".localized()
+                static let color: UIColor = .brandColor
+            }
+        }
+    }
     // MARK: - Properties
     
     // Fecha de nacimiento
@@ -25,7 +33,7 @@ class TextFieldsViewController: BaseViewController<TextFieldsViewModel> {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
-        stackView.spacing = UiConstants.normalSpace
+        stackView.spacing = UiConstants.smallSpace
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -103,11 +111,8 @@ class TextFieldsViewController: BaseViewController<TextFieldsViewModel> {
 
     // MARK: - UI Functions
     private func configUI() {
-        view.backgroundColor = .systemGray3
-        configNavigationHeader(title: "TextFields", titleColor: .black)
-         
-
         configScrollViewToView()
+        configBasic(Constants.Base.General.text, Constants.Base.General.color)
         configActions()
         configConstraints()
     }
