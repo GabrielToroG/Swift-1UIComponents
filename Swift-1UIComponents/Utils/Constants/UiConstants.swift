@@ -27,6 +27,6 @@ struct UiConstants {
     /// CGFloat = 64
     static let extremeXLSpace: CGFloat = 64
     /// CGFloat = 100
-    static let normalWidth: CGFloat = 100
+    static let normalWidth: CGFloat = 144
 
 }

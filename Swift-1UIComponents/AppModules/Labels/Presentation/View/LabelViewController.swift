@@ -38,7 +38,7 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
             }
         }
     }
-    
+
     // MARK: - Properties
     private lazy var containerView: UIView = {
         let view = UIView()

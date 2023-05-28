@@ -21,7 +21,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             }
         }
     }
-    
+
     // MARK: - Properties
     let dataSource: [UiHomeOption] = [
         UiHomeOption(icon: "home.label.option", title: "home.label.option".localized()),
@@ -56,6 +56,12 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         configTableView()
         configConstraints()
     }
+    
+    private func configTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.registerCellClass(for: HomeTableViewCell.self)
+    }
 
     private func configConstraints() {
         view.addSubview(tableView)
@@ -70,12 +76,6 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ]
         NSLayoutConstraint.activate(tableViewConstraints)
-    }
-
-    private func configTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.registerCellClass(for: HomeTableViewCell.self)
     }
 }
 

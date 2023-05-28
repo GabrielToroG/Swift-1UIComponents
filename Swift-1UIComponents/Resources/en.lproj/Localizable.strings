@@ -22,7 +22,7 @@
 // Labels
 "label.title" = "Labels";
 "label.strikethrough" = "Strikethrough";
-"label.max.width.left" = "Left text";
+"label.max.width.left" = "Max width text";
 "label.max.width.right" = "Right text";
 "label.different.styles.first" = "Different Style on label";
 "label.different.styles.second" = " on label";

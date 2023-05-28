@@ -22,7 +22,7 @@
 // Labels
 "label.title" = "Etiquetas";
 "label.strikethrough" = "Tachado";
-"label.max.width.left" = "Texto izquierdo";
+"label.max.width.left" = "Texto tamaño máximo";
 "label.max.width.right" = "Texto derecho";
 "label.different.styles.first" = "Etiqueta con";
 "label.different.styles.second" = " diferentes éstilos";
