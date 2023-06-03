@@ -36,3 +36,8 @@
 
 // Text fields
 "textfield.title" = "Text Fields";
+
+// Switchs
+"switch.title" = "Switchs";
+"switch.on" = "On";
+"switch.off" = "Off";

@@ -36,3 +36,8 @@
 
 // Text fields
 "textfield.title" = "Entradas";
+
+// Switchs
+"switch.title" = "Interruptor";
+"switch.on" = "Prendido";
+"switch.off" = "Apagado";

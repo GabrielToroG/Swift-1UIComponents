@@ -27,13 +27,13 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         UiHomeOption(icon: "home.label.option", title: "home.label.option".localized()),
         UiHomeOption(icon: "home.button.option", title: "home.button.option".localized()),
         UiHomeOption(icon: "home.textfield.option", title: "home.textfield.option".localized()),
+        UiHomeOption(icon: "home.switch.option", title: "home.switch.option".localized()),
         UiHomeOption(icon: "home.image.option", title: "home.image.option".localized()),
+        UiHomeOption(icon: "home.toast.option", title: "home.toast.option".localized()),
         UiHomeOption(icon: "home.view.option", title: "home.view.option".localized()),
         UiHomeOption(icon: "home.table.option", title: "home.table.option".localized()),
         UiHomeOption(icon: "home.collection.option", title: "home.collection.option".localized()),
         UiHomeOption(icon: "home.web.option", title: "home.web.option".localized()),
-        UiHomeOption(icon: "home.switch.option", title: "home.switch.option".localized()),
-        UiHomeOption(icon: "home.toast.option", title: "home.toast.option".localized()),
     ]
 
     // MARK: - Outlets
@@ -101,6 +101,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 2:
             coordinator.pushViewController(newViewControllerType: TextFieldsViewController.self)
         case 3:
+            coordinator.pushViewController(newViewControllerType: SwitchViewController.self)
+        case 4:
             coordinator.pushViewController(newViewControllerType: ImagesViewController.self)
         default:
             print("")

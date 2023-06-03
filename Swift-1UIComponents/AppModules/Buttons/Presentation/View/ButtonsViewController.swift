@@ -61,6 +61,12 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    private lazy var circleButton: CircleButton = {
+        let button = CircleButton()
+        button.item = .init()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     private lazy var leftImageButton: UIButton = {
         var config = UIButton.Configuration.plain()
         config.title = Constants.Button.LeftImage.text
@@ -102,6 +108,7 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(primaryButton)
         mainStackView.addArrangedSubview(secondaryButton)
+        mainStackView.addArrangedSubview(circleButton)
         mainStackView.addArrangedSubview(leftImageButton)
         mainStackView.addArrangedSubview(rightImageButton)
 

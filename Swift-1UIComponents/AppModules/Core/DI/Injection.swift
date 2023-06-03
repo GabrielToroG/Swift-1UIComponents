@@ -25,6 +25,7 @@ final class Injection {
         LabelsModule.register(container)
         ButtonsModule.register(container)
         TextFieldsModule.register(container)
+        SwitchModule.register(container)
         ImagesModule.register(container)
     }
     

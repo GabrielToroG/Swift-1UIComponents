@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FillerButton: UIButton {
+class FillerButton: UIView {
     private enum Constants {
         enum Button {
             enum Filler {
