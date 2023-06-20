@@ -13,7 +13,7 @@ class TablesViewViewController: BaseViewController<TablesViewViewModel> {
     private enum Constants {
         enum Base {
             enum General {
-                static let title: String = ""
+                static let title: String = "Table View"
                 static let color: UIColor = .white
             }
         }
