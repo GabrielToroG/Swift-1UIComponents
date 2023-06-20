@@ -29,6 +29,7 @@ final class Injection {
         ImagesModule.register(container)
         ToastModule.register(container)
         ViewsModule.register(container)
+        TablesViewModule.register(container)
     }
     
     func getContainer() -> Container {

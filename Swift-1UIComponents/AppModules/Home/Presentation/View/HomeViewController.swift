@@ -108,6 +108,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             coordinator.pushViewController(newViewControllerType: ToastViewController.self)
         case 6:
             coordinator.pushViewController(newViewControllerType: ViewsViewController.self)
+        case 7:
+            coordinator.pushViewController(newViewControllerType: TablesViewViewController.self)
         default:
             print("")
         }

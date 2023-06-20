@@ -44,6 +44,9 @@
 		7F1C02A92A2C631F00213934 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C02A82A2C631F00213934 /* ToastViewModel.swift */; };
 		7F1C02AB2A2C633600213934 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C02AA2A2C633600213934 /* ToastViewController.swift */; };
 		7F1F25A22A1C0C9C0030C0D7 /* RutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F25A12A1C0C9C0030C0D7 /* RutHelper.swift */; };
+		7F21799F2A4151B90009D1E9 /* TablesViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21799E2A4151B90009D1E9 /* TablesViewModule.swift */; };
+		7F2179A42A41526D0009D1E9 /* TablesViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2179A32A41526D0009D1E9 /* TablesViewViewModel.swift */; };
+		7F2179A62A4152800009D1E9 /* TablesViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2179A52A4152800009D1E9 /* TablesViewViewController.swift */; };
 		7F21917D2A241E35000EE324 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21917C2A241E35000EE324 /* SwitchViewController.swift */; };
 		7F21917F2A241EA1000EE324 /* SwitchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21917E2A241EA1000EE324 /* SwitchViewModel.swift */; };
 		7F2191812A241EF2000EE324 /* SwitchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2191802A241EF2000EE324 /* SwitchModule.swift */; };
@@ -115,6 +118,9 @@
 		7F1C02A82A2C631F00213934 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		7F1C02AA2A2C633600213934 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		7F1F25A12A1C0C9C0030C0D7 /* RutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutHelper.swift; sourceTree = "<group>"; };
+		7F21799E2A4151B90009D1E9 /* TablesViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewModule.swift; sourceTree = "<group>"; };
+		7F2179A32A41526D0009D1E9 /* TablesViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewViewModel.swift; sourceTree = "<group>"; };
+		7F2179A52A4152800009D1E9 /* TablesViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewViewController.swift; sourceTree = "<group>"; };
 		7F21917C2A241E35000EE324 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		7F21917E2A241EA1000EE324 /* SwitchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewModel.swift; sourceTree = "<group>"; };
 		7F2191802A241EF2000EE324 /* SwitchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchModule.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				7F13090C2A22ECFA0063174D /* Images */,
 				7F1C02A12A2C624D00213934 /* Toasts */,
 				7F2AC5F02A2FF6870042F1EA /* Views */,
+				7F21799C2A4151A20009D1E9 /* TablesView */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -532,6 +539,48 @@
 				7F1F25A12A1C0C9C0030C0D7 /* RutHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7F21799C2A4151A20009D1E9 /* TablesView */ = {
+			isa = PBXGroup;
+			children = (
+				7F21799D2A4151AE0009D1E9 /* DI */,
+				7F2179A12A4152570009D1E9 /* Presentation */,
+			);
+			path = TablesView;
+			sourceTree = "<group>";
+		};
+		7F21799D2A4151AE0009D1E9 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F21799E2A4151B90009D1E9 /* TablesViewModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F2179A02A4152470009D1E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F2179A52A4152800009D1E9 /* TablesViewViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F2179A12A4152570009D1E9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F2179A22A4152600009D1E9 /* ViewModel */,
+				7F2179A02A4152470009D1E9 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F2179A22A4152600009D1E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F2179A32A41526D0009D1E9 /* TablesViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7F2191772A241CC7000EE324 /* Switch */ = {
@@ -931,6 +980,7 @@
 				7FC1504C2A2BFB1200638688 /* CircleButtonArgs.swift in Sources */,
 				7F0E38872A00CD1800F24809 /* LoaderView.swift in Sources */,
 				7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */,
+				7F21799F2A4151B90009D1E9 /* TablesViewModule.swift in Sources */,
 				7F2AC5FA2A2FF71D0042F1EA /* ViewsModule.swift in Sources */,
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
@@ -939,6 +989,7 @@
 				7F2AC5ED2A2FF15B0042F1EA /* ViewWithShadow.swift in Sources */,
 				7F0E389A2A00D28000F24809 /* HomeTableViewCell.swift in Sources */,
 				7F45309C2A0F027900A91782 /* TextFieldsViewModel.swift in Sources */,
+				7F2179A62A4152800009D1E9 /* TablesViewViewController.swift in Sources */,
 				7F21917F2A241EA1000EE324 /* SwitchViewModel.swift in Sources */,
 				7FC1504A2A2BF62200638688 /* CircleButton.swift in Sources */,
 				7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */,
@@ -961,6 +1012,7 @@
 				7F33F2522A0C0F6A00062E8A /* LabelsModule.swift in Sources */,
 				7F2EEA582A2023F2002255D4 /* LabeledTextFieldPickerViewArgs.swift in Sources */,
 				7F13090B2A22B7A60063174D /* UIColorExtension.swift in Sources */,
+				7F2179A42A41526D0009D1E9 /* TablesViewViewModel.swift in Sources */,
 				7F0E38732A00CA5200F24809 /* Injection.swift in Sources */,
 				7F1309162A22EE0B0063174D /* ImagesModule.swift in Sources */,
 				7F1C02A42A2C62BD00213934 /* ToastModule.swift in Sources */,
