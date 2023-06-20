@@ -32,14 +32,39 @@ enum DescripcionResult {
 
 class LabeledTextFieldView: UIView {
     private enum Constants {
+        enum View {
+            enum Container {
+                static let color: UIColor = .clear
+                static let topAnchor: CGFloat = UiConstants.NO_SPACE
+                static let leadingAnchor: CGFloat = UiConstants.NO_SPACE
+                static let trailingAnchor: CGFloat = UiConstants.NO_SPACE
+                static let bottomAnchor: CGFloat = UiConstants.NO_SPACE
+            }
+        }
+        enum StackView {
+            enum Horizontal {
+                static let spacing: CGFloat = 8
+                static let topAnchor: CGFloat = UiConstants.SMALL_SPACE
+                static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
+                static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
+                static let heightAnchor: CGFloat = UiConstants.SMALL_STACKVIEW_HEIGHT
+            }
+        }
         enum Label {
             enum Title {
                 static let textColor: UIColor = .blackColor
                 static let font: UIFont = .montserratRegular16
+                static let topAnchor: CGFloat = UiConstants.SMALL_SPACE
+                static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
             }
             enum Description {
                 static let textColor: UIColor = .blackColor
                 static let font: UIFont = .montserratRegular12
+                static let topAnchor: CGFloat = UiConstants.SMALL_SPACE
+                static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
+                static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
+                static let bottomAnchor: CGFloat = -UiConstants.SMALL_SPACE
+                static let heightAnchor: CGFloat = UiConstants.NORMAL_TEXTFIELD_DESCRIPTION_SIZE
             }
         }
         enum TextField {
@@ -48,6 +73,7 @@ class LabeledTextFieldView: UIView {
                 static let borderWidth: CGFloat = 1
                 static let borderColor: CGColor = UIColor.systemGray.cgColor
                 static let radius: CGFloat = 4
+                static let widthAnchor: CGFloat = UiConstants.NORMAL_TEXTFIELD_WIDTH
             }
             enum Right {
                 static let font: UIFont = .montserratRegular16
@@ -56,14 +82,21 @@ class LabeledTextFieldView: UIView {
                 static let radius: CGFloat = 4
             }
         }
+        enum Button {
+            enum State {
+                static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
+                static let widthAnchor: CGFloat = UiConstants.NORMAL_ICON_SIZE
+                static let heightAnchor: CGFloat = UiConstants.NORMAL_ICON_SIZE
+            }
+        }
     }
 
     // MARK: - Outlets
-    private lazy var containerHeader: UIView = {
+    private lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clear
+        view.backgroundColor = Constants.View.Container.color
         view.isUserInteractionEnabled = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     private lazy var titleLabel: UILabel = {
@@ -76,7 +109,7 @@ class LabeledTextFieldView: UIView {
     private lazy var horizontalFieldStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = UiConstants.smallSpace
+        stackView.spacing = Constants.StackView.Horizontal.spacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -86,8 +119,8 @@ class LabeledTextFieldView: UIView {
         textField.layer.borderWidth = Constants.TextField.Left.borderWidth
         textField.layer.cornerRadius = Constants.TextField.Left.radius
         textField.layer.borderColor = Constants.TextField.Left.borderColor
-        textField.setLeftPaddingPoints(UiConstants.normalSpace)
-        textField.setRightPaddingPoints(UiConstants.normalSpace)
+        textField.setLeftPaddingPoints(UiConstants.NORMAL_SPACE)
+        textField.setRightPaddingPoints(UiConstants.NORMAL_SPACE)
         textField.isUserInteractionEnabled = false
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -98,12 +131,12 @@ class LabeledTextFieldView: UIView {
         textField.layer.borderWidth = Constants.TextField.Right.borderWidth
         textField.layer.cornerRadius = Constants.TextField.Right.radius
         textField.layer.borderColor = Constants.TextField.Right.borderColor
-        textField.setLeftPaddingPoints(UiConstants.normalSpace)
-        textField.setRightPaddingPoints(UiConstants.superXLSpace)
+        textField.setLeftPaddingPoints(UiConstants.smallPaddingTextField)
+        textField.setRightPaddingPoints(UiConstants.bigPaddingTextField)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
-    private lazy var errorButton: UIButton = {
+    private lazy var stateButton: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -135,7 +168,7 @@ class LabeledTextFieldView: UIView {
                 leftTextField.text = value
             }
             if let image = item.initialRightImage {
-                errorButton.setImage(UIImage(systemName: image), for: .normal)
+                stateButton.setImage(UIImage(systemName: image), for: .normal)
             }
         }
     }
@@ -192,15 +225,15 @@ class LabeledTextFieldView: UIView {
     func updateIconImage(_ iconResult: IconResult) {
         switch iconResult {
         case .empty:
-            errorButton.isHidden = true
+            stateButton.isHidden = true
         case .error:
-            errorButton.isHidden = false
-            errorButton.tintColor = .systemRed
-            errorButton.setImage(UIImage(named: "textfield.close.icon"), for: .normal)
+            stateButton.isHidden = false
+            stateButton.tintColor = .systemRed
+            stateButton.setImage(UIImage(named: "textfield.close.icon"), for: .normal)
         case .check:
-            errorButton.isHidden = false
-            errorButton.tintColor = .systemGreen
-            errorButton.setImage(UIImage(named: "textfield.success.icon"), for: .normal)
+            stateButton.isHidden = false
+            stateButton.tintColor = .systemGreen
+            stateButton.setImage(UIImage(named: "textfield.success.icon"), for: .normal)
         }
     }
 
@@ -215,13 +248,13 @@ class LabeledTextFieldView: UIView {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
+        configUI()
         configActions()
     }
 
     
     // MARK: - UI Functions
-    func setupUI() {
+    func configUI() {
         configDelegates()
         configConstraints()
     }
@@ -231,82 +264,86 @@ class LabeledTextFieldView: UIView {
     }
 
     private func configConstraints() {
-        addSubview(containerHeader)
-        containerHeader.addSubview(titleLabel)
-        containerHeader.addSubview(errorButton)
-        containerHeader.addSubview(descriptionLabel)
-        containerHeader.addSubview(horizontalFieldStackView)
+        addSubview(containerView)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(stateButton)
+        containerView.addSubview(descriptionLabel)
+        containerView.addSubview(horizontalFieldStackView)
         horizontalFieldStackView.addArrangedSubview(leftTextField)
         horizontalFieldStackView.addArrangedSubview(rightTextField)
 
-        let containerHeaderConstraints = [
-            containerHeader.topAnchor.constraint(
-                equalTo: topAnchor),
-            containerHeader.leadingAnchor.constraint(
-                equalTo: leadingAnchor),
-            containerHeader.trailingAnchor.constraint(
-                equalTo: trailingAnchor),
-            containerHeader.bottomAnchor.constraint(
-                equalTo: bottomAnchor)
+        let containerViewConstraints = [
+            containerView.topAnchor.constraint(
+                equalTo: topAnchor,
+                constant: Constants.View.Container.topAnchor),
+            containerView.leadingAnchor.constraint(
+                equalTo: leadingAnchor,
+                constant: Constants.View.Container.leadingAnchor),
+            containerView.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: Constants.View.Container.trailingAnchor),
+            containerView.bottomAnchor.constraint(
+                equalTo: bottomAnchor,
+                constant: Constants.View.Container.bottomAnchor)
         ]
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(
-                equalTo: containerHeader.topAnchor,
-                constant: UiConstants.smallSpace),
+                equalTo: containerView.topAnchor,
+                constant: Constants.Label.Title.topAnchor),
             titleLabel.leadingAnchor.constraint(
-                equalTo: containerHeader.leadingAnchor,
-                constant: UiConstants.smallSpace)
+                equalTo: containerView.leadingAnchor,
+                constant: Constants.Label.Title.leadingAnchor)
         ]
         let horizontalFieldStackViewConstraints = [
             horizontalFieldStackView.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor,
-                constant: UiConstants.smallSpace),
+                constant: Constants.StackView.Horizontal.topAnchor),
             horizontalFieldStackView.leadingAnchor.constraint(
-                equalTo: containerHeader.leadingAnchor,
-                constant: UiConstants.smallSpace),
+                equalTo: containerView.leadingAnchor,
+                constant: Constants.StackView.Horizontal.leadingAnchor),
             horizontalFieldStackView.trailingAnchor.constraint(
-                equalTo: containerHeader.trailingAnchor,
-                constant: -UiConstants.smallSpace),
+                equalTo: containerView.trailingAnchor,
+                constant: Constants.StackView.Horizontal.trailingAnchor),
             horizontalFieldStackView.heightAnchor.constraint(
-                equalToConstant: UiConstants.superSpace)
+                equalToConstant: Constants.StackView.Horizontal.heightAnchor)
         ]
         let leftTextFieldConstraints = [
             leftTextField.widthAnchor.constraint(
-                equalToConstant: UiConstants.extremeXLSpace)
+                equalToConstant: Constants.TextField.Left.widthAnchor)
         ]
-        let errorButtonConstraints = [
-            errorButton.centerYAnchor.constraint(
+        let stateButtonConstraints = [
+            stateButton.centerYAnchor.constraint(
                 equalTo: rightTextField.centerYAnchor),
-            errorButton.trailingAnchor.constraint(
+            stateButton.trailingAnchor.constraint(
                 equalTo: rightTextField.trailingAnchor,
-                constant: -UiConstants.smallSpace),
-            errorButton.widthAnchor.constraint(
-                equalToConstant: UiConstants.bigXLSpace),
-            errorButton.heightAnchor.constraint(
-                equalToConstant: UiConstants.bigXLSpace)
+                constant: Constants.Button.State.trailingAnchor),
+            stateButton.widthAnchor.constraint(
+                equalToConstant: Constants.Button.State.widthAnchor),
+            stateButton.heightAnchor.constraint(
+                equalToConstant: Constants.Button.State.heightAnchor)
         ]
         let descriptionLabelConstraints = [
             descriptionLabel.topAnchor.constraint(
                 equalTo: rightTextField.bottomAnchor,
-                constant: UiConstants.smallSpace),
+                constant: Constants.Label.Description.topAnchor),
             descriptionLabel.leadingAnchor.constraint(
-                equalTo: containerHeader.leadingAnchor,
-                constant: UiConstants.smallSpace),
+                equalTo: containerView.leadingAnchor,
+                constant: Constants.Label.Description.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(
-                equalTo: containerHeader.trailingAnchor,
-                constant: -UiConstants.smallSpace),
+                equalTo: containerView.trailingAnchor,
+                constant: Constants.Label.Description.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(
-                equalTo: containerHeader.bottomAnchor,
-                constant: -UiConstants.smallSpace),
+                equalTo: containerView.bottomAnchor,
+                constant: Constants.Label.Description.bottomAnchor),
             descriptionLabel.heightAnchor.constraint(
-                equalToConstant: UiConstants.normalSpace)
+                equalToConstant: Constants.Label.Description.heightAnchor)
         ]
 
         NSLayoutConstraint.activate(
-            containerHeaderConstraints +
+            containerViewConstraints +
             titleLabelConstraints +
             horizontalFieldStackViewConstraints +
-            errorButtonConstraints +
+            stateButtonConstraints +
             descriptionLabelConstraints +
             leftTextFieldConstraints
         )

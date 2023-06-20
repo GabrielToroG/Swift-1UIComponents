@@ -104,6 +104,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             coordinator.pushViewController(newViewControllerType: SwitchViewController.self)
         case 4:
             coordinator.pushViewController(newViewControllerType: ImagesViewController.self)
+        case 5:
+            coordinator.pushViewController(newViewControllerType: ToastViewController.self)
+        case 6:
+            coordinator.pushViewController(newViewControllerType: ViewsViewController.self)
         default:
             print("")
         }

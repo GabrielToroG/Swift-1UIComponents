@@ -19,15 +19,15 @@ class HomeTableViewCell: UITableViewCell {
                 static let color: UIColor = .brandColor
             }
         }
+        enum ImageView {
+            enum Option {
+                static let color: UIColor = .blackColor
+            }
+        }
         enum Label {
             enum Option {
                 static let font: UIFont = .montserratRegular16
                 static let textColor: UIColor = .blackColor
-            }
-        }
-        enum ImageView {
-            enum Option {
-                static let color: UIColor = .blackColor
             }
         }
     }
@@ -92,29 +92,29 @@ class HomeTableViewCell: UITableViewCell {
                 equalTo: contentView.bottomAnchor)
         ]
         let optionImageViewConstraints = [
-            optionImageView.widthAnchor.constraint(
-                equalToConstant: UiConstants.bigXLSpace),
-            optionImageView.heightAnchor.constraint(
-                equalToConstant: UiConstants.bigXLSpace),
             optionImageView.topAnchor.constraint(
                 equalTo: containerView.topAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             optionImageView.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             optionImageView.bottomAnchor.constraint(
                 equalTo: containerView.bottomAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE),
+            optionImageView.widthAnchor.constraint(
+                equalToConstant: UiConstants.NORMAL_ICON_SIZE),
+            optionImageView.heightAnchor.constraint(
+                equalToConstant: UiConstants.NORMAL_ICON_SIZE)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(
                 equalTo: optionImageView.centerYAnchor),
             optionLabel.leadingAnchor.constraint(
                 equalTo: optionImageView.trailingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             optionLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE)
         ]
 
         NSLayoutConstraint.activate(

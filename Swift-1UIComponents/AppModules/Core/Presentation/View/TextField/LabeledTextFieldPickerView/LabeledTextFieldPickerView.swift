@@ -58,14 +58,14 @@ class LabeledTextFieldPickerView: UIView {
         textField.layer.borderWidth = Constants.TextField.Right.borderWidth
         textField.layer.cornerRadius = Constants.TextField.Right.radius
         textField.layer.borderColor = Constants.TextField.Right.borderColor
-        textField.setLeftPaddingPoints(UiConstants.normalSpace)
-        textField.setRightPaddingPoints(UiConstants.superXLSpace)
+        textField.setLeftPaddingPoints(UiConstants.smallPaddingTextField)
+        textField.setRightPaddingPoints(UiConstants.bigPaddingTextField)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     private lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
-        pickerView.backgroundColor = .white
+        pickerView.backgroundColor = .whiteColor
         return pickerView
     }()
 
@@ -132,26 +132,26 @@ class LabeledTextFieldPickerView: UIView {
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(
                 equalTo: containerHeader.topAnchor,
-                constant: UiConstants.smallSpace),
+                constant: UiConstants.SMALL_SPACE),
             titleLabel.leadingAnchor.constraint(
                 equalTo: containerHeader.leadingAnchor,
-                constant: UiConstants.smallSpace)
+                constant: UiConstants.SMALL_SPACE)
         ]
         let mainTextFieldConstraints = [
             mainTextField.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor,
-                constant: UiConstants.smallSpace),
+                constant: UiConstants.SMALL_SPACE),
             mainTextField.leadingAnchor.constraint(
                 equalTo: containerHeader.leadingAnchor,
-                constant: UiConstants.smallSpace),
+                constant: UiConstants.SMALL_SPACE),
             mainTextField.trailingAnchor.constraint(
                 equalTo: containerHeader.trailingAnchor,
-                constant: -UiConstants.smallSpace),
+                constant: -UiConstants.SMALL_SPACE),
             mainTextField.heightAnchor.constraint(
-                equalToConstant: UiConstants.superSpace),
+                equalToConstant: UiConstants.normalTextFieldSize),
             mainTextField.bottomAnchor.constraint(
                 equalTo: containerHeader.bottomAnchor,
-                constant: -UiConstants.bigXLSpace)
+                constant: -UiConstants.BIG_SPACE)
         ]
 
         NSLayoutConstraint.activate(

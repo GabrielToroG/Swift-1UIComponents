@@ -12,5 +12,8 @@ extension UIColor {
     static let brandColor = UIColor(named: "brandColor")!
     /// hex: 212224
     static let blackColor = UIColor(named: "blackColor")!
+    
     static let brownColor = UIColor(named: "brownColor")!
+    /// hex: FFFFFF
+    static let whiteColor = UIColor(named: "whiteColor")!
 }

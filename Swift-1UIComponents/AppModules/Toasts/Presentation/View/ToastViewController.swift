@@ -1,37 +1,39 @@
 //
-//  ImagesViewController.swift
+//  ToastViewController.swift
 //  Swift-1UIComponents
 //
-//  Created by Gabriel Alonso Toro Guzmán on 27-05-23.
+//  Created by Gabriel Alonso Toro Guzmán on 04-06-23.
 //
 
 import UIKit
 
-class ImagesViewController: BaseViewController<ImagesViewModel> {
+class ToastViewController: BaseViewController<ToastViewModel> {
     private enum Constants {
         enum Base {
             enum General {
-                static let title: String = ""
-                static let color: UIColor = .whiteColor
+                static let title: String = "Toasts"
+                static let color: UIColor = .brandColor
             }
         }
     }
     // MARK: - Properties
-    
+
     // MARK: - Outlets
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        viewModel.showLoading()
     }
     
     // MARK: - UI Functions
     private func configUI() {
         configBasic(Constants.Base.General.title, Constants.Base.General.color)
-        configConstraints()
+        configConstraints()        
+        suscribeToToast()
     }
     private func configConstraints() {
-        
+
     }
 }

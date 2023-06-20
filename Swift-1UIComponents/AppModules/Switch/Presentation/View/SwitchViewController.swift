@@ -30,7 +30,7 @@ class SwitchViewController: BaseViewController<SwitchViewModel> {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
-        stackView.spacing = UiConstants.smallSpace
+        stackView.spacing = UiConstants.SMALL_SPACE
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -65,13 +65,13 @@ class SwitchViewController: BaseViewController<SwitchViewModel> {
         let mainStackViewConstraints = [
             mainStackView.topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor,
-                constant: UiConstants.smallSpace),
+                constant: UiConstants.SMALL_SPACE),
             mainStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             mainStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE)
         ]
         NSLayoutConstraint.activate(mainStackViewConstraints)
     }

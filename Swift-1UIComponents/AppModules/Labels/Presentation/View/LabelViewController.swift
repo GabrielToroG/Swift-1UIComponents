@@ -110,10 +110,10 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
 
     func configDifferentStyles() {
         let firstText = ("label.different.styles.first".localized()).mutableAttribute
-        firstText.set(foreground: .black)
+        firstText.set(foreground: .blackColor)
         firstText.set(font: .montserratSemibold18)
         let secondText = ("label.different.styles.second".localized()).mutableAttribute
-        secondText.set(foreground: .black)
+        secondText.set(foreground: .blackColor)
         secondText.set(font: .montserratRegular14)
         firstText.append(secondText)
         differentStyleLabel.attributedText = firstText
@@ -139,44 +139,44 @@ class LabelsViewController: BaseViewController<LabelsViewModel> {
         let strikethroughLabelConstraints = [
             strikethroughLabel.topAnchor.constraint(
                 equalTo: containerView.topAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             strikethroughLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             strikethroughLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE)
         ]
         let maxWidthLeftLabelConstraints = [
             maxWidthLeftLabel.topAnchor.constraint(
                 equalTo: strikethroughLabel.bottomAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             maxWidthLeftLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             maxWidthLeftLabel.widthAnchor.constraint(
-                lessThanOrEqualToConstant: UiConstants.normalWidth)
+                lessThanOrEqualToConstant: UiConstants.MAX_WIDTH_LABEL)
         ]
         let maxWidthRightLabelConstraints = [
             maxWidthRightLabel.centerYAnchor.constraint(
                 equalTo: maxWidthLeftLabel.centerYAnchor),
             maxWidthRightLabel.leadingAnchor.constraint(
                 equalTo: maxWidthLeftLabel.trailingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             maxWidthRightLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE)
         ]
         let differentStyleLabelConstraints = [
             differentStyleLabel.topAnchor.constraint(
                 equalTo: maxWidthLeftLabel.bottomAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             differentStyleLabel.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             differentStyleLabel.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: UiConstants.normalSpace)
+                constant: UiConstants.NORMAL_SPACE)
         ]
 
         NSLayoutConstraint.activate(

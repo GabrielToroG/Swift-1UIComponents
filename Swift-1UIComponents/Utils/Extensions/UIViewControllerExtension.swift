@@ -42,7 +42,7 @@ extension UIViewController {
     /// Función para configurar el titulo, color y fuente de la navegación
     func configNavigationHeader(
         title: String = "",
-        titleColor: UIColor = UIColor.white,
+        titleColor: UIColor = UIColor.whiteColor,
         titleFont: UIFont = UIFont.montserratRegular17
     ) {
         self.title = title // Set title of navigation

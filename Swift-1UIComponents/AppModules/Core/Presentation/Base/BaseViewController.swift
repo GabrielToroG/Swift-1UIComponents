@@ -22,6 +22,12 @@ open class BaseViewController<V: BaseViewModel>: UIViewController {
         loaderView.translatesAutoresizingMaskIntoConstraints = false
         return loaderView
     }()
+    private lazy var toastView: ToastView = {
+        let toastView = ToastView()
+        toastView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)
+        toastView.translatesAutoresizingMaskIntoConstraints = false
+        return toastView
+    }()
 
     public init(
         _ viewModel: V,
@@ -53,7 +59,7 @@ open class BaseViewController<V: BaseViewModel>: UIViewController {
         view.endEditing(true)
     }
     
-    // MARK: -
+    // MARK: - Loader
     private func showLoading(_ value: Bool) {
         if value {
             addLoadConstraint()
@@ -92,6 +98,46 @@ open class BaseViewController<V: BaseViewModel>: UIViewController {
         viewModel.isLoading.sink { _ in } receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.showLoading(value)
+        }.store(in: &anyCancellable)
+    }
+
+    // MARK: - Toast
+    private func showToast(_ value: Bool) {
+        if value {
+            addToastConstraints()
+        } else {
+            removeToastConstraints()
+        }
+    }
+    
+    private func addToastConstraints() {
+        view.addSubview(toastView)
+
+        let toastViewConstraints = [
+            toastView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            toastView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            toastView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ]
+
+        NSLayoutConstraint.activate(toastViewConstraints)
+    }
+    
+    private func removeToastConstraints() {
+        let toastViewConstraints = [
+            toastView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            toastView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            toastView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ]
+
+        NSLayoutConstraint.deactivate(toastViewConstraints)
+
+        toastView.removeFromSuperview()
+    }
+
+    public func suscribeToToast() {
+        viewModel.isTopToast.sink { _ in } receiveValue: { [weak self] value in
+            guard let self = self else { return }
+            self.showToast(value)
         }.store(in: &anyCancellable)
     }
 }

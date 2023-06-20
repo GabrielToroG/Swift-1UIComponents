@@ -11,7 +11,20 @@ class CircleButton: UIView {
     private enum Constants {
         enum View {
             enum Container {
-                static let heightAnchor: CGFloat = 300
+                static let color: UIColor = .brownColor
+                static let cornerRadius: CGFloat = UiConstants.SMALL_BUTTON_RADIUS
+                static let topAnchor: CGFloat = UiConstants.NO_SPACE
+                static let bottomAnchor: CGFloat = UiConstants.NO_SPACE
+                static let heightAnchor: CGFloat = UiConstants.SMALL_BUTTON_SIZE
+                static let widthAnchor: CGFloat = UiConstants.SMALL_BUTTON_SIZE
+            }
+        }
+        enum Button {
+            enum Circle {
+                static let topAnchor: CGFloat = UiConstants.TINY_SPACE
+                static let leadingAnchor: CGFloat = UiConstants.TINY_SPACE
+                static let trailingAnchor: CGFloat = -UiConstants.TINY_SPACE
+                static let bottomAnchor: CGFloat = -UiConstants.TINY_SPACE
             }
         }
     }
@@ -19,8 +32,8 @@ class CircleButton: UIView {
     // MARK: - Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .brownColor
-        view.layer.cornerRadius = UiConstants.bigSpace
+        view.backgroundColor = Constants.View.Container.color
+        view.layer.cornerRadius = Constants.View.Container.cornerRadius
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -50,11 +63,11 @@ class CircleButton: UIView {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
+        configUI()
     }
 
     // MARK: - UI Functions
-    func setupUI() {
+    func configUI() {
         configConstraints()
     }
 
@@ -63,30 +76,32 @@ class CircleButton: UIView {
         containerView.addSubview(circleButton)
 
         let containerViewConstraints = [
-            containerView.topAnchor.constraint(
-                equalTo: topAnchor),
-            containerView.bottomAnchor.constraint(
-                equalTo: bottomAnchor),
             containerView.centerXAnchor.constraint(
                 equalTo: centerXAnchor),
+            containerView.topAnchor.constraint(
+                equalTo: topAnchor,
+                constant: Constants.View.Container.topAnchor),
+            containerView.bottomAnchor.constraint(
+                equalTo: bottomAnchor,
+                constant: Constants.View.Container.bottomAnchor),
             containerView.widthAnchor.constraint(
-                equalToConstant: UiConstants.superXLSpace),
+                equalToConstant: Constants.View.Container.widthAnchor),
             containerView.heightAnchor.constraint(
-                equalToConstant: UiConstants.superXLSpace)
+                equalToConstant: Constants.View.Container.heightAnchor)
         ]
         let circleButtonConstraints = [
             circleButton.topAnchor.constraint(
                 equalTo: containerView.topAnchor,
-                constant: UiConstants.tinySpace),
+                constant: Constants.Button.Circle.topAnchor),
             circleButton.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: UiConstants.tinySpace),
+                constant: Constants.Button.Circle.leadingAnchor),
             circleButton.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -UiConstants.tinySpace),
+                constant: Constants.Button.Circle.trailingAnchor),
             circleButton.bottomAnchor.constraint(
                 equalTo: containerView.bottomAnchor,
-                constant: -UiConstants.tinySpace),
+                constant: Constants.Button.Circle.bottomAnchor),
         ]
 
         NSLayoutConstraint.activate(

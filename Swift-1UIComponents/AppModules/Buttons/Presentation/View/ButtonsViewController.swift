@@ -25,14 +25,14 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
             enum LeftImage {
                 static let text: String = "button.left.image.button".localized()
                 static let image: UIImage? = UIImage(systemName: "chevron.left")
-                static let imagePadding: CGFloat = UiConstants.tinySpace
+                static let imagePadding: CGFloat = UiConstants.TINY_SPACE
                 static let textColor: UIColor = .systemGray
                 static let color: UIColor = .clear
             }
             enum RightImage {
                 static let text: String = "button.right.image.button".localized()
                 static let image: UIImage? = UIImage(systemName: "chevron.right")
-                static let imagePadding: CGFloat = UiConstants.tinySpace
+                static let imagePadding: CGFloat = UiConstants.TINY_SPACE
                 static let textColor: UIColor = .systemGray
                 static let color: UIColor = .clear
             }
@@ -43,24 +43,32 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = UiConstants.normalSpace
+        stackView.spacing = UiConstants.NORMAL_SPACE
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    private lazy var primaryButton: FillerButton = {
-        let button = FillerButton()
-        button.item = .init(
-            title: Constants.Button.Primary.text)
+    private lazy var filledButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .filled)
+        button.setTitle("Filled Button", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    private lazy var secondaryButton: BorderButton = {
-        let button = BorderButton()
-        button.item = .init(
-            title: Constants.Button.Primary.text)
+    private lazy var filledShadowButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .shadowFilled)
+        button.setTitle("Filled Shadow Button", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    private lazy var borderedButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .bordered)
+        button.setTitle("Bordered Button", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+//    private lazy var
     private lazy var circleButton: CircleButton = {
         let button = CircleButton()
         button.item = .init()
@@ -91,6 +99,7 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -106,8 +115,9 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
 
     private func configConstraints() {
         view.addSubview(mainStackView)
-        mainStackView.addArrangedSubview(primaryButton)
-        mainStackView.addArrangedSubview(secondaryButton)
+        mainStackView.addArrangedSubview(filledButton)
+        mainStackView.addArrangedSubview(filledShadowButton)
+        mainStackView.addArrangedSubview(borderedButton)
         mainStackView.addArrangedSubview(circleButton)
         mainStackView.addArrangedSubview(leftImageButton)
         mainStackView.addArrangedSubview(rightImageButton)
@@ -117,10 +127,10 @@ class ButtonsViewController: BaseViewController<ButtonsViewModel> {
                 equalTo: view.safeAreaLayoutGuide.topAnchor),
             mainStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             mainStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-                constant: -UiConstants.normalSpace)
+                constant: -UiConstants.NORMAL_SPACE)
         ]
 
         NSLayoutConstraint.activate(mainStackViewConstraints)

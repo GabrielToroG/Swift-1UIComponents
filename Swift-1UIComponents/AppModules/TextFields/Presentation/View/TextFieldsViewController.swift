@@ -33,7 +33,7 @@ class TextFieldsViewController: BaseViewController<TextFieldsViewModel> {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
-        stackView.spacing = UiConstants.smallSpace
+        stackView.spacing = UiConstants.SMALL_SPACE
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -132,16 +132,16 @@ class TextFieldsViewController: BaseViewController<TextFieldsViewModel> {
         let mainStackViewConstraints = [
             mainStackView.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: UiConstants.smallSpace),
+                constant: UiConstants.SMALL_SPACE),
             mainStackView.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: UiConstants.normalSpace),
+                constant: UiConstants.NORMAL_SPACE),
             mainStackView.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: -UiConstants.normalSpace),
+                constant: -UiConstants.NORMAL_SPACE),
             mainStackView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -UiConstants.smallSpace)
+                constant: -UiConstants.SMALL_SPACE)
         ]
         let rutTextFieldConstraints = [
             rutTextField.leadingAnchor.constraint(
