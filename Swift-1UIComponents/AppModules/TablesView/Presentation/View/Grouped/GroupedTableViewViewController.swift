@@ -31,8 +31,13 @@ class GroupedTableViewViewController: BaseViewController<GroupedTableViewViewMod
     }
 
     // MARK: - Properties
-    private let data = ["Cell", "Cell", "Cell", "Cell"]
-    private var groupTableViewHeaderView = GroupTableViewHeaderView()
+    private let dataSource: [UiGroupedTableOption] = [
+        UiGroupedTableOption(title: "Cell"),
+        UiGroupedTableOption(title: "Cell"),
+        UiGroupedTableOption(title: "Cell"),
+        UiGroupedTableOption(title: "Cell")
+    ]
+    private var groupedTableViewHeaderView = GroupedTableViewHeaderView()
 
     // MARK: - Outlets
     /// En un TableView Grouped:
@@ -41,12 +46,13 @@ class GroupedTableViewViewController: BaseViewController<GroupedTableViewViewMod
     private lazy var groupedTableView: UITableView = {
         let view = UIView()
         let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = Constants.TableView.Grouped.color
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         // Para eliminar footer de las secciones
         view.frame.size.height = .leastNonzeroMagnitude
         tableView.tableFooterView = view
         tableView.estimatedSectionFooterHeight = .zero
-        tableView.backgroundColor = Constants.TableView.Grouped.color
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
 
@@ -80,9 +86,10 @@ class GroupedTableViewViewController: BaseViewController<GroupedTableViewViewMod
     }
 
     private func configTableView() {
-        groupedTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        groupTableViewHeaderView.count = data.count
-        groupedTableView.setAndLayoutTableHeaderView(header: groupTableViewHeaderView)
+        groupedTableViewHeaderView.count = dataSource.count
+        groupedTableView.setAndLayoutTableHeaderView(header: groupedTableViewHeaderView)
+        groupedTableView.registerCellClass(for: GroupedTableViewItemCell.self)
+        groupedTableView.registerCellClass(for: GroupedTableViewNotItemCell.self)
     }
 
     private func configDelegates() {
@@ -117,7 +124,7 @@ private extension GroupedTableViewViewController {
 // MARK: - TableView Delegate
 extension GroupedTableViewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        dataSource.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         Constants.TableView.Grouped.numberOfSections
@@ -132,8 +139,14 @@ extension GroupedTableViewViewController: UITableViewDelegate, UITableViewDataSo
         Constants.TableView.Grouped.heightForFooterInSection // Elimina margen inferior sección
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(data[indexPath.row]) \(indexPath)"
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(with: GroupedTableViewItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(with: GroupedTableViewNotItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        }
     }
 }

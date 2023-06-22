@@ -1,5 +1,5 @@
 //
-//  InsetGroupTableViewHeaderView.swift
+//  GroupedTableViewHeaderView.swift
 //  Swift-1UIComponents
 //
 //  Created by Gabriel Alonso Toro Guzmán on 22-06-23.
@@ -8,12 +8,11 @@
 import UIKit
 
 // MARK: - Class
-final class InsetGroupTableViewHeaderView: UIView {
+final class GroupedTableViewHeaderView: UIView {
     private enum Constants {
         enum View {
             enum Container {
                 static let color: UIColor = .brownColor
-                static let radius: CGFloat = 4
             }
         }
         enum Label {
@@ -27,7 +26,6 @@ final class InsetGroupTableViewHeaderView: UIView {
     // Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = Constants.View.Container.radius
         view.backgroundColor = Constants.View.Container.color
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -63,7 +61,7 @@ final class InsetGroupTableViewHeaderView: UIView {
 }
 
 // MARK: - UI Functions
-private extension InsetGroupTableViewHeaderView {
+private extension GroupedTableViewHeaderView {
     private func configUI() {
         configConstraints()
     }
@@ -76,11 +74,9 @@ private extension InsetGroupTableViewHeaderView {
             containerView.topAnchor.constraint(
                 equalTo: topAnchor),
             containerView.leadingAnchor.constraint(
-                equalTo: leadingAnchor,
-                constant: UiConstants.NORMAL_SPACE),
+                equalTo: leadingAnchor),
             containerView.trailingAnchor.constraint(
-                equalTo: trailingAnchor,
-                constant: -UiConstants.NORMAL_SPACE),
+                equalTo: trailingAnchor),
             containerView.bottomAnchor.constraint(
                 equalTo: bottomAnchor),
         ]

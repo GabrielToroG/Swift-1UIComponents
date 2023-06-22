@@ -43,8 +43,14 @@
 		7F1C02A42A2C62BD00213934 /* ToastModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C02A32A2C62BD00213934 /* ToastModule.swift */; };
 		7F1C02A92A2C631F00213934 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C02A82A2C631F00213934 /* ToastViewModel.swift */; };
 		7F1C02AB2A2C633600213934 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C02AA2A2C633600213934 /* ToastViewController.swift */; };
-		7F1EC5A12A4418420013440D /* GroupTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A02A4418420013440D /* GroupTableViewHeaderView.swift */; };
-		7F1EC5A32A4419030013440D /* InsetGroupTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A22A4419030013440D /* InsetGroupTableViewHeaderView.swift */; };
+		7F1EC5A12A4418420013440D /* GroupedTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A02A4418420013440D /* GroupedTableViewHeaderView.swift */; };
+		7F1EC5A32A4419030013440D /* InsetGroupedTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A22A4419030013440D /* InsetGroupedTableViewHeaderView.swift */; };
+		7F1EC5A52A441DA50013440D /* PlainTableViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A42A441DA50013440D /* PlainTableViewItemCell.swift */; };
+		7F1EC5A72A4427D20013440D /* PlainTableViewNotItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A62A4427D20013440D /* PlainTableViewNotItemCell.swift */; };
+		7F1EC5A92A4431180013440D /* GroupedTableViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5A82A4431180013440D /* GroupedTableViewItemCell.swift */; };
+		7F1EC5AB2A4431B90013440D /* GroupedTableViewNotItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5AA2A4431B90013440D /* GroupedTableViewNotItemCell.swift */; };
+		7F1EC5AD2A4436170013440D /* InsetGroupedTableViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5AC2A4436170013440D /* InsetGroupedTableViewItemCell.swift */; };
+		7F1EC5AF2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC5AE2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift */; };
 		7F1F25A22A1C0C9C0030C0D7 /* RutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F25A12A1C0C9C0030C0D7 /* RutHelper.swift */; };
 		7F21799F2A4151B90009D1E9 /* TablesViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F21799E2A4151B90009D1E9 /* TablesViewModule.swift */; };
 		7F2179A42A41526D0009D1E9 /* PlainTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2179A32A41526D0009D1E9 /* PlainTableViewViewModel.swift */; };
@@ -124,8 +130,14 @@
 		7F1C02A32A2C62BD00213934 /* ToastModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModule.swift; sourceTree = "<group>"; };
 		7F1C02A82A2C631F00213934 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
 		7F1C02AA2A2C633600213934 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
-		7F1EC5A02A4418420013440D /* GroupTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewHeaderView.swift; sourceTree = "<group>"; };
-		7F1EC5A22A4419030013440D /* InsetGroupTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupTableViewHeaderView.swift; sourceTree = "<group>"; };
+		7F1EC5A02A4418420013440D /* GroupedTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewHeaderView.swift; sourceTree = "<group>"; };
+		7F1EC5A22A4419030013440D /* InsetGroupedTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedTableViewHeaderView.swift; sourceTree = "<group>"; };
+		7F1EC5A42A441DA50013440D /* PlainTableViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTableViewItemCell.swift; sourceTree = "<group>"; };
+		7F1EC5A62A4427D20013440D /* PlainTableViewNotItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTableViewNotItemCell.swift; sourceTree = "<group>"; };
+		7F1EC5A82A4431180013440D /* GroupedTableViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewItemCell.swift; sourceTree = "<group>"; };
+		7F1EC5AA2A4431B90013440D /* GroupedTableViewNotItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewNotItemCell.swift; sourceTree = "<group>"; };
+		7F1EC5AC2A4436170013440D /* InsetGroupedTableViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedTableViewItemCell.swift; sourceTree = "<group>"; };
+		7F1EC5AE2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedTableViewNotItemCell.swift; sourceTree = "<group>"; };
 		7F1F25A12A1C0C9C0030C0D7 /* RutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutHelper.swift; sourceTree = "<group>"; };
 		7F21799E2A4151B90009D1E9 /* TablesViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewModule.swift; sourceTree = "<group>"; };
 		7F2179A32A41526D0009D1E9 /* PlainTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTableViewViewModel.swift; sourceTree = "<group>"; };
@@ -259,8 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				7F33F2532A0C585500062E8A /* Font */,
-				7F0E385A2A00C5F100F24809 /* Assets.xcassets */,
 				7F0E38A62A00DFC000F24809 /* Localizable.strings */,
+				7F0E385A2A00C5F100F24809 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -386,13 +398,13 @@
 		7F0E389B2A00D31800F24809 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */,
 				7F0E38A82A00E0AE00F24809 /* StringExtension.swift */,
 				7F33F25E2A0C682000062E8A /* UIFontExtension.swift */,
-				7F4530A52A0F34F200A91782 /* UITextFieldExtension.swift */,
-				7F2EEA592A206E50002255D4 /* UIViewControllerExtension.swift */,
 				7F13090A2A22B7A60063174D /* UIColorExtension.swift */,
 				7F2AC5FB2A2FFC2D0042F1EA /* UIButtonExtension.swift */,
+				7F4530A52A0F34F200A91782 /* UITextFieldExtension.swift */,
+				7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */,
+				7F2EEA592A206E50002255D4 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -577,7 +589,7 @@
 			children = (
 				7F2179A92A4175E50009D1E9 /* Plain */,
 				7F2179AA2A4175F10009D1E9 /* Grouped */,
-				7F2CF6C22A42DD1E007345BA /* InsetGropued */,
+				7F2CF6C22A42DD1E007345BA /* InsetGrouped */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +618,8 @@
 			children = (
 				7F2179A52A4152800009D1E9 /* PlainTableViewViewController.swift */,
 				7F2179A72A415CB10009D1E9 /* PlainTableViewHeaderView.swift */,
+				7F1EC5A42A441DA50013440D /* PlainTableViewItemCell.swift */,
+				7F1EC5A62A4427D20013440D /* PlainTableViewNotItemCell.swift */,
 			);
 			path = Plain;
 			sourceTree = "<group>";
@@ -614,7 +628,9 @@
 			isa = PBXGroup;
 			children = (
 				7F2179AB2A4176090009D1E9 /* GroupedTableViewViewController.swift */,
-				7F1EC5A02A4418420013440D /* GroupTableViewHeaderView.swift */,
+				7F1EC5A02A4418420013440D /* GroupedTableViewHeaderView.swift */,
+				7F1EC5A82A4431180013440D /* GroupedTableViewItemCell.swift */,
+				7F1EC5AA2A4431B90013440D /* GroupedTableViewNotItemCell.swift */,
 			);
 			path = Grouped;
 			sourceTree = "<group>";
@@ -720,13 +736,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7F2CF6C22A42DD1E007345BA /* InsetGropued */ = {
+		7F2CF6C22A42DD1E007345BA /* InsetGrouped */ = {
 			isa = PBXGroup;
 			children = (
 				7F2CF6C32A42DD36007345BA /* InsetGroupedTableViewViewController.swift */,
-				7F1EC5A22A4419030013440D /* InsetGroupTableViewHeaderView.swift */,
+				7F1EC5A22A4419030013440D /* InsetGroupedTableViewHeaderView.swift */,
+				7F1EC5AC2A4436170013440D /* InsetGroupedTableViewItemCell.swift */,
+				7F1EC5AE2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift */,
 			);
-			path = InsetGropued;
+			path = InsetGrouped;
 			sourceTree = "<group>";
 		};
 		7F2EEA512A201061002255D4 /* Base */ = {
@@ -1025,6 +1043,7 @@
 				7F4530A42A0F2EC600A91782 /* LabeledTextFieldView.swift in Sources */,
 				7F0E38822A00CC0300F24809 /* BaseViewController.swift in Sources */,
 				7FC1504C2A2BFB1200638688 /* CircleButtonArgs.swift in Sources */,
+				7F1EC5AD2A4436170013440D /* InsetGroupedTableViewItemCell.swift in Sources */,
 				7F0E38872A00CD1800F24809 /* LoaderView.swift in Sources */,
 				7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */,
 				7F21799F2A4151B90009D1E9 /* TablesViewModule.swift in Sources */,
@@ -1032,6 +1051,7 @@
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
 				7F0E38972A00D04B00F24809 /* HomeModule.swift in Sources */,
 				7F33F24E2A0C0A5500062E8A /* LabelViewModel.swift in Sources */,
+				7F1EC5AF2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift in Sources */,
 				7F1309122A22ED380063174D /* ImagesViewController.swift in Sources */,
 				7F2CF6C42A42DD36007345BA /* InsetGroupedTableViewViewController.swift in Sources */,
 				7F2AC5ED2A2FF15B0042F1EA /* ViewWithShadow.swift in Sources */,
@@ -1041,10 +1061,12 @@
 				7F21917F2A241EA1000EE324 /* SwitchViewModel.swift in Sources */,
 				7FC1504A2A2BF62200638688 /* CircleButton.swift in Sources */,
 				7F2CF6C12A42DD05007345BA /* InsetGroupedTableViewViewModel.swift in Sources */,
+				7F1EC5AB2A4431B90013440D /* GroupedTableViewNotItemCell.swift in Sources */,
 				7F1BB91D2A0E98F700CC2BE9 /* ButtonsModule.swift in Sources */,
-				7F1EC5A12A4418420013440D /* GroupTableViewHeaderView.swift in Sources */,
+				7F1EC5A12A4418420013440D /* GroupedTableViewHeaderView.swift in Sources */,
 				7F0E38A92A00E0AE00F24809 /* StringExtension.swift in Sources */,
 				7F0E38712A00CA2800F24809 /* CoordinatorProtocol.swift in Sources */,
+				7F1EC5A52A441DA50013440D /* PlainTableViewItemCell.swift in Sources */,
 				7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */,
 				7F4530A02A0F02A300A91782 /* TextFieldsModule.swift in Sources */,
 				7F2AC5EF2A2FF1DB0042F1EA /* ViewWithShadowArgs.swift in Sources */,
@@ -1069,12 +1091,14 @@
 				7F1C02A42A2C62BD00213934 /* ToastModule.swift in Sources */,
 				7F1B47EB2A2DB9C400A729FB /* ToastView.swift in Sources */,
 				7F0E38522A00C5EE00F24809 /* AppDelegate.swift in Sources */,
+				7F1EC5A72A4427D20013440D /* PlainTableViewNotItemCell.swift in Sources */,
 				7F0E387B2A00CAD100F24809 /* NotificationCenterWrapperImpl.swift in Sources */,
 				7F1309142A22EDE70063174D /* ImagesViewModel.swift in Sources */,
 				7F0E38912A00CF0600F24809 /* HomeViewController.swift in Sources */,
 				7F0E38A02A00D90400F24809 /* UiConstants.swift in Sources */,
 				7F21917D2A241E35000EE324 /* SwitchViewController.swift in Sources */,
 				7F45309E2A0F028B00A91782 /* TextFieldsViewController.swift in Sources */,
+				7F1EC5A92A4431180013440D /* GroupedTableViewItemCell.swift in Sources */,
 				7F1BB9222A0E997E00CC2BE9 /* ButtonsViewController.swift in Sources */,
 				7F1C02A92A2C631F00213934 /* ToastViewModel.swift in Sources */,
 				7F0E38772A00CAA900F24809 /* MainModule.swift in Sources */,
@@ -1082,7 +1106,7 @@
 				7F0E38542A00C5EE00F24809 /* SceneDelegate.swift in Sources */,
 				7F3C61102A1340A500F4F2EC /* LabeledTextFieldViewArgs.swift in Sources */,
 				7F0E38892A00CD5200F24809 /* ProgressBarView.swift in Sources */,
-				7F1EC5A32A4419030013440D /* InsetGroupTableViewHeaderView.swift in Sources */,
+				7F1EC5A32A4419030013440D /* InsetGroupedTableViewHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

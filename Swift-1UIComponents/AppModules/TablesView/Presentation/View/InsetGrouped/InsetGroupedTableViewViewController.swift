@@ -29,8 +29,13 @@ class InsetGroupedTableViewViewController: BaseViewController<InsetGroupedTableV
     }
 
     // MARK: - Properties
-    private let data = ["Cell", "Cell", "Cell", "Cell"]
-    private var insetGroupTableViewHeaderView = InsetGroupTableViewHeaderView()
+    private let dataSource: [UiInsetGroupedTableOption] = [
+        UiInsetGroupedTableOption(title: "Cell"),
+        UiInsetGroupedTableOption(title: "Cell"),
+        UiInsetGroupedTableOption(title: "Cell"),
+        UiInsetGroupedTableOption(title: "Cell")
+    ]
+    private var insetGroupedTableViewHeaderView = InsetGroupedTableViewHeaderView()
 
     // MARK: - Outlets
     /// En un TableView InsetGrouped:
@@ -65,9 +70,10 @@ class InsetGroupedTableViewViewController: BaseViewController<InsetGroupedTableV
     }
 
     private func configTableView() {
-        insetGroupedTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        insetGroupTableViewHeaderView.count = data.count
-        insetGroupedTableView.setAndLayoutTableHeaderView(header: insetGroupTableViewHeaderView)
+        insetGroupedTableViewHeaderView.count = dataSource.count
+        insetGroupedTableView.setAndLayoutTableHeaderView(header: insetGroupedTableViewHeaderView)
+        insetGroupedTableView.registerCellClass(for: InsetGroupedTableViewItemCell.self)
+        insetGroupedTableView.registerCellClass(for: InsetGroupedTableViewNotItemCell.self)
     }
 
     private func configDelegates() {
@@ -94,7 +100,7 @@ class InsetGroupedTableViewViewController: BaseViewController<InsetGroupedTableV
 // MARK: - TableView Delegate
 extension InsetGroupedTableViewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        dataSource.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         Constants.TableView.InsetGrouped.numberOfSections
@@ -109,8 +115,14 @@ extension InsetGroupedTableViewViewController: UITableViewDelegate, UITableViewD
         Constants.TableView.InsetGrouped.heightForFooterInSection // Elimina margen inferior sección
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(data[indexPath.row]) \(indexPath)"
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(with: InsetGroupedTableViewItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(with: InsetGroupedTableViewNotItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        }
     }
 }

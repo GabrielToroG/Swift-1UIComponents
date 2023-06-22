@@ -12,7 +12,7 @@ class PlainTableViewViewController: BaseViewController<PlainTableViewViewModel> 
     private enum Constants {
         enum Base {
             enum General {
-                static let color: UIColor = .white
+                static let color: UIColor = .grayColor
                 static let title: String = "Plain Table"
                 static let rightTitle: String = "Grouped"
             }
@@ -28,7 +28,12 @@ class PlainTableViewViewController: BaseViewController<PlainTableViewViewModel> 
     }
 
     // Properties
-    private let data = ["Cell", "Cell", "Cell", "Cell"]
+    private let dataSource: [UiPlainTableOption] = [
+        UiPlainTableOption(title: "Cell"),
+        UiPlainTableOption(title: "Cell"),
+        UiPlainTableOption(title: "Cell"),
+        UiPlainTableOption(title: "Cell")
+    ]
     private var plainTableViewHeaderView = PlainTableViewHeaderView()
 
     // Outlets
@@ -37,6 +42,8 @@ class PlainTableViewViewController: BaseViewController<PlainTableViewViewModel> 
     /// 2) No funciona eliminar el margen inferior de las secciones
     private lazy var plainTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.separatorStyle = .none
+//        tableView.isUserInteractionEnabled = false
         tableView.backgroundColor = Constants.TableView.Plain.color
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -74,9 +81,10 @@ private extension PlainTableViewViewController {
     }
 
     private func configTableView() {
-        plainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        plainTableViewHeaderView.count = data.count
+        plainTableViewHeaderView.count = dataSource.count
         plainTableView.setAndLayoutTableHeaderView(header: plainTableViewHeaderView)
+        plainTableView.registerCellClass(for: PlainTableViewItemCell.self)
+        plainTableView.registerCellClass(for: PlainTableViewNotItemCell.self)
     }
 
     private func configDelegates() {
@@ -111,7 +119,7 @@ private extension PlainTableViewViewController {
 // MARK: - TableView Delegate
 extension PlainTableViewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        dataSource.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         Constants.TableView.Plain.numberOfSections
@@ -123,8 +131,14 @@ extension PlainTableViewViewController: UITableViewDelegate, UITableViewDataSour
         Constants.TableView.Plain.heightForHeaderInSection
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(data[indexPath.row]) \(indexPath)"
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(with: PlainTableViewItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(with: PlainTableViewNotItemCell.self, for: indexPath)
+            cell.item = dataSource[indexPath.row]
+            return cell
+        }
     }
 }
