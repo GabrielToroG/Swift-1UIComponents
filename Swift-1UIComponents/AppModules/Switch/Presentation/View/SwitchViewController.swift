@@ -62,6 +62,7 @@ class SwitchViewController: BaseViewController<SwitchViewModel> {
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(mainSwitchLabel)
         mainStackView.addArrangedSubview(mainSwitch)
+
         let mainStackViewConstraints = [
             mainStackView.topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor,
@@ -73,6 +74,7 @@ class SwitchViewController: BaseViewController<SwitchViewModel> {
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
                 constant: -UiConstants.NORMAL_SPACE)
         ]
+
         NSLayoutConstraint.activate(mainStackViewConstraints)
     }
     

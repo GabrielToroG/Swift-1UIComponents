@@ -109,7 +109,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 6:
             coordinator.pushViewController(newViewControllerType: ViewsViewController.self)
         case 7:
-            coordinator.pushViewController(newViewControllerType: TablesViewViewController.self)
+            coordinator.pushViewController(newViewControllerType: PlainTableViewViewController.self)
         default:
             print("")
         }

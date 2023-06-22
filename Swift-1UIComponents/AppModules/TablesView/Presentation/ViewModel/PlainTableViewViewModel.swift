@@ -1,5 +1,5 @@
 //
-//  TablesViewViewModel.swift
+//  PlainTableViewViewModel.swift
 //  Swift-1UIComponents
 //
 //  Created by Gabriel Alonso Toro Guzmán on 19-06-23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TablesViewViewModel: BaseViewModel {
+class PlainTableViewViewModel: BaseViewModel {
     // MARK: -
     // MARK: -
 }

@@ -37,15 +37,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func configNavigationController(_ navController: UINavigationController) {
+        // Cambiar estilos al botón "Back"
+        let backButtonAppearance = UIBarButtonItemAppearance()
+        backButtonAppearance.normal.titleTextAttributes = [
+            .font: UIFont.montserratRegular16,
+            .foregroundColor: UIColor.blackColor
+        ]
+
+        // Cambiar estilos
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.blackColor,
             NSAttributedString.Key.font: UIFont.montserratSemibold16,
         ]
         standardAppearance.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.blackColor,
             NSAttributedString.Key.font: UIFont.montserratSemibold30,
         ]
+        standardAppearance.backButtonAppearance = backButtonAppearance
         standardAppearance.configureWithOpaqueBackground()          // So that it does not become lighter
         standardAppearance.backgroundColor = UIColor.brandColor
         standardAppearance.shadowColor = .clear                     // delete border bottom

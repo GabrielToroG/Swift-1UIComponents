@@ -16,4 +16,6 @@ extension UIColor {
     static let brownColor = UIColor(named: "brownColor")!
     /// hex: FFFFFF
     static let whiteColor = UIColor(named: "whiteColor")!
+    /// hex: F6F6F6
+    static let grayColor = UIColor(named: "grayColor")!
 }
