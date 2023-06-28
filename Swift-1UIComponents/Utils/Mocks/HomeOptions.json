@@ -1,0 +1,14 @@
+{
+    "options": [
+        {"icon":"home.label.option", "title":"home.label.option"},
+        {"icon":"home.button.option", "title":"home.button.option"},
+        {"icon":"home.textfield.option", "title":"home.textfield.option"},
+        {"icon":"home.switch.option", "title":"home.switch.option"},
+        {"icon":"home.image.option", "title":"home.image.option"},
+        {"icon":"home.toast.option", "title":"home.toast.option"},
+        {"icon":"home.view.option", "title":"home.view.option"},
+        {"icon":"home.table.option", "title":"home.table.option"},
+        {"icon":"home.collection.option", "title":"home.collection.option"},
+        {"icon":"home.web.option", "title":"home.web.option"}
+    ]
+}

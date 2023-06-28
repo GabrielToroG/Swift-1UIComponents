@@ -8,7 +8,18 @@
 import Swinject
 
 class ImagesModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+extension ImagesModule {
+    func injectPresentation() {
         container.register(ImagesViewModel.self) { _ in
             ImagesViewModel()
         }

@@ -8,7 +8,18 @@
 import Swinject
 
 class ViewsModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+private extension ViewsModule {
+    func injectPresentation() {
         container.register(ViewsViewModel.self) { _ in
             ViewsViewModel()
         }

@@ -20,16 +20,16 @@ final class Injection {
     }
 
     private func injectDependencies() {
-        MainModule.register(container)
-        HomeModule.register(container)
-        LabelsModule.register(container)
-        ButtonsModule.register(container)
-        TextFieldsModule.register(container)
-        SwitchModule.register(container)
-        ImagesModule.register(container)
-        ToastModule.register(container)
-        ViewsModule.register(container)
-        TablesViewModule.register(container)
+        MainModule(container).inject()
+        HomeModule(container).inject()
+        LabelsModule(container).inject()
+        ButtonsModule(container).inject()
+        TextFieldsModule(container).inject()
+        SwitchModule(container).inject()
+        ImagesModule(container).inject()
+        ToastModule(container).inject()
+        ViewsModule(container).inject()
+        TablesViewModule(container).inject()
     }
     
     func getContainer() -> Container {

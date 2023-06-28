@@ -9,7 +9,18 @@ import Foundation
 import Swinject
 
 class TextFieldsModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+extension TextFieldsModule {
+    func injectPresentation() {
         container.register(TextFieldsViewModel.self) { _ in
             TextFieldsViewModel()
         }

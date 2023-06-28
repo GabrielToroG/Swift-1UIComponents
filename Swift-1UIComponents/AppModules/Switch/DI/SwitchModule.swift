@@ -8,7 +8,18 @@
 import Swinject
 
 class SwitchModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+extension SwitchModule {
+    func injectPresentation() {
         container.register(SwitchViewModel.self) { _ in
             SwitchViewModel()
         }

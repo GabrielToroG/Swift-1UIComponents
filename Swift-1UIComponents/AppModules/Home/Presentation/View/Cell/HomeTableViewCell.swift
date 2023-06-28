@@ -7,10 +7,6 @@
 
 import UIKit
 
-struct UiHomeOption {
-    let icon: String
-    let title: String
-}
 
 class HomeTableViewCell: UITableViewCell {
     private enum Constants {
@@ -58,7 +54,7 @@ class HomeTableViewCell: UITableViewCell {
         didSet {
             guard let item = item else { return }
             optionImageView.image = UIImage(named: item.icon)
-            optionLabel.text = item.title
+            optionLabel.text = item.title.localized()
         }
     }
 

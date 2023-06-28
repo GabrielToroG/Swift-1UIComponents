@@ -8,7 +8,18 @@
 import Swinject
 
 class ToastModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+private extension ToastModule {
+    func injectPresentation() {
         container.register(ToastViewModel.self) { _ in
             ToastViewModel()
         }

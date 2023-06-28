@@ -10,7 +10,18 @@ import Foundation
 import Swinject
 
 class TablesViewModule {
-    static func register(_ container: Container) {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+private extension TablesViewModule {
+    func injectPresentation() {
         container.register(PlainTableViewViewModel.self) { _ in
             PlainTableViewViewModel()
         }

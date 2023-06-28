@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: BaseViewController<HomeViewModel> {
     private enum Constants {
@@ -23,18 +24,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     }
 
     // MARK: - Properties
-    let dataSource: [UiHomeOption] = [
-        UiHomeOption(icon: "home.label.option", title: "home.label.option".localized()),
-        UiHomeOption(icon: "home.button.option", title: "home.button.option".localized()),
-        UiHomeOption(icon: "home.textfield.option", title: "home.textfield.option".localized()),
-        UiHomeOption(icon: "home.switch.option", title: "home.switch.option".localized()),
-        UiHomeOption(icon: "home.image.option", title: "home.image.option".localized()),
-        UiHomeOption(icon: "home.toast.option", title: "home.toast.option".localized()),
-        UiHomeOption(icon: "home.view.option", title: "home.view.option".localized()),
-        UiHomeOption(icon: "home.table.option", title: "home.table.option".localized()),
-        UiHomeOption(icon: "home.collection.option", title: "home.collection.option".localized()),
-        UiHomeOption(icon: "home.web.option", title: "home.web.option".localized()),
-    ]
+    var homeOptionData: UiHomeOptions?
 
     // MARK: - Outlets
     private lazy var tableView: UITableView = {
@@ -47,6 +37,11 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        Task {
+            await viewModel.onViewDidLoad()
+        }
+//        viewModel.test()
+        configBindings()
         configUI()
     }
 
@@ -79,15 +74,27 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     }
 }
 
+extension HomeViewController {
+    private func configBindings() {
+//        suscribeToLoading()
+        viewModel.homeOptionsSubject.sink { _ in } receiveValue: { value in
+            DispatchQueue.main.async {
+                self.homeOptionData = value
+                self.tableView.reloadData()
+            }
+        }.store(in: &anyCancellable)
+    }
+}
+
 // MARK: - UITableView Extension
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return homeOptionData?.options.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
-        cell.item = dataSource[indexPath.row]
+        cell.item = homeOptionData?.options[indexPath.row]
         return cell
     }
 

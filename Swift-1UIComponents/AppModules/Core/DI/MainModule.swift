@@ -8,10 +8,15 @@
 import Foundation
 import Swinject
 
-class MainModule {
-    static func register(_ container: Container) {
+final class MainModule {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
         container.register(Coordinator.self) { _ in
-            .init(container: container)
+                .init(container: self.container)
         }
         container.register(NotificationCenter.self) { _ in
             .default

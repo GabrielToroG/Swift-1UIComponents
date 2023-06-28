@@ -8,8 +8,19 @@
 import Foundation
 import Swinject
 
-class ButtonsModule {
-    static func register(_ container: Container) {
+final class ButtonsModule {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+extension ButtonsModule {
+    func injectPresentation() {
         container.register(ButtonsViewModel.self) { _ in
             ButtonsViewModel()
         }

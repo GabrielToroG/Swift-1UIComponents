@@ -8,8 +8,19 @@
 import Foundation
 import Swinject
 
-class LabelsModule {
-    static func register(_ container: Container) {
+final class LabelsModule {
+    private let container: Container
+    init(_ container: Container) {
+        self.container = container
+    }
+
+    func inject() {
+        injectPresentation()
+    }
+}
+
+private extension LabelsModule {
+    func injectPresentation() {
         container.register(LabelsViewModel.self) { _ in
             LabelsViewModel()
         }
