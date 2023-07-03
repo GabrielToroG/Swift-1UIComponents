@@ -22,6 +22,16 @@ class TablesViewModule {
 
 private extension TablesViewModule {
     func injectPresentation() {
+        container.register(TableMenuViewModel.self) { _ in
+            TableMenuViewModel()
+        }
+        container.register(TableMenuViewController.self) { resolver in
+            let coordinator = resolver.resolve(Coordinator.self)!
+            let notification = resolver.resolve(NotificationCenterWrapper.self)!
+            let viewModel = resolver.resolve(TableMenuViewModel.self)!
+            return TableMenuViewController(viewModel, coordinator: coordinator, notificationCenter: notification)
+        }
+
         container.register(PlainTableViewViewModel.self) { _ in
             PlainTableViewViewModel()
         }

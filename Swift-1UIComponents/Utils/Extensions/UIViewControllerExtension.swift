@@ -60,7 +60,8 @@ extension UIViewController {
         self.navigationController?.navigationBar.standardAppearance = standardAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
     }
-    
+
+    /// Función que fija el título de navegación y el color de fondo de un UIViewController
     func configBasic(
         _ title: String = "",
         _ backgroundColor: UIColor

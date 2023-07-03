@@ -11,5 +11,8 @@ protocol BaseUseCase {
     associatedtype RequestType
     associatedtype ResultType
 
-    func execute(_ parameters: RequestType) async throws -> ResultType
+    func execute(
+        _ parameters: RequestType,
+        _ onCompletion: @escaping (Result<ResultType, Error>) -> Void
+    )
 }

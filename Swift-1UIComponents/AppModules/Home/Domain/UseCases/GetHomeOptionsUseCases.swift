@@ -18,9 +18,20 @@ final class GetHomeOptionsUseCases: BaseUseCase {
         self.repository = repository
         self.mapper = mapper
     }
-
-    func execute(_ parameters: Void) async throws -> UiHomeOptions {
-        let domainHomeOptions = try await repository.getHomeOptions()
-        return mapper.domainToPresentation(domainHomeOptions)
+    
+    func execute(_ parameters: Void, _ onCompletion: @escaping (Result<UiHomeOptions, Error>) -> Void) {
+        repository.getHomeOptions { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let uiHomeOptions):
+                let mappedOptions = self.mapper.domainToPresentation(uiHomeOptions)
+                let result: Result<UiHomeOptions, Error> = .success(mappedOptions)
+                onCompletion(result)
+            case .failure(let error):
+                // Manejar el error de alguna forma
+                print("Error: \(error)")
+            }
+        }
     }
+
 }

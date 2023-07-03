@@ -18,7 +18,8 @@ extension UIColor {
     static let whiteColor = UIColor(named: "whiteColor")!
     /// hex: F6F6F6
     static let grayColor = UIColor(named: "grayColor")!
-    
     /// hex: FF8580
     static let redColor = UIColor(named: "redColor")!
+    /// hex:
+    static let yellowColor = UIColor(named: "yellowColor")!
 }

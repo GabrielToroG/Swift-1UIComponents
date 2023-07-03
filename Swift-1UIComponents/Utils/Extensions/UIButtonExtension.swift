@@ -21,26 +21,26 @@ extension UIButton {
         switch type {
         case .filled:
             titleLabel?.font = .montserratSemibold17
-            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_BUTTON_SIZE).isActive = true
+            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_SIZE_BUTTON).isActive = true
             setTitleColor(.blackColor, for: .normal)
             backgroundColor = .brownColor
             isEnabled = true
-            layer.cornerRadius = UiConstants.NORMAL_BUTTON_RADIUS
+            layer.cornerRadius = UiConstants.NORMAL_RADIUS_BUTTON
         case .shadowFilled:
             titleLabel?.font = .montserratSemibold17
-            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_BUTTON_SIZE).isActive = true
+            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_SIZE_BUTTON).isActive = true
             setTitleColor(.blackColor, for: .normal)
             backgroundColor = .brownColor
             isEnabled = true
-            layer.cornerRadius = UiConstants.NORMAL_BUTTON_RADIUS
+            layer.cornerRadius = UiConstants.NORMAL_RADIUS_BUTTON
             configButtonShadow(show: true)
         case .bordered:
             titleLabel?.font = .montserratSemibold17
-            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_BUTTON_SIZE).isActive = true
+            heightAnchor.constraint(equalToConstant: UiConstants.NORMAL_SIZE_BUTTON).isActive = true
             setTitleColor(.blackColor, for: .normal)
             backgroundColor = .clear
             isEnabled = true
-            layer.cornerRadius = UiConstants.NORMAL_BUTTON_RADIUS
+            layer.cornerRadius = UiConstants.NORMAL_RADIUS_BUTTON
             layer.borderWidth = 1
             layer.borderColor = UIColor.blackColor.cgColor
         case .noBackgroundColor:
@@ -51,7 +51,7 @@ extension UIButton {
             print("")
         }
     }
-    
+
     private func configButtonShadow(show: Bool) {
         let shadowOpacitiy: Float = show ? 0.2 : 0
         let shadowRadius: CGFloat = show ? 1 : 0

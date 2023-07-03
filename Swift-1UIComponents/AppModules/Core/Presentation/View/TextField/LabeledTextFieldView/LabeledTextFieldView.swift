@@ -47,7 +47,7 @@ class LabeledTextFieldView: UIView {
                 static let topAnchor: CGFloat = UiConstants.SMALL_SPACE
                 static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
                 static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
-                static let heightAnchor: CGFloat = UiConstants.SMALL_STACKVIEW_HEIGHT
+                static let heightAnchor: CGFloat = UiConstants.SMALL_HEIGHT_STACKVIEW
             }
         }
         enum Label {
@@ -64,7 +64,7 @@ class LabeledTextFieldView: UIView {
                 static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
                 static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
                 static let bottomAnchor: CGFloat = -UiConstants.SMALL_SPACE
-                static let heightAnchor: CGFloat = UiConstants.NORMAL_TEXTFIELD_DESCRIPTION_SIZE
+                static let heightAnchor: CGFloat = UiConstants.NORMAL_SIZE_TEXTFIELD_DESCRIPTION
             }
         }
         enum TextField {
@@ -73,7 +73,7 @@ class LabeledTextFieldView: UIView {
                 static let borderWidth: CGFloat = 1
                 static let borderColor: CGColor = UIColor.systemGray.cgColor
                 static let radius: CGFloat = 4
-                static let widthAnchor: CGFloat = UiConstants.NORMAL_TEXTFIELD_WIDTH
+                static let widthAnchor: CGFloat = UiConstants.NORMAL_WIDTH_TEXTFIELD
             }
             enum Right {
                 static let font: UIFont = .montserratRegular16
@@ -85,8 +85,8 @@ class LabeledTextFieldView: UIView {
         enum Button {
             enum State {
                 static let trailingAnchor: CGFloat = -UiConstants.SMALL_SPACE
-                static let widthAnchor: CGFloat = UiConstants.NORMAL_ICON_SIZE
-                static let heightAnchor: CGFloat = UiConstants.NORMAL_ICON_SIZE
+                static let widthAnchor: CGFloat = UiConstants.SMALL_SIZE_ICON
+                static let heightAnchor: CGFloat = UiConstants.SMALL_SIZE_ICON
             }
         }
     }
@@ -131,8 +131,8 @@ class LabeledTextFieldView: UIView {
         textField.layer.borderWidth = Constants.TextField.Right.borderWidth
         textField.layer.cornerRadius = Constants.TextField.Right.radius
         textField.layer.borderColor = Constants.TextField.Right.borderColor
-        textField.setLeftPaddingPoints(UiConstants.smallPaddingTextField)
-        textField.setRightPaddingPoints(UiConstants.bigPaddingTextField)
+        textField.setLeftPaddingPoints(UiConstants.LEFT_PADDING_TEXTFIELD)
+        textField.setRightPaddingPoints(UiConstants.RIGHT_PADDING_TEXTFIELD)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()

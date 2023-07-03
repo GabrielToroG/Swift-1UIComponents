@@ -80,6 +80,10 @@
 		7F2AC5FC2A2FFC2D0042F1EA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AC5FB2A2FFC2D0042F1EA /* UIButtonExtension.swift */; };
 		7F2CF6C12A42DD05007345BA /* InsetGroupedTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2CF6C02A42DD05007345BA /* InsetGroupedTableViewViewModel.swift */; };
 		7F2CF6C42A42DD36007345BA /* InsetGroupedTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2CF6C32A42DD36007345BA /* InsetGroupedTableViewViewController.swift */; };
+		7F2DC03D2A5232C100776693 /* TableMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DC03C2A5232C100776693 /* TableMenuViewController.swift */; };
+		7F2DC03F2A5232E200776693 /* TableMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DC03E2A5232E200776693 /* TableMenuViewModel.swift */; };
+		7F2DC0412A52442900776693 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DC0402A52442900776693 /* UIViewExtension.swift */; };
+		7F2DC0442A5244FA00776693 /* ClickableGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DC0432A5244FA00776693 /* ClickableGestureRecognizer.swift */; };
 		7F2EE0CD2A4B7FC400A73FBB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EE0CC2A4B7FC400A73FBB /* NetworkError.swift */; };
 		7F2EE0CF2A4B7FDD00A73FBB /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EE0CE2A4B7FDD00A73FBB /* RequestModel.swift */; };
 		7F2EE0D12A4B80DF00A73FBB /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EE0D02A4B80DF00A73FBB /* ServiceLayer.swift */; };
@@ -187,6 +191,10 @@
 		7F2AC5FB2A2FFC2D0042F1EA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		7F2CF6C02A42DD05007345BA /* InsetGroupedTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedTableViewViewModel.swift; sourceTree = "<group>"; };
 		7F2CF6C32A42DD36007345BA /* InsetGroupedTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGroupedTableViewViewController.swift; sourceTree = "<group>"; };
+		7F2DC03C2A5232C100776693 /* TableMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableMenuViewController.swift; sourceTree = "<group>"; };
+		7F2DC03E2A5232E200776693 /* TableMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableMenuViewModel.swift; sourceTree = "<group>"; };
+		7F2DC0402A52442900776693 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7F2DC0432A5244FA00776693 /* ClickableGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableGestureRecognizer.swift; sourceTree = "<group>"; };
 		7F2EE0CC2A4B7FC400A73FBB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7F2EE0CE2A4B7FDD00A73FBB /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		7F2EE0D02A4B80DF00A73FBB /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
@@ -305,6 +313,7 @@
 				7F0E389E2A00D8FA00F24809 /* Constants */,
 				7F0E389B2A00D31800F24809 /* Extensions */,
 				7F0E386C2A00C9D500F24809 /* Protocols */,
+				7F2DC0422A5244E000776693 /* Classes */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 				7F4530A52A0F34F200A91782 /* UITextFieldExtension.swift */,
 				7F0E389C2A00D37900F24809 /* UITableViewExtension.swift */,
 				7F2EEA592A206E50002255D4 /* UIViewControllerExtension.swift */,
+				7F2DC0402A52442900776693 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -633,6 +643,7 @@
 		7F2179A02A4152470009D1E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F2DC03B2A5232A200776693 /* Menu */,
 				7F2179A92A4175E50009D1E9 /* Plain */,
 				7F2179AA2A4175F10009D1E9 /* Grouped */,
 				7F2CF6C22A42DD1E007345BA /* InsetGrouped */,
@@ -652,6 +663,7 @@
 		7F2179A22A4152600009D1E9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7F2DC03E2A5232E200776693 /* TableMenuViewModel.swift */,
 				7F2179A32A41526D0009D1E9 /* PlainTableViewViewModel.swift */,
 				7F2179AD2A4176240009D1E9 /* GroupedTableViewViewModel.swift */,
 				7F2CF6C02A42DD05007345BA /* InsetGroupedTableViewViewModel.swift */,
@@ -891,6 +903,22 @@
 				7F1EC5AE2A4436470013440D /* InsetGroupedTableViewNotItemCell.swift */,
 			);
 			path = InsetGrouped;
+			sourceTree = "<group>";
+		};
+		7F2DC03B2A5232A200776693 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7F2DC03C2A5232C100776693 /* TableMenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		7F2DC0422A5244E000776693 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7F2DC0432A5244FA00776693 /* ClickableGestureRecognizer.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7F2EE0CB2A4B7FAF00A73FBB /* ServiceLayer */ = {
@@ -1207,6 +1235,7 @@
 				7F0E38872A00CD1800F24809 /* LoaderView.swift in Sources */,
 				7F0E389D2A00D37900F24809 /* UITableViewExtension.swift in Sources */,
 				7F21799F2A4151B90009D1E9 /* TablesViewModule.swift in Sources */,
+				7F2DC03F2A5232E200776693 /* TableMenuViewModel.swift in Sources */,
 				7F25EABB2A4AB18C00A1AFA5 /* HomeRemoteDataSourceImpl.swift in Sources */,
 				7F2AC5FA2A2FF71D0042F1EA /* ViewsModule.swift in Sources */,
 				7F0E38792A00CAC200F24809 /* NotificationCenterWrapper.swift in Sources */,
@@ -1232,6 +1261,7 @@
 				7F2EE0D72A4BD17D00A73FBB /* HomeDomainMapperImpl.swift in Sources */,
 				7F1EC5A52A441DA50013440D /* PlainTableViewItemCell.swift in Sources */,
 				7F33F25F2A0C682000062E8A /* UIFontExtension.swift in Sources */,
+				7F2DC03D2A5232C100776693 /* TableMenuViewController.swift in Sources */,
 				7F4530A02A0F02A300A91782 /* TextFieldsModule.swift in Sources */,
 				7F25EAB92A4AB11200A1AFA5 /* DataHomeOptions.swift in Sources */,
 				7F2EE0D32A4BCCE000A73FBB /* HomeDataMapper.swift in Sources */,
@@ -1259,6 +1289,7 @@
 				7F2179A42A41526D0009D1E9 /* PlainTableViewViewModel.swift in Sources */,
 				7F0E38732A00CA5200F24809 /* Injection.swift in Sources */,
 				7F1309162A22EE0B0063174D /* ImagesModule.swift in Sources */,
+				7F2DC0412A52442900776693 /* UIViewExtension.swift in Sources */,
 				7F1C02A42A2C62BD00213934 /* ToastModule.swift in Sources */,
 				7F25EA9E2A4AA3E800A1AFA5 /* UiHomeOptions.swift in Sources */,
 				7F1B47EB2A2DB9C400A729FB /* ToastView.swift in Sources */,
@@ -1276,6 +1307,7 @@
 				7F1C02A92A2C631F00213934 /* ToastViewModel.swift in Sources */,
 				7F0E38772A00CAA900F24809 /* MainModule.swift in Sources */,
 				7F0E388B2A00CDBD00F24809 /* HomeCoordinator.swift in Sources */,
+				7F2DC0442A5244FA00776693 /* ClickableGestureRecognizer.swift in Sources */,
 				7F25EABD2A4AB1DF00A1AFA5 /* HomeDataSource.swift in Sources */,
 				7F2EE0CD2A4B7FC400A73FBB /* NetworkError.swift in Sources */,
 				7F2EE0DB2A4BDA1500A73FBB /* DomainHomeOption.swift in Sources */,

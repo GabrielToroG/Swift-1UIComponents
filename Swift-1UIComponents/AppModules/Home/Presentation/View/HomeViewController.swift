@@ -37,12 +37,9 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        Task {
-            await viewModel.onViewDidLoad()
-        }
-//        viewModel.test()
-        configBindings()
         configUI()
+        configBindings()
+        viewModel.onViewDidLoad()
     }
 
     // MARK: - UI Functions
@@ -76,7 +73,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
 
 extension HomeViewController {
     private func configBindings() {
-//        suscribeToLoading()
+        suscribeToLoading()
         viewModel.homeOptionsSubject.sink { _ in } receiveValue: { value in
             DispatchQueue.main.async {
                 self.homeOptionData = value
@@ -116,7 +113,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 6:
             coordinator.pushViewController(newViewControllerType: ViewsViewController.self)
         case 7:
-            coordinator.pushViewController(newViewControllerType: PlainTableViewViewController.self)
+            coordinator.pushViewController(newViewControllerType: TableMenuViewController.self)
         default:
             print("")
         }

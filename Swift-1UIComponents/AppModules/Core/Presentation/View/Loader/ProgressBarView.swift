@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Class
 class ProgressBarView: UIView {
     private enum Constants {
         enum View {
@@ -16,7 +17,7 @@ class ProgressBarView: UIView {
         }
     }
 
-    // MARK: - Outlets
+    // Outlets
     private let progressView: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.View.Progress.color
@@ -24,11 +25,11 @@ class ProgressBarView: UIView {
         return view
     }()
 
-    // MARK: - Properties
+    // Properties
     private var progressViewWidthConstraint: NSLayoutConstraint!
     private let progressDuration: TimeInterval = 2.0
 
-    // MARK: - Init
+    // Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configViews()
@@ -37,13 +38,14 @@ class ProgressBarView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    // MARK: - UI Functions
+// MARK: - UI Functions
+extension ProgressBarView {
     private func configViews() {
         addSubview(progressView)
-
         progressViewWidthConstraint = progressView.widthAnchor.constraint(
-            equalToConstant: frame.width) // Establecer el ancho predeterminado aquí
+            equalToConstant: frame.width)
         NSLayoutConstraint.activate([
             progressView.topAnchor.constraint(equalTo: topAnchor),
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -51,8 +53,10 @@ class ProgressBarView: UIView {
             progressViewWidthConstraint
         ])
     }
+}
 
-    // MARK: - Actions
+// MARK: - Actions
+extension ProgressBarView {
     func startProgressAnimation() {
         progressViewWidthConstraint.constant = 0 // Aquí establecemos la constante en 0 para que la barra de progreso comience desde la izquierda
         layoutIfNeeded()

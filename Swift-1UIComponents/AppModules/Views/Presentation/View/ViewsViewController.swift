@@ -60,7 +60,7 @@ class ViewsViewController: BaseViewController<ViewsViewModel> {
         ]
         let shadowViewConstraints = [
             shadowView.heightAnchor.constraint(
-                equalToConstant: UiConstants.NORMAL_VIEW_SIZE)
+                equalToConstant: UiConstants.NORMAL_SIZE_VIEW)
         ]
 
         NSLayoutConstraint.activate(mainStackViewConstraints + shadowViewConstraints)

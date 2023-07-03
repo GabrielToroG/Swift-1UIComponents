@@ -16,8 +16,15 @@ class HomeRepository: HomeDataSource {
         self.mapper = mapper
     }
 
-    func getHomeOptions() async throws -> DomainHomeOptions {
-        let dataHomeOptions = try await remote.getHomeOptions()
-        return mapper.dataToDomain(dataHomeOptions)
+    func getHomeOptions(completion: @escaping (Result<DomainHomeOptions, Error>) -> Void) {
+        remote.getHomeOptions { [weak self] result in
+            guard let self = self else { return }
+            completion(result.map(self.mapper.dataToDomain(_:)))
+        }
     }
+    
+//    func getHomeOptions() async throws -> DomainHomeOptions {
+//        let dataHomeOptions = try await remote.getHomeOptions()
+//        return mapper.dataToDomain(dataHomeOptions)
+//    }
 }

@@ -12,11 +12,11 @@ class CircleButton: UIView {
         enum View {
             enum Container {
                 static let color: UIColor = .brownColor
-                static let cornerRadius: CGFloat = UiConstants.SMALL_BUTTON_RADIUS
+                static let cornerRadius: CGFloat = UiConstants.SMALL_RADIUS_BUTTON
                 static let topAnchor: CGFloat = UiConstants.NO_SPACE
                 static let bottomAnchor: CGFloat = UiConstants.NO_SPACE
-                static let heightAnchor: CGFloat = UiConstants.SMALL_BUTTON_SIZE
-                static let widthAnchor: CGFloat = UiConstants.SMALL_BUTTON_SIZE
+                static let heightAnchor: CGFloat = UiConstants.SMALL_SIZE_BUTTON
+                static let widthAnchor: CGFloat = UiConstants.SMALL_SIZE_BUTTON
             }
         }
         enum Button {

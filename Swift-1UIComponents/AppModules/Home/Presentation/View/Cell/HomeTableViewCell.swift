@@ -98,9 +98,9 @@ class HomeTableViewCell: UITableViewCell {
                 equalTo: containerView.bottomAnchor,
                 constant: -UiConstants.NORMAL_SPACE),
             optionImageView.widthAnchor.constraint(
-                equalToConstant: UiConstants.NORMAL_ICON_SIZE),
+                equalToConstant: UiConstants.NORMAL_SIZE_ICON),
             optionImageView.heightAnchor.constraint(
-                equalToConstant: UiConstants.NORMAL_ICON_SIZE)
+                equalToConstant: UiConstants.NORMAL_SIZE_ICON)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(

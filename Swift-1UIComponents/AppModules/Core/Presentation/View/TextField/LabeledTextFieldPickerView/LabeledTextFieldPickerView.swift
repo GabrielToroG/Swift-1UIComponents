@@ -58,8 +58,8 @@ class LabeledTextFieldPickerView: UIView {
         textField.layer.borderWidth = Constants.TextField.Right.borderWidth
         textField.layer.cornerRadius = Constants.TextField.Right.radius
         textField.layer.borderColor = Constants.TextField.Right.borderColor
-        textField.setLeftPaddingPoints(UiConstants.smallPaddingTextField)
-        textField.setRightPaddingPoints(UiConstants.bigPaddingTextField)
+        textField.setLeftPaddingPoints(UiConstants.LEFT_PADDING_TEXTFIELD)
+        textField.setRightPaddingPoints(UiConstants.RIGHT_PADDING_TEXTFIELD)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -148,7 +148,7 @@ class LabeledTextFieldPickerView: UIView {
                 equalTo: containerHeader.trailingAnchor,
                 constant: -UiConstants.SMALL_SPACE),
             mainTextField.heightAnchor.constraint(
-                equalToConstant: UiConstants.normalTextFieldSize),
+                equalToConstant: UiConstants.NORMAL_HEIGHT_TEXTFIELD),
             mainTextField.bottomAnchor.constraint(
                 equalTo: containerHeader.bottomAnchor,
                 constant: -UiConstants.BIG_SPACE)

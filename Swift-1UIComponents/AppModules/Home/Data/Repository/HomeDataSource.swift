@@ -8,5 +8,7 @@
 import Foundation
 
 protocol HomeDataSource {
-    func getHomeOptions() async throws -> DomainHomeOptions
+//    func getHomeOptions() async throws -> DomainHomeOptions
+    func getHomeOptions(completion: @escaping (Result<DomainHomeOptions, Error>) -> Void)
+
 }

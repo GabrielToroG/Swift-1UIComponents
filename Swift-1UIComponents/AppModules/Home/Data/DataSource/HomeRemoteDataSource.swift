@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeRemoteDataSource {
-    func getHomeOptions() async throws -> DataHomeOptions
+    func getHomeOptions(completion: @escaping (Result<DataHomeOptions, Error>) -> Void)
 }

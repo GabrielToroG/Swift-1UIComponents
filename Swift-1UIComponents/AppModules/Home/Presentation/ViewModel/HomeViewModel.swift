@@ -15,22 +15,24 @@ class HomeViewModel: BaseViewModel {
     init(getHomeOptionsUseCases: GetHomeOptionsUseCases) {
         self.getHomeOptionsUseCases = getHomeOptionsUseCases
     }
-
-    // MARK: - Lifecycle
-    func onViewDidLoad() async {
-        await loadHomeOptions()
-    }
-    func loadHomeOptions() async {
-        do {
-            self.isLoading.send(true)
-            let data = try await getHomeOptionsUseCases.execute(())
-                self.homeOptionsSubject.send(data)
-                self.isLoading.send(false)
+    
+    func onViewDidLoad() {
+        self.isLoading.send(true)
+        getHomeOptionsUseCases.execute(()) { result in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                if case .success(let new) = result {
+                    self.isLoading.send(false)
+                    let uiHomeOptions = new
+                    self.homeOptionsSubject.send(uiHomeOptions)
+                }
+                
+            }
             
-        } catch {
-            // Manejar errores
         }
     }
+
+
+
     
     func test() {
         self.isLoading.send(true)
@@ -38,21 +40,4 @@ class HomeViewModel: BaseViewModel {
             self.isLoading.send(false)
         }
     }
-    
-//    func onViewDidLoad() {
-//        self.isLoading.send(true)
-//        getMyListUseCase.execute(userId) { [weak self] result in
-//            guard let self = self else { return }
-//            self.isLoadingSubject.onNext(false)
-//            if case .success(let data) = result {
-//                self.myListSubject.onNext(data)
-//                if self.showDeleteTopToast {
-//                    self.showDeleteSuccess()
-//                    self.showDeleteTopToast = false
-//                }
-//            } else {
-//                self.showErrorSubject.onNext(())
-//            }
-//        }
-//    }
 }

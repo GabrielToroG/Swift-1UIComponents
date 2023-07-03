@@ -12,11 +12,11 @@ class ToastView: UIView {
         enum View {
             enum Container {
                 static let color: UIColor = .blackColor
-                static let cornerRadius: CGFloat = UiConstants.SMALL_CORNER_RADIUS
+                static let cornerRadius: CGFloat = UiConstants.SMALL_RADIUS_TOAST
                 static let topAnchor: CGFloat = UiConstants.NO_SPACE
                 static let leadingAnchor: CGFloat = UiConstants.EXTREME_SPACE
                 static let trailingAnchor: CGFloat = -UiConstants.EXTREME_SPACE
-                static let heightAnchor: CGFloat = UiConstants.NORMAL_TOAST_SIZE
+                static let heightAnchor: CGFloat = UiConstants.NORMAL_SIZE_TOAST
             }
         }
         enum ImageView {
@@ -24,8 +24,8 @@ class ToastView: UIView {
                 static let color: UIColor = .whiteColor
                 static let image: UIImage? = UIImage(named: "general.toast.info")
                 static let leadingAnchor: CGFloat = UiConstants.SMALL_SPACE
-                static let widthAnchor: CGFloat = UiConstants.SMALL_ICON_SIZE
-                static let heightAnchor: CGFloat = UiConstants.SMALL_ICON_SIZE
+                static let widthAnchor: CGFloat = UiConstants.SMALL_SIZE_ICON
+                static let heightAnchor: CGFloat = UiConstants.SMALL_SIZE_ICON
             }
         }
         enum Label {

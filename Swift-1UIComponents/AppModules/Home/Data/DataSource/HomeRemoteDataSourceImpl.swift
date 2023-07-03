@@ -13,11 +13,14 @@ class HomeRemoteDataSourceImpl: HomeRemoteDataSource {
         self.manager = manager
     }
 
-    func getHomeOptions() async throws -> DataHomeOptions {
-        guard let homeOptions = manager.requestUsingMock(jsonName: "HomeOptions", model: DataHomeOptions.self) else {
-            throw NetworkError.jsonDecoder
+    func getHomeOptions(completion: @escaping (Result<DataHomeOptions, Error>) -> Void) {
+        do {
+            guard let homeOptions = manager.requestUsingMock(jsonName: "HomeOptions", model: DataHomeOptions.self) else {
+                throw NetworkError.jsonDecoder
+            }
+            completion(.success(homeOptions))
+        } catch {
+            completion(.failure(error))
         }
-        
-        return homeOptions
     }
 }
