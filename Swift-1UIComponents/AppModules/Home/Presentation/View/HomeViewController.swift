@@ -13,7 +13,6 @@ final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinato
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = UITableView.automaticDimension
         return tableView
     }()
 }
@@ -49,7 +48,7 @@ extension HomeViewController {
 extension HomeViewController {
     private func configUI() {
         view.backgroundColor = .white
-        configBasic("home.title".localized(), .brandColor)
+        configBasic(L10n.Home.title, Asset.Colors.brandColor.color)
         configTableView()
         configConstraints()
     }
@@ -86,5 +85,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
         cell.item = viewModel.homeOptions?[indexPath.row]
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

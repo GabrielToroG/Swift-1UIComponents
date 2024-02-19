@@ -17,8 +17,10 @@ final class HomeViewModel: BaseViewModel {
 
 extension HomeViewModel {
     func onViewDidLoad() {
+        self.isLoadingSubject.send(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.dispatchTime) { [weak self] in
             guard let self = self else { return }
+            self.isLoadingSubject.send(false)
             self.homeOptions = [
                 UiHomeOption(icon: Asset.Home.homeLabelOption.image, title: L10n.Home.labelOption),
                 UiHomeOption(icon: Asset.Home.homeImageOption.image, title: L10n.Home.imageOption),
