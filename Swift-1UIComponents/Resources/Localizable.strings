@@ -1,0 +1,12 @@
+// Home
+"home.title" = "UI Components";
+"home.label_option" = "Labels";
+"home.image_option" = "Images";
+"home.view_option" = "Views";
+"home.button_option" = "Buttons";
+"home.textfield_option" = "Text Fields";
+"home.table_option" = "Table Views";
+"home.collection_option" = "Collection Views";
+"home.web_option" = "Web Views";
+"home.switch_option" = "Switchs";
+"home.toast_option" = "Toasts";

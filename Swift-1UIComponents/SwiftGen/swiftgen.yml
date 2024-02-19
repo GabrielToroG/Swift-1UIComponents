@@ -1,0 +1,15 @@
+input_dir: ${PROJECT_DIR}/Swift-1UIComponents
+output_dir: ${PROJECT_DIR}/Swift-1UIComponents/SwiftGen
+strings:
+  inputs: Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.swift
+xcassets:
+  inputs:
+    - Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+        forceProvidesNamespaces: true
+      output: Assets.swift

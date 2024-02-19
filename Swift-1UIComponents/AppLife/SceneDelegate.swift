@@ -24,8 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Configure UINavigationController
         let navController = UINavigationController()
-//        configNavigationController(navController)
-        
+        configNavigationController(navController)
 
         // Dependency injection
         coordinator = InitCoordinator(navigationController: navController, container: container)
@@ -37,6 +36,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = navController
         window.makeKeyAndVisible()
         self.window = window
+    }
+
+    private func configNavigationController(_ navController: UINavigationController) {
+        // Cambiar estilos al botón "Back"
+        let backButtonAppearance = UIBarButtonItemAppearance()
+        backButtonAppearance.normal.titleTextAttributes = [
+            .font: Fonts.Heading.backButton,
+            .foregroundColor: UIColor.blackColor
+        ]
+
+        // Cambiar estilos
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.blackColor,
+            NSAttributedString.Key.font: Fonts.Heading.heading2,
+        ]
+        standardAppearance.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.blackColor,
+            NSAttributedString.Key.font: Fonts.Heading.heading1,
+        ]
+        standardAppearance.backButtonAppearance = backButtonAppearance
+        standardAppearance.configureWithOpaqueBackground()          // So that it does not become lighter
+        standardAppearance.backgroundColor = UIColor.brandColor
+        standardAppearance.shadowColor = .clear                     // delete border bottom
+        navController.navigationBar.standardAppearance = standardAppearance
+        navController.navigationBar.scrollEdgeAppearance = standardAppearance
+        navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.tintColor = UIColor.blackColor  // change color to left header, when large titles
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

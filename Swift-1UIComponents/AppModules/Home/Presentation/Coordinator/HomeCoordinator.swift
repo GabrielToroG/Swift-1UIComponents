@@ -5,8 +5,23 @@
 //  Created by Gabriel Alonso Toro Guzmán on 19-02-24.
 //
 
-import Foundation
+import UIKit
 
-class HomeCoordinator: Coordinator {
-    
+final class HomeCoordinator: Coordinator {
+    indirect enum GoToScene: Equatable {
+        case labelScreen
+    }
+
+    func goToScene(
+        scene: GoToScene,
+        from viewController: UIViewController
+    ) {
+        switch scene {
+        case .labelScreen:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: LabelViewController.self
+            )
+        }
+    }
 }
