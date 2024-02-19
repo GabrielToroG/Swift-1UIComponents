@@ -5,7 +5,7 @@
 //  Created by Gabriel Alonso Toro Guzmán on 19-02-24.
 //
 
-import Foundation
+import UIKit
 
 enum Dimensions {
     enum Margin {
@@ -23,11 +23,6 @@ enum Dimensions {
         static let extreme: CGFloat = 64
     }
 
-    enum Icon {
-        /// CGFloat = 28
-        static let normal: CGFloat = 28
-    }
-
     enum BorderWidth {
         /// CGFloat = 1
         static let minimum: CGFloat = 1
@@ -35,6 +30,18 @@ enum Dimensions {
         static let normal: CGFloat = 8
         /// CGFloat = 16
         static let big: CGFloat = 16
+    }
+
+    enum Icon {
+        /// CGFloat = 28
+        static let normal: CGFloat = 28
+    }
+
+    enum Label {
+        /// CGFloat = 176
+        static let maxWidth: CGFloat = 176
+        /// CGFloat = -2
+        static let strokeWidth: CGFloat = -2
     }
 
     enum LoaderView {
@@ -46,5 +53,10 @@ enum Dimensions {
         static let barCorner: CGFloat = 3
         /// CGFloat = 1
         static let horizontalPadding: CGFloat = 1
+    }
+
+    enum Priorities {
+        static let huggingPriority: UILayoutPriority = .init(rawValue: 252)
+        static let compressPriority: UILayoutPriority = .init(rawValue: 752)
     }
 }

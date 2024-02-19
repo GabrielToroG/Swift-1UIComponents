@@ -47,7 +47,6 @@ extension HomeViewController {
 // MARK: - UI Functions
 extension HomeViewController {
     private func configUI() {
-        view.backgroundColor = .white
         configBasic(L10n.Home.title, Asset.Colors.brandColor.color)
         configTableView()
         configConstraints()
@@ -89,5 +88,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        switch indexPath.row {
+        case 0:
+            viewModel.goToLabelView()
+        default:
+            return
+        }
     }
 }

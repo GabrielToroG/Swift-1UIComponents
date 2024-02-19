@@ -69,8 +69,10 @@ enum Fonts {
     }
 
     enum Body {
-        /// Montserrat regular 16
-        static let body1 = UIFont(name: FontName.Montserrat.regular, size: 17) ?? SysFont.regularSize16
+        /// Montserrat regular 17
+        static let body1 = UIFont(name: FontName.Montserrat.regular, size: 17) ?? SysFont.regularSize17
+        /// Montserrat regular 17
+        static let body2 = UIFont(name: FontName.Montserrat.regular, size: 14) ?? SysFont.regularSize14
     }
 }
 

@@ -34,6 +34,20 @@ internal enum L10n {
     /// Web Views
     internal static let webOption = L10n.tr("Localizable", "home.web_option", fallback: "Web Views")
   }
+  internal enum Label {
+    /// Etiqueta con
+    internal static let differentStylesFirst = L10n.tr("Localizable", "label.different_styles_first", fallback: "Etiqueta con")
+    ///  diferentes éstilos
+    internal static let differentStylesSecond = L10n.tr("Localizable", "label.different_styles_second", fallback: " diferentes éstilos")
+    /// Texto tamaño máximo
+    internal static let maxWidthLeft = L10n.tr("Localizable", "label.max_width_left", fallback: "Texto tamaño máximo")
+    /// Texto derecho
+    internal static let maxWidthRight = L10n.tr("Localizable", "label.max_width_right", fallback: "Texto derecho")
+    /// Tachado
+    internal static let strikethrough = L10n.tr("Localizable", "label.strikethrough", fallback: "Tachado")
+    /// Etiquetas
+    internal static let title = L10n.tr("Localizable", "label.title", fallback: "Etiquetas")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

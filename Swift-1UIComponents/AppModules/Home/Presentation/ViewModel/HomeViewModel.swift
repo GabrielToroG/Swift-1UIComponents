@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeViewModel: BaseViewModel {
     private enum Constants {
-        static let dispatchTime: Double = 3
+        static let dispatchTime: Double = 5
     }
     @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var homeOptions: [UiHomeOption]?
@@ -34,5 +34,11 @@ extension HomeViewModel {
                 UiHomeOption(icon: Asset.Home.homeToastOption.image, title: L10n.Home.toastOption)
             ]
         }
+    }
+}
+
+extension HomeViewModel {
+    func goToLabelView() {
+        self.goTo = .labelScreen
     }
 }

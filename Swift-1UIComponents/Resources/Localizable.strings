@@ -10,3 +10,11 @@
 "home.web_option" = "Web Views";
 "home.switch_option" = "Switchs";
 "home.toast_option" = "Toasts";
+
+// Labels
+"label.title" = "Etiquetas";
+"label.strikethrough" = "Tachado";
+"label.max_width_left" = "Texto tamaño máximo";
+"label.max_width_right" = "Texto derecho";
+"label.different_styles_first" = "Etiqueta con";
+"label.different_styles_second" = " diferentes éstilos";

@@ -20,7 +20,8 @@ final class HomeCoordinator: Coordinator {
         case .labelScreen:
             pushViewController(
                 viewController: viewController,
-                newViewControllerType: LabelViewController.self
+                newViewControllerType: LabelViewController.self,
+                animated: true
             )
         }
     }

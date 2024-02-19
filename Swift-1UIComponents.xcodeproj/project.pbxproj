@@ -26,7 +26,6 @@
 		7FE018912B8344DC008FC45A /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018902B8344DC008FC45A /* HomeModule.swift */; };
 		7FE018942B834586008FC45A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018932B834586008FC45A /* HomeCoordinator.swift */; };
 		7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0189D2B8354C9008FC45A /* UiHomeOption.swift */; };
-		7FE018A12B8355BD008FC45A /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018A02B8355BD008FC45A /* LabelViewController.swift */; };
 		7FE018A52B8361CE008FC45A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */; };
 		7FE018A72B83620B008FC45A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018A62B83620B008FC45A /* HomeTableViewCell.swift */; };
 		7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018A92B836243008FC45A /* Dimensions.swift */; };
@@ -45,6 +44,10 @@
 		7FE018D52B837A77008FC45A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE018D42B837A77008FC45A /* Localizable.strings */; };
 		7FE018D82B83835D008FC45A /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018D72B83835D008FC45A /* LoaderView.swift */; };
 		7FE018DA2B83843B008FC45A /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018D92B83843B008FC45A /* ProgressBarView.swift */; };
+		7FE018E12B838975008FC45A /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018E02B838975008FC45A /* LabelViewController.swift */; };
+		7FE018E32B83898C008FC45A /* LabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018E22B83898C008FC45A /* LabelViewModel.swift */; };
+		7FE018E52B8389AA008FC45A /* LabelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018E42B8389AA008FC45A /* LabelCoordinator.swift */; };
+		7FE018E72B83B92F008FC45A /* LabelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018E62B83B92F008FC45A /* LabelModule.swift */; };
 		C9A6081960357A8A8D89C1D4 /* Pods_Swift_1UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048B14AA6B518D70C4CE3C27 /* Pods_Swift_1UIComponents.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +74,6 @@
 		7FE018902B8344DC008FC45A /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		7FE018932B834586008FC45A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7FE0189D2B8354C9008FC45A /* UiHomeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiHomeOption.swift; sourceTree = "<group>"; };
-		7FE018A02B8355BD008FC45A /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7FE018A62B83620B008FC45A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		7FE018A92B836243008FC45A /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		7FE018D42B837A77008FC45A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7FE018D72B83835D008FC45A /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		7FE018D92B83843B008FC45A /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		7FE018E02B838975008FC45A /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		7FE018E22B83898C008FC45A /* LabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewModel.swift; sourceTree = "<group>"; };
+		7FE018E42B8389AA008FC45A /* LabelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCoordinator.swift; sourceTree = "<group>"; };
+		7FE018E62B83B92F008FC45A /* LabelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelModule.swift; sourceTree = "<group>"; };
 		B71F65727C2F1CC595823B19 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 		BE4E9807FFED8A6466F9A306 /* Pods-Swift-1UIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.release.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,7 +328,8 @@
 		7FE0189F2B8355B0008FC45A /* Label */ = {
 			isa = PBXGroup;
 			children = (
-				7FE018A02B8355BD008FC45A /* LabelViewController.swift */,
+				7FE018DC2B838950008FC45A /* DI */,
+				7FE018DB2B838945008FC45A /* Presentation */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -339,10 +346,10 @@
 		7FE018A32B8361BC008FC45A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */,
 				7FE018B02B836503008FC45A /* StringExtension.swift */,
-				7FE018C02B836936008FC45A /* UIViewControllerExtension.swift */,
 				7FE018CA2B836D71008FC45A /* UIColorExtensions.swift */,
+				7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */,
+				7FE018C02B836936008FC45A /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +392,48 @@
 				7FE018D92B83843B008FC45A /* ProgressBarView.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		7FE018DB2B838945008FC45A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018DD2B838955008FC45A /* Coordinator */,
+				7FE018DF2B838960008FC45A /* View */,
+				7FE018DE2B83895B008FC45A /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7FE018DC2B838950008FC45A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018E62B83B92F008FC45A /* LabelModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7FE018DD2B838955008FC45A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018E42B8389AA008FC45A /* LabelCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7FE018DE2B83895B008FC45A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018E22B83898C008FC45A /* LabelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FE018DF2B838960008FC45A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018E02B838975008FC45A /* LabelViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +577,7 @@
 			files = (
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
 				7FE018BF2B83686D008FC45A /* Colors.swift in Sources */,
+				7FE018E72B83B92F008FC45A /* LabelModule.swift in Sources */,
 				7FE018C12B836936008FC45A /* UIViewControllerExtension.swift in Sources */,
 				7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */,
 				7FE018D82B83835D008FC45A /* LoaderView.swift in Sources */,
@@ -535,13 +585,15 @@
 				7FE018942B834586008FC45A /* HomeCoordinator.swift in Sources */,
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
+				7FE018E52B8389AA008FC45A /* LabelCoordinator.swift in Sources */,
 				7FE0188C2B833A7F008FC45A /* BaseViewModel.swift in Sources */,
 				7FE018A72B83620B008FC45A /* HomeTableViewCell.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
 				7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */,
+				7FE018E12B838975008FC45A /* LabelViewController.swift in Sources */,
+				7FE018E32B83898C008FC45A /* LabelViewModel.swift in Sources */,
 				7FE018BD2B8367C2008FC45A /* Fonts.swift in Sources */,
-				7FE018A12B8355BD008FC45A /* LabelViewController.swift in Sources */,
 				7FE018772B82D813008FC45A /* MainControllerProvider.swift in Sources */,
 				7FE018CB2B836D71008FC45A /* UIColorExtensions.swift in Sources */,
 				7FE018A52B8361CE008FC45A /* UITableViewExtension.swift in Sources */,
