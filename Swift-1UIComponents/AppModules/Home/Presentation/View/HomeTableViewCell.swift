@@ -81,9 +81,9 @@ extension HomeTableViewCell {
                 equalTo: containerView.bottomAnchor,
                 constant: -Dimensions.Margin.small),
             optionImageView.widthAnchor.constraint(
-                equalToConstant: Dimensions.Icon.normal),
+                equalToConstant: Dimensions.Icon.normalSize),
             optionImageView.heightAnchor.constraint(
-                equalToConstant: Dimensions.Icon.normal)
+                equalToConstant: Dimensions.Icon.normalSize)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(

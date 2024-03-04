@@ -21,17 +21,17 @@ final class LabelModule {
 
 private extension LabelModule {
     func injectPresentation() {
-        container.register(LabelViewModel.self) { resolver in
-            LabelViewModel()
+        container.register(LabelsViewModel.self) { resolver in
+            LabelsViewModel()
         }
 
-        container.register(LabelCoordinator.self) { _ in
-            LabelCoordinator(container: self.container)
+        container.register(LabelsCoordinator.self) { _ in
+            LabelsCoordinator(container: self.container)
         }
-        container.register(LabelViewController.self) { resolver in
-            LabelViewController(
-                resolver.resolve(LabelViewModel.self)!,
-                resolver.resolve(LabelCoordinator.self)!,
+        container.register(LabelsViewController.self) { resolver in
+            LabelsViewController(
+                resolver.resolve(LabelsViewModel.self)!,
+                resolver.resolve(LabelsCoordinator.self)!,
                 resolver.resolve(NotificationCenterWrapper.self)!
             )
         }

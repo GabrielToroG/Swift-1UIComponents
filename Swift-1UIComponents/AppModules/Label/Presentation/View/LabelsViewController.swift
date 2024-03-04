@@ -1,5 +1,5 @@
 //
-//  LabelViewController.swift
+//  LabelsViewController.swift
 //  Swift-1UIComponents
 //
 //  Created by Gabriel Alonso Toro Guzmán on 19-02-24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LabelViewController: BaseViewController<LabelViewModel, LabelCoordinator> {
+final class LabelsViewController: BaseViewController<LabelsViewModel, LabelsCoordinator> {
     // Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
@@ -49,24 +49,17 @@ final class LabelViewController: BaseViewController<LabelViewModel, LabelCoordin
 }
 
 // MARK: - Lifecycle
-extension LabelViewController {
+extension LabelsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        configBindings()
         viewModel.onViewDidLoad()
     }
 }
 
-// MARK: - Bindings
-extension LabelViewController {
-    private func configBindings() {
-        
-    }
-}
 
 // MARK: - UI Functions
-extension LabelViewController {
+extension LabelsViewController {
     private func configUI() {
         configBasic(L10n.Label.title, Asset.Colors.brandColor.color)
         configLabels()
@@ -74,8 +67,8 @@ extension LabelViewController {
     }
 
     private func configLabels() {
-        configDifferentStyles()
         configStroke()
+        configDifferentStyles()
     }
 
     private func configStroke() {

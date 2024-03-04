@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class LabelViewModel: BaseViewModel {
+final class LabelsViewModel: BaseViewModel {
     
 }
 
-extension LabelViewModel {
+extension LabelsViewModel {
     func onViewDidLoad() {
         
     }

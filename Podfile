@@ -8,4 +8,5 @@ target 'Swift-1UIComponents' do
   # Pods for Swift-1UIComponents
   pod 'Swinject'
   pod 'SwiftGen', '~> 6.0'
+  pod 'SDWebImage', '~> 5.0'
 end

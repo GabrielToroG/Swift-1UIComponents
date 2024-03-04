@@ -23,6 +23,11 @@ enum Dimensions {
         static let extreme: CGFloat = 64
     }
 
+    enum Alpha {
+        /// CGFloat = 0.3
+        static let normal: CGFloat = 0.3
+    }
+
     enum BorderWidth {
         /// CGFloat = 1
         static let minimum: CGFloat = 1
@@ -34,7 +39,12 @@ enum Dimensions {
 
     enum Icon {
         /// CGFloat = 28
-        static let normal: CGFloat = 28
+        static let normalSize: CGFloat = 28
+    }
+
+    enum Images {
+        /// CGFloat = 200
+        static let bigSize: CGFloat = 160
     }
 
     enum Label {

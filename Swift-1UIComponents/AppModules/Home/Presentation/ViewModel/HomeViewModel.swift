@@ -39,6 +39,10 @@ extension HomeViewModel {
 
 extension HomeViewModel {
     func goToLabelView() {
-        self.goTo = .labelScreen
+        self.goTo = .labelsView
+    }
+
+    func goToImagesView() {
+        self.goTo = .ImagesView
     }
 }

@@ -54,6 +54,9 @@ internal enum Asset {
     internal static let homeViewOption = ImageAsset(name: "home.view.option")
     internal static let homeWebOption = ImageAsset(name: "home.web.option")
   }
+  internal enum Images {
+    internal static let imagesWebpage = ImageAsset(name: "images.webpage")
+  }
   internal enum TextFields {
     internal static let textfieldCloseIcon = ImageAsset(name: "textfield.close.icon")
     internal static let textfieldEyeIcon = ImageAsset(name: "textfield.eye.icon")

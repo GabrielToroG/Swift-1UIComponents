@@ -23,6 +23,7 @@ final class Injection {
         MainModule(container).inject()
         HomeModule(container).inject()
         LabelModule(container).inject()
+        ImagesModule(container).inject()
     }
     
     func getContainer() -> Container {

@@ -1,20 +1,26 @@
 PODS:
+  - SDWebImage (5.18.10):
+    - SDWebImage/Core (= 5.18.10)
+  - SDWebImage/Core (5.18.10)
   - SwiftGen (6.6.2)
   - Swinject (2.8.3)
 
 DEPENDENCIES:
+  - SDWebImage (~> 5.0)
   - SwiftGen (~> 6.0)
   - Swinject
 
 SPEC REPOS:
   trunk:
+    - SDWebImage
     - SwiftGen
     - Swinject
 
 SPEC CHECKSUMS:
+  SDWebImage: fc8f2d48bbfd72ef39d70e981bd24a3f3be53fec
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
   Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
 
-PODFILE CHECKSUM: 1b92b7d08e3b50201d36f95b345240c266f69a06
+PODFILE CHECKSUM: 0bf5eec251595892420a92bd300f261671471b76
 
 COCOAPODS: 1.11.3

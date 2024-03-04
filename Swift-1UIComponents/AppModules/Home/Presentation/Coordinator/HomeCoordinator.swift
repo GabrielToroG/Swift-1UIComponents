@@ -9,7 +9,8 @@ import UIKit
 
 final class HomeCoordinator: Coordinator {
     indirect enum GoToScene: Equatable {
-        case labelScreen
+        case labelsView
+        case ImagesView
     }
 
     func goToScene(
@@ -17,10 +18,16 @@ final class HomeCoordinator: Coordinator {
         from viewController: UIViewController
     ) {
         switch scene {
-        case .labelScreen:
+        case .labelsView:
             pushViewController(
                 viewController: viewController,
-                newViewControllerType: LabelViewController.self,
+                newViewControllerType: LabelsViewController.self,
+                animated: true
+            )
+        case .ImagesView:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: ImagesViewController.self,
                 animated: true
             )
         }

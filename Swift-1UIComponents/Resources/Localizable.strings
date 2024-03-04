@@ -15,6 +15,9 @@
 "label.title" = "Etiquetas";
 "label.strikethrough" = "Tachado";
 "label.max_width_left" = "Texto tamaño máximo";
-"label.max_width_right" = "Texto derecho";
+"label.max_width_right" = "Texto derecha";
 "label.different_styles_first" = "Etiqueta con";
 "label.different_styles_second" = " diferentes éstilos";
+
+// Images
+"images.title" = "Imagenes";

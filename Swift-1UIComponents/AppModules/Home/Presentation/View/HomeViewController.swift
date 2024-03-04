@@ -91,6 +91,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             viewModel.goToLabelView()
+        case 1:
+            viewModel.goToImagesView()
         default:
             return
         }

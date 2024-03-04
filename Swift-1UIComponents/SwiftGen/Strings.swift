@@ -34,6 +34,10 @@ internal enum L10n {
     /// Web Views
     internal static let webOption = L10n.tr("Localizable", "home.web_option", fallback: "Web Views")
   }
+  internal enum Images {
+    /// Imagenes
+    internal static let title = L10n.tr("Localizable", "images.title", fallback: "Imagenes")
+  }
   internal enum Label {
     /// Etiqueta con
     internal static let differentStylesFirst = L10n.tr("Localizable", "label.different_styles_first", fallback: "Etiqueta con")
