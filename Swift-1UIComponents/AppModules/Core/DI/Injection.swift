@@ -24,6 +24,7 @@ final class Injection {
         HomeModule(container).inject()
         LabelModule(container).inject()
         ImagesModule(container).inject()
+        ViewsModule(container).inject()
     }
     
     func getContainer() -> Container {

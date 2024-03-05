@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+final class ViewsViewModel: BaseViewModel {
+    @Published private(set) var goTo: ViewsCoordinator.GoToScene?
+
+}
+
+extension ViewsViewModel {
+    func onViewDidLoad() {
+        
+    }
+}
+
+extension ViewsViewModel {
+    func showAlert() {
+        self.goTo = .showAlert
+    }
+}

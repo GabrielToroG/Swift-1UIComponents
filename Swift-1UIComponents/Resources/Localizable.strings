@@ -21,3 +21,12 @@
 
 // Images
 "images.title" = "Imagenes";
+
+// Views
+"views.title" = "Vistas";
+"views.shadow_title" = "Vista con sombra";
+"views.alert_title" = "Presionaste la vista";
+"views.alert_message" = "La acción de la vista ha sido llamada con éxito";
+"views.alert_action" = "Cerrar";
+"views.alert_text" = "Presioname, mira mi función";
+"views.config_text" = "Vista que ha sido configurada mediante parámetros";

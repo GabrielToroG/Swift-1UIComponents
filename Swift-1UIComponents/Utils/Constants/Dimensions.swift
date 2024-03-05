@@ -28,6 +28,17 @@ enum Dimensions {
         static let normal: CGFloat = 0.3
     }
 
+    enum Shadow {
+        static let opacity: Float = 0.1
+        static let radius: CGFloat = 8
+        static let offset: CGSize = CGSize(width: 0, height: 0)
+    }
+
+    enum BorderRadius {
+        /// CGFloat = 8
+        static let normal: CGFloat = 8
+    }
+
     enum BorderWidth {
         /// CGFloat = 1
         static let minimum: CGFloat = 1
@@ -35,6 +46,18 @@ enum Dimensions {
         static let normal: CGFloat = 8
         /// CGFloat = 16
         static let big: CGFloat = 16
+    }
+
+    enum StackView {
+        /// CGFloat = 8
+        static let small: CGFloat = 8
+        /// CGFloat = 16
+        static let normal: CGFloat = 16
+    }
+
+    enum View {
+        /// CGFloat = 64
+        static let normalSize: CGFloat = 64
     }
 
     enum Icon {
@@ -52,6 +75,8 @@ enum Dimensions {
         static let maxWidth: CGFloat = 176
         /// CGFloat = -2
         static let strokeWidth: CGFloat = -2
+        /// Int = 1
+        static let normalLines: Int = 1
     }
 
     enum LoaderView {

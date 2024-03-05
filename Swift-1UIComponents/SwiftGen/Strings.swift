@@ -45,12 +45,28 @@ internal enum L10n {
     internal static let differentStylesSecond = L10n.tr("Localizable", "label.different_styles_second", fallback: " diferentes éstilos")
     /// Texto tamaño máximo
     internal static let maxWidthLeft = L10n.tr("Localizable", "label.max_width_left", fallback: "Texto tamaño máximo")
-    /// Texto derecho
-    internal static let maxWidthRight = L10n.tr("Localizable", "label.max_width_right", fallback: "Texto derecho")
+    /// Texto derecha
+    internal static let maxWidthRight = L10n.tr("Localizable", "label.max_width_right", fallback: "Texto derecha")
     /// Tachado
     internal static let strikethrough = L10n.tr("Localizable", "label.strikethrough", fallback: "Tachado")
     /// Etiquetas
     internal static let title = L10n.tr("Localizable", "label.title", fallback: "Etiquetas")
+  }
+  internal enum Views {
+    /// Cerrar
+    internal static let alertAction = L10n.tr("Localizable", "views.alert_action", fallback: "Cerrar")
+    /// La acción de la vista ha sido llamada con éxito
+    internal static let alertMessage = L10n.tr("Localizable", "views.alert_message", fallback: "La acción de la vista ha sido llamada con éxito")
+    /// Presioname, mira mi función
+    internal static let alertText = L10n.tr("Localizable", "views.alert_text", fallback: "Presioname, mira mi función")
+    /// Presionaste la vista
+    internal static let alertTitle = L10n.tr("Localizable", "views.alert_title", fallback: "Presionaste la vista")
+    /// Vista que ha sido configurada mediante parámetros
+    internal static let configText = L10n.tr("Localizable", "views.config_text", fallback: "Vista que ha sido configurada mediante parámetros")
+    /// Vista con sombra
+    internal static let shadowTitle = L10n.tr("Localizable", "views.shadow_title", fallback: "Vista con sombra")
+    /// Vistas
+    internal static let title = L10n.tr("Localizable", "views.title", fallback: "Vistas")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

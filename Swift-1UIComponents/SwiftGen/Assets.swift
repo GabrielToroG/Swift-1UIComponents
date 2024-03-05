@@ -62,6 +62,9 @@ internal enum Asset {
     internal static let textfieldEyeIcon = ImageAsset(name: "textfield.eye.icon")
     internal static let textfieldSuccessIcon = ImageAsset(name: "textfield.success.icon")
   }
+  internal enum Views {
+    internal static let viewsStar = ImageAsset(name: "views.star")
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

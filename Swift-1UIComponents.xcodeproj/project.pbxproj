@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */; };
 		7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */; };
 		7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */; };
 		7FB3F1F52B96794A00E7B252 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */; };
+		7FB3F1FD2B9697B600E7B252 /* ViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F1FC2B9697B600E7B252 /* ViewsViewController.swift */; };
+		7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F1FE2B9697DC00E7B252 /* ViewsCoordinator.swift */; };
+		7FB3F2012B9697F100E7B252 /* ViewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2002B9697F100E7B252 /* ViewsViewModel.swift */; };
+		7FB3F2032B969F5F00E7B252 /* ViewsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2022B969F5F00E7B252 /* ViewsModule.swift */; };
+		7FB3F2072B96A27E00E7B252 /* ViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2062B96A27E00E7B252 /* ViewWithShadow.swift */; };
+		7FB3F2092B96A9E900E7B252 /* ViewWithShadowArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2082B96A9E900E7B252 /* ViewWithShadowArgs.swift */; };
+		7FB3F20B2B96B23900E7B252 /* ViewWithActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F20A2B96B23900E7B252 /* ViewWithActionView.swift */; };
+		7FB3F20E2B96D13F00E7B252 /* ClickableGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F20D2B96D13F00E7B252 /* ClickableGestureRecognizer.swift */; };
+		7FB3F2102B96D16000E7B252 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F20F2B96D16000E7B252 /* LongPressGestureRecognizer.swift */; };
+		7FB3F2152B96D37200E7B252 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */; };
 		7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1598A2B82C6FA00347CA1 /* AppDelegate.swift */; };
 		7FD1598D2B82C6FA00347CA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1598C2B82C6FA00347CA1 /* SceneDelegate.swift */; };
 		7FD159942B82C6FB00347CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD159932B82C6FB00347CA1 /* Assets.xcassets */; };
@@ -58,9 +69,20 @@
 
 /* Begin PBXFileReference section */
 		048B14AA6B518D70C4CE3C27 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithConfigView.swift; sourceTree = "<group>"; };
 		7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitCoordinator.swift; sourceTree = "<group>"; };
 		7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		7FB3F1FC2B9697B600E7B252 /* ViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsViewController.swift; sourceTree = "<group>"; };
+		7FB3F1FE2B9697DC00E7B252 /* ViewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsCoordinator.swift; sourceTree = "<group>"; };
+		7FB3F2002B9697F100E7B252 /* ViewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsViewModel.swift; sourceTree = "<group>"; };
+		7FB3F2022B969F5F00E7B252 /* ViewsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsModule.swift; sourceTree = "<group>"; };
+		7FB3F2062B96A27E00E7B252 /* ViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithShadow.swift; sourceTree = "<group>"; };
+		7FB3F2082B96A9E900E7B252 /* ViewWithShadowArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithShadowArgs.swift; sourceTree = "<group>"; };
+		7FB3F20A2B96B23900E7B252 /* ViewWithActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithActionView.swift; sourceTree = "<group>"; };
+		7FB3F20D2B96D13F00E7B252 /* ClickableGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableGestureRecognizer.swift; sourceTree = "<group>"; };
+		7FB3F20F2B96D16000E7B252 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
+		7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		7FD159872B82C6FA00347CA1 /* Swift-1UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-1UIComponents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD1598A2B82C6FA00347CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FD1598C2B82C6FA00347CA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +170,111 @@
 			path = AppLife;
 			sourceTree = "<group>";
 		};
+		7FB3F1F62B96976900E7B252 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F1F72B96977300E7B252 /* DI */,
+				7FB3F1F82B96977D00E7B252 /* Presentation */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7FB3F1F72B96977300E7B252 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F2022B969F5F00E7B252 /* ViewsModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7FB3F1F82B96977D00E7B252 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F1F92B96978B00E7B252 /* Coordinator */,
+				7FB3F1FA2B96979000E7B252 /* View */,
+				7FB3F1FB2B96979400E7B252 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7FB3F1F92B96978B00E7B252 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F1FE2B9697DC00E7B252 /* ViewsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7FB3F1FA2B96979000E7B252 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F1FC2B9697B600E7B252 /* ViewsViewController.swift */,
+				7FB3F20A2B96B23900E7B252 /* ViewWithActionView.swift */,
+				7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FB3F1FB2B96979400E7B252 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F2002B9697F100E7B252 /* ViewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FB3F2042B96A25800E7B252 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F2052B96A26C00E7B252 /* ViewWithShadow */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7FB3F2052B96A26C00E7B252 /* ViewWithShadow */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F2062B96A27E00E7B252 /* ViewWithShadow.swift */,
+				7FB3F2082B96A9E900E7B252 /* ViewWithShadowArgs.swift */,
+			);
+			path = ViewWithShadow;
+			sourceTree = "<group>";
+		};
+		7FB3F20C2B96D09100E7B252 /* UIEvents */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3F20D2B96D13F00E7B252 /* ClickableGestureRecognizer.swift */,
+				7FB3F20F2B96D16000E7B252 /* LongPressGestureRecognizer.swift */,
+			);
+			path = UIEvents;
+			sourceTree = "<group>";
+		};
+		7FB3F2112B96D1F300E7B252 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018892B833978008FC45A /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7FB3F2122B96D25800E7B252 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FE0188B2B833A7F008FC45A /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FB3F2132B96D2C800E7B252 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FE018992B835405008FC45A /* Launch */,
+				7FE018D62B838351008FC45A /* Loader */,
+				7FB3F2042B96A25800E7B252 /* CustomViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7FD1597E2B82C6FA00347CA1 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +313,7 @@
 				7FE018802B82D8BA008FC45A /* Home */,
 				7FE0189F2B8355B0008FC45A /* Label */,
 				7FE018E82B83C4BC008FC45A /* Images */,
+				7FB3F1F62B96976900E7B252 /* Views */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -267,10 +395,11 @@
 		7FE018882B8338CE008FC45A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				7FE018992B835405008FC45A /* Launch */,
+				7FB3F20C2B96D09100E7B252 /* UIEvents */,
 				7FE018952B8353BD008FC45A /* Coordinator */,
-				7FE018962B8353CF008FC45A /* Base */,
-				7FE018D62B838351008FC45A /* Loader */,
+				7FB3F2112B96D1F300E7B252 /* ViewController */,
+				7FB3F2122B96D25800E7B252 /* ViewModel */,
+				7FB3F2132B96D2C800E7B252 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -296,18 +425,9 @@
 			children = (
 				7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */,
 				7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		7FE018962B8353CF008FC45A /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				7FE018892B833978008FC45A /* BaseViewController.swift */,
-				7FE0188B2B833A7F008FC45A /* BaseViewModel.swift */,
 				7FE0188D2B833B41008FC45A /* Coordinator.swift */,
 			);
-			path = Base;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		7FE018982B8353ED008FC45A /* Resources */ = {
@@ -362,6 +482,7 @@
 				7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */,
 				7FE018C02B836936008FC45A /* UIViewControllerExtension.swift */,
 				7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */,
+				7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -638,22 +759,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB3F2072B96A27E00E7B252 /* ViewWithShadow.swift in Sources */,
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
+				7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */,
 				7FE018BF2B83686D008FC45A /* Colors.swift in Sources */,
 				7FE018E72B83B92F008FC45A /* LabelModule.swift in Sources */,
 				7FE018C12B836936008FC45A /* UIViewControllerExtension.swift in Sources */,
 				7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */,
+				7FB3F2012B9697F100E7B252 /* ViewsViewModel.swift in Sources */,
 				7FE018D82B83835D008FC45A /* LoaderView.swift in Sources */,
 				7FE0188E2B833B41008FC45A /* Coordinator.swift in Sources */,
 				7FE018942B834586008FC45A /* HomeCoordinator.swift in Sources */,
+				7FB3F2152B96D37200E7B252 /* UIViewExtensions.swift in Sources */,
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
 				7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */,
+				7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */,
+				7FB3F20E2B96D13F00E7B252 /* ClickableGestureRecognizer.swift in Sources */,
 				7FE018E52B8389AA008FC45A /* LabelsCoordinator.swift in Sources */,
 				7FE0188C2B833A7F008FC45A /* BaseViewModel.swift in Sources */,
 				7FE018A72B83620B008FC45A /* HomeTableViewCell.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
+				7FB3F1FD2B9697B600E7B252 /* ViewsViewController.swift in Sources */,
+				7FB3F20B2B96B23900E7B252 /* ViewWithActionView.swift in Sources */,
 				7FE018EF2B83C538008FC45A /* ImagesViewController.swift in Sources */,
 				7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */,
 				7FE018E12B838975008FC45A /* LabelsViewController.swift in Sources */,
@@ -661,7 +790,9 @@
 				7FE018E32B83898C008FC45A /* LabelsViewModel.swift in Sources */,
 				7FE018BD2B8367C2008FC45A /* Fonts.swift in Sources */,
 				7FB3F1F52B96794A00E7B252 /* UIImageViewExtension.swift in Sources */,
+				7FB3F2032B969F5F00E7B252 /* ViewsModule.swift in Sources */,
 				7FE018772B82D813008FC45A /* MainControllerProvider.swift in Sources */,
+				7FB3F2092B96A9E900E7B252 /* ViewWithShadowArgs.swift in Sources */,
 				7FE018CB2B836D71008FC45A /* UIColorExtensions.swift in Sources */,
 				7FE018A52B8361CE008FC45A /* UITableViewExtension.swift in Sources */,
 				7FE018ED2B83C51D008FC45A /* ImagesCoordinator.swift in Sources */,
@@ -674,6 +805,7 @@
 				7FE018852B82D966008FC45A /* HomeViewController.swift in Sources */,
 				7FE0187F2B82D8A4008FC45A /* NotificationCenterWrapperImpl.swift in Sources */,
 				7FE018792B82D832008FC45A /* MainModule.swift in Sources */,
+				7FB3F2102B96D16000E7B252 /* LongPressGestureRecognizer.swift in Sources */,
 				7FE018B12B836503008FC45A /* StringExtension.swift in Sources */,
 				7FD1598D2B82C6FA00347CA1 /* SceneDelegate.swift in Sources */,
 			);

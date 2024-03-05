@@ -10,7 +10,8 @@ import UIKit
 final class HomeCoordinator: Coordinator {
     indirect enum GoToScene: Equatable {
         case labelsView
-        case ImagesView
+        case imagesView
+        case viewsView
     }
 
     func goToScene(
@@ -24,10 +25,16 @@ final class HomeCoordinator: Coordinator {
                 newViewControllerType: LabelsViewController.self,
                 animated: true
             )
-        case .ImagesView:
+        case .imagesView:
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: ImagesViewController.self,
+                animated: true
+            )
+        case .viewsView:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: ViewsViewController.self,
                 animated: true
             )
         }
