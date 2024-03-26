@@ -9,6 +9,9 @@ import UIKit
 
 final class ViewWithConfigView: UIView {
 
+    private enum Constants {
+        static let huggingPriority: UILayoutPriority = .init(rawValue: 251)
+    }
     // Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
@@ -16,19 +19,38 @@ final class ViewWithConfigView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = Fonts.Body.body2
-        label.textColor = Asset.Colors.blackColor.color
-        label.numberOfLines = Dimensions.Label.normalLines
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var containerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 4
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }()
-    private lazy var iconImageView = {
+    private lazy var iconContainerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.setContentHuggingPriority(Constants.huggingPriority, for: .horizontal)
+        imageView.setContentHuggingPriority(Constants.huggingPriority, for: .vertical)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = Fonts.Body.body1
+        label.textColor = Asset.Colors.blackColor.color
+        label.numberOfLines = Dimensions.Label.normalLines
+        label.setContentHuggingPriority(Constants.huggingPriority, for: .horizontal)
+        label.setContentHuggingPriority(Constants.huggingPriority, for: .vertical)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
 
     // Init
     override init(frame: CGRect = .zero) {
@@ -60,47 +82,48 @@ extension ViewWithConfigView {
     
     private func configConstraints() {
         addSubview(containerView)
-        containerView.addSubview(titleLabel)
-        containerView.addSubview(iconImageView)
+        containerView.addSubview(containerStackView)
+        containerStackView.addArrangedSubview(iconContainerView)
+        iconContainerView.addSubview(iconImageView)
+        containerStackView.addArrangedSubview(titleLabel)
 
         let containerViewConstraints = [
-            containerView.topAnchor.constraint(
-                equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(
-                equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(
-                equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(
-                equalTo: bottomAnchor),
-            containerView.heightAnchor.constraint(
-                equalToConstant: Dimensions.View.normalSize)
+            containerView.topAnchor.constraint(equalTo: topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            containerView.heightAnchor.constraint(equalToConstant: Dimensions.View.normalSize)
         ]
-        let titleLabelConstraints = [
-            titleLabel.centerYAnchor.constraint(
-                equalTo: containerView.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(
-                equalTo: containerView.leadingAnchor,
-                constant: Dimensions.Margin.small),
-            titleLabel.trailingAnchor.constraint(
-                equalTo: iconImageView.leadingAnchor,
-                constant: -Dimensions.Margin.small)
+
+        let containerStackViewConstraints = [
+            containerStackView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            containerStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            containerStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+        ]
+        let iconContainerViewConstraints = [
+            iconContainerView.widthAnchor.constraint(equalToConstant: Dimensions.Icon.normalSize),
         ]
         let iconImageViewConstraints = [
-            iconImageView.widthAnchor.constraint(
-                equalToConstant: Dimensions.Icon.normalSize),
-            iconImageView.heightAnchor.constraint(
-                equalToConstant: Dimensions.Icon.normalSize),
-            iconImageView.trailingAnchor.constraint(
-                lessThanOrEqualTo: containerView.trailingAnchor,
-                constant: -Dimensions.Margin.small),
-            iconImageView.centerYAnchor.constraint(
-                equalTo: titleLabel.centerYAnchor)
+            iconImageView.centerYAnchor.constraint(equalTo: iconContainerView.centerYAnchor),
+            iconImageView.widthAnchor.constraint(equalToConstant: Dimensions.Icon.normalSize),
+            iconImageView.heightAnchor.constraint(equalToConstant: Dimensions.Icon.normalSize),
+            iconImageView.centerXAnchor.constraint(equalTo: iconContainerView.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(
             containerViewConstraints +
-            titleLabelConstraints +
+            containerStackViewConstraints +
+            iconContainerViewConstraints +
             iconImageViewConstraints
         )
+
+        // Establecer las prioridades de compresión y resistencia de contenido del UIStackView y sus subvistas
+        containerStackView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        containerStackView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        iconContainerView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        iconContainerView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
     }
+
+
 }

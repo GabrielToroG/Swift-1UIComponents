@@ -49,4 +49,7 @@ extension HomeViewModel {
     func goToViewsView() {
         self.goTo = .viewsView
     }
+    func goToButtonsView() {
+        self.goTo = .buttonsView
+    }
 }

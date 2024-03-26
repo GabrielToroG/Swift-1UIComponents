@@ -10,6 +10,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum Button {
+    /// Botón borde
+    internal static let bordered = L10n.tr("Localizable", "button.bordered", fallback: "Botón borde")
+    /// Botón relleno
+    internal static let filled = L10n.tr("Localizable", "button.filled", fallback: "Botón relleno")
+    /// Botón relleno con sombra
+    internal static let filledShadow = L10n.tr("Localizable", "button.filled_shadow", fallback: "Botón relleno con sombra")
+    /// Botones
+    internal static let title = L10n.tr("Localizable", "button.title", fallback: "Botones")
+  }
   internal enum Home {
     /// Buttons
     internal static let buttonOption = L10n.tr("Localizable", "home.button_option", fallback: "Buttons")
@@ -61,8 +71,8 @@ internal enum L10n {
     internal static let alertText = L10n.tr("Localizable", "views.alert_text", fallback: "Presioname, mira mi función")
     /// Presionaste la vista
     internal static let alertTitle = L10n.tr("Localizable", "views.alert_title", fallback: "Presionaste la vista")
-    /// Vista que ha sido configurada mediante parámetros
-    internal static let configText = L10n.tr("Localizable", "views.config_text", fallback: "Vista que ha sido configurada mediante parámetros")
+    /// Vista configurada con parámetros
+    internal static let configText = L10n.tr("Localizable", "views.config_text", fallback: "Vista configurada con parámetros")
     /// Vista con sombra
     internal static let shadowTitle = L10n.tr("Localizable", "views.shadow_title", fallback: "Vista con sombra")
     /// Vistas

@@ -95,6 +95,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.goToImagesView()
         case 2:
             viewModel.goToViewsView()
+        case 3:
+            viewModel.goToButtonsView()
         default:
             return
         }

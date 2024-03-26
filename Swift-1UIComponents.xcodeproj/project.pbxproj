@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */; };
+		7F0115C42B97DCCD002A82A6 /* ButtonsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115C32B97DCCD002A82A6 /* ButtonsModule.swift */; };
+		7F0115CA2B97DCFE002A82A6 /* ButtonsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115C92B97DCFE002A82A6 /* ButtonsCoordinator.swift */; };
+		7F0115CC2B97DD0B002A82A6 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CB2B97DD0B002A82A6 /* ButtonsViewController.swift */; };
+		7F0115CE2B97DD15002A82A6 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */; };
+		7F0115D02B97DEBA002A82A6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CF2B97DEBA002A82A6 /* UIButtonExtension.swift */; };
 		7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */; };
 		7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */; };
 		7FB3F1F52B96794A00E7B252 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */; };
@@ -70,6 +75,11 @@
 /* Begin PBXFileReference section */
 		048B14AA6B518D70C4CE3C27 /* Pods_Swift_1UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_1UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithConfigView.swift; sourceTree = "<group>"; };
+		7F0115C32B97DCCD002A82A6 /* ButtonsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsModule.swift; sourceTree = "<group>"; };
+		7F0115C92B97DCFE002A82A6 /* ButtonsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCoordinator.swift; sourceTree = "<group>"; };
+		7F0115CB2B97DD0B002A82A6 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
+		7F0115CF2B97DEBA002A82A6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitCoordinator.swift; sourceTree = "<group>"; };
 		7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -159,6 +169,57 @@
 				BE4E9807FFED8A6466F9A306 /* Pods-Swift-1UIComponents.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F0115C12B97DA8B002A82A6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115C22B97DCC2002A82A6 /* DI */,
+				7F0115C52B97DCD1002A82A6 /* Presentation */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7F0115C22B97DCC2002A82A6 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115C32B97DCCD002A82A6 /* ButtonsModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F0115C52B97DCD1002A82A6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115C62B97DCE1002A82A6 /* Coordinator */,
+				7F0115C72B97DCE5002A82A6 /* View */,
+				7F0115C82B97DCE8002A82A6 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F0115C62B97DCE1002A82A6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115C92B97DCFE002A82A6 /* ButtonsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7F0115C72B97DCE5002A82A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115CB2B97DD0B002A82A6 /* ButtonsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F0115C82B97DCE8002A82A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7F8CD2472B82D3BB0045D49D /* AppLife */ = {
@@ -314,6 +375,7 @@
 				7FE0189F2B8355B0008FC45A /* Label */,
 				7FE018E82B83C4BC008FC45A /* Images */,
 				7FB3F1F62B96976900E7B252 /* Views */,
+				7F0115C12B97DA8B002A82A6 /* Buttons */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -483,6 +545,7 @@
 				7FE018C02B836936008FC45A /* UIViewControllerExtension.swift */,
 				7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */,
 				7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */,
+				7F0115CF2B97DEBA002A82A6 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -759,6 +822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0115CE2B97DD15002A82A6 /* ButtonsViewModel.swift in Sources */,
 				7FB3F2072B96A27E00E7B252 /* ViewWithShadow.swift in Sources */,
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
 				7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */,
@@ -767,11 +831,13 @@
 				7FE018C12B836936008FC45A /* UIViewControllerExtension.swift in Sources */,
 				7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */,
 				7FB3F2012B9697F100E7B252 /* ViewsViewModel.swift in Sources */,
+				7F0115CC2B97DD0B002A82A6 /* ButtonsViewController.swift in Sources */,
 				7FE018D82B83835D008FC45A /* LoaderView.swift in Sources */,
 				7FE0188E2B833B41008FC45A /* Coordinator.swift in Sources */,
 				7FE018942B834586008FC45A /* HomeCoordinator.swift in Sources */,
 				7FB3F2152B96D37200E7B252 /* UIViewExtensions.swift in Sources */,
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
+				7F0115C42B97DCCD002A82A6 /* ButtonsModule.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
 				7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */,
 				7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */,
@@ -779,6 +845,7 @@
 				7FE018E52B8389AA008FC45A /* LabelsCoordinator.swift in Sources */,
 				7FE0188C2B833A7F008FC45A /* BaseViewModel.swift in Sources */,
 				7FE018A72B83620B008FC45A /* HomeTableViewCell.swift in Sources */,
+				7F0115D02B97DEBA002A82A6 /* UIButtonExtension.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
 				7FB3F1FD2B9697B600E7B252 /* ViewsViewController.swift in Sources */,
@@ -800,6 +867,7 @@
 				7FE018752B82D7FE008FC45A /* Injection.swift in Sources */,
 				7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */,
 				7FE018912B8344DC008FC45A /* HomeModule.swift in Sources */,
+				7F0115CA2B97DCFE002A82A6 /* ButtonsCoordinator.swift in Sources */,
 				7FE018872B82D997008FC45A /* HomeViewModel.swift in Sources */,
 				7FE018D12B837937008FC45A /* Assets.swift in Sources */,
 				7FE018852B82D966008FC45A /* HomeViewController.swift in Sources */,
