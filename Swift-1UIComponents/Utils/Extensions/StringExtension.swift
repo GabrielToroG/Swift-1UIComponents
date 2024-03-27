@@ -12,6 +12,12 @@ extension String {
     var mutableAttribute: NSMutableAttributedString {
         NSMutableAttributedString(string: self)
     }
+
+    /// Recibe un patrón regex y lo valida
+    func hasValidPattern(pattern: String) -> Bool {
+        let stringPred = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return stringPred.evaluate(with: self)
+    }
 }
 
 extension NSMutableAttributedString {

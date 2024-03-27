@@ -25,6 +25,7 @@ extension HomeViewModel {
                 UiHomeOption(icon: Asset.Home.homeLabelOption.image, title: L10n.Home.labelOption),
                 UiHomeOption(icon: Asset.Home.homeImageOption.image, title: L10n.Home.imageOption),
                 UiHomeOption(icon: Asset.Home.homeViewOption.image, title: L10n.Home.viewOption),
+                UiHomeOption(icon: Asset.Home.homeProgressBarOption.image, title: L10n.Home.progressBarOption),
                 UiHomeOption(icon: Asset.Home.homeButtonOption.image, title: L10n.Home.buttonOption),
                 UiHomeOption(icon: Asset.Home.homeTextfieldOption.image, title: L10n.Home.textfieldOption),
                 UiHomeOption(icon: Asset.Home.homeTableOption.image, title: L10n.Home.tableOption),
@@ -49,7 +50,12 @@ extension HomeViewModel {
     func goToViewsView() {
         self.goTo = .viewsView
     }
+
     func goToButtonsView() {
         self.goTo = .buttonsView
+    }
+
+    func goToTextFieldsView() {
+        self.goTo = .textFieldsView
     }
 }

@@ -16,7 +16,7 @@ enum Fonts {
             static let bold = "Montserrat-Bold"
         }
     }
-
+    
     // Se definen las fuentes de sistema, en caso de no funcionar las otras
     enum SysFont {
         static let boldSize30 = UIFont.systemFont(ofSize: 30, weight: .bold)
@@ -31,7 +31,7 @@ enum Fonts {
         static let boldSize12 = UIFont.systemFont(ofSize: 12, weight: .bold)
         static let boldSize11 = UIFont.systemFont(ofSize: 11, weight: .bold)
         static let boldSize10 = UIFont.systemFont(ofSize: 10, weight: .bold)
-
+        
         static let semiboldSize30 = UIFont.systemFont(ofSize: 30, weight: .semibold)
         static let semiboldSize20 = UIFont.systemFont(ofSize: 20, weight: .semibold)
         static let semiboldSize19 = UIFont.systemFont(ofSize: 19, weight: .semibold)
@@ -44,7 +44,7 @@ enum Fonts {
         static let semiboldSize12 = UIFont.systemFont(ofSize: 12, weight: .semibold)
         static let semiboldSize11 = UIFont.systemFont(ofSize: 11, weight: .semibold)
         static let semiboldSize10 = UIFont.systemFont(ofSize: 10, weight: .semibold)
-
+        
         static let regularSize30 = UIFont.systemFont(ofSize: 30, weight: .regular)
         static let regularSize20 = UIFont.systemFont(ofSize: 20, weight: .regular)
         static let regularSize19 = UIFont.systemFont(ofSize: 19, weight: .regular)
@@ -58,7 +58,7 @@ enum Fonts {
         static let regularSize11 = UIFont.systemFont(ofSize: 11, weight: .regular)
         static let regularSize10 = UIFont.systemFont(ofSize: 10, weight: .regular)
     }
-
+    
     enum Heading {
         /// Montserrat semibold 30
         static let heading1 = UIFont(name: FontName.Montserrat.semiBold, size: 30) ?? SysFont.semiboldSize30
@@ -67,17 +67,25 @@ enum Fonts {
         /// Montserrat regular 16
         static let backButton = UIFont(name: FontName.Montserrat.regular, size: 16) ?? SysFont.regularSize16
     }
-
+    
     enum Body {
         /// Montserrat regular 17
         static let body1 = UIFont(name: FontName.Montserrat.regular, size: 17) ?? SysFont.regularSize17
         /// Montserrat regular 14
         static let body2 = UIFont(name: FontName.Montserrat.regular, size: 14) ?? SysFont.regularSize14
-    }
+        /// Montserrat regular 12
+        static let body3 = UIFont(name: FontName.Montserrat.regular, size: 12) ?? SysFont.regularSize12
 
+    }
+    
     enum Button {
         /// Montserrat semibold 17
         static let button1 = UIFont(name: FontName.Montserrat.semiBold, size: 17) ?? SysFont.semiboldSize17
+    }
+
+    enum TextField {
+        /// Montserrat regular 16
+        static let textfield1 = UIFont(name: FontName.Montserrat.regular, size: 16) ?? SysFont.regularSize16
     }
 }
 

@@ -63,7 +63,7 @@ extension ButtonsViewController {
 // MARK: - UI Functions
 extension ButtonsViewController {
     private func configUI() {
-        configBasic(L10n.Button.title, UIColor.white)
+        configBasic(L10n.Button.title, Asset.Colors.whiteColor.color)
         configConstraints()
     }
     

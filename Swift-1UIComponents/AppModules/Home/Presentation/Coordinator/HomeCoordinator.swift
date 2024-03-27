@@ -13,6 +13,7 @@ final class HomeCoordinator: Coordinator {
         case imagesView
         case viewsView
         case buttonsView
+        case textFieldsView
     }
 
     func goToScene(
@@ -44,7 +45,12 @@ final class HomeCoordinator: Coordinator {
                 newViewControllerType: ButtonsViewController.self,
                 animated: true
             )
-
+        case .textFieldsView:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: TextFieldsViewController.self,
+                animated: true
+            )
         }
     }
 }

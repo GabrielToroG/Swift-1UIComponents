@@ -20,6 +20,10 @@ internal enum L10n {
     /// Botones
     internal static let title = L10n.tr("Localizable", "button.title", fallback: "Botones")
   }
+  internal enum General {
+    /// Atrás
+    internal static let back = L10n.tr("Localizable", "general.back", fallback: "Atrás")
+  }
   internal enum Home {
     /// Buttons
     internal static let buttonOption = L10n.tr("Localizable", "home.button_option", fallback: "Buttons")
@@ -29,6 +33,8 @@ internal enum L10n {
     internal static let imageOption = L10n.tr("Localizable", "home.image_option", fallback: "Images")
     /// Labels
     internal static let labelOption = L10n.tr("Localizable", "home.label_option", fallback: "Labels")
+    /// Barras de progreso
+    internal static let progressBarOption = L10n.tr("Localizable", "home.progress_bar_option", fallback: "Barras de progreso")
     /// Switchs
     internal static let switchOption = L10n.tr("Localizable", "home.switch_option", fallback: "Switchs")
     /// Table Views
@@ -61,6 +67,36 @@ internal enum L10n {
     internal static let strikethrough = L10n.tr("Localizable", "label.strikethrough", fallback: "Tachado")
     /// Etiquetas
     internal static let title = L10n.tr("Localizable", "label.title", fallback: "Etiquetas")
+  }
+  internal enum Textfield {
+    /// Email válido
+    internal static let emailCorrect = L10n.tr("Localizable", "textfield.email_correct", fallback: "Email válido")
+    /// El email ingresado no es válido
+    internal static let emailError = L10n.tr("Localizable", "textfield.email_error", fallback: "El email ingresado no es válido")
+    /// TextField con etiqueta
+    internal static let labeledButton = L10n.tr("Localizable", "textfield.labeled_button", fallback: "TextField con etiqueta")
+    /// Nombre válido
+    internal static let nameCorrect = L10n.tr("Localizable", "textfield.name_correct", fallback: "Nombre válido")
+    /// Ingrese un nombre con al menos 3 caracteres
+    internal static let nameEmpty = L10n.tr("Localizable", "textfield.name_empty", fallback: "Ingrese un nombre con al menos 3 caracteres")
+    /// El nombre ingresado es demasiado largo
+    internal static let nameLargeError = L10n.tr("Localizable", "textfield.name_large_error", fallback: "El nombre ingresado es demasiado largo")
+    /// El nombre ingresado es demasiado corto
+    internal static let nameSmallError = L10n.tr("Localizable", "textfield.name_small_error", fallback: "El nombre ingresado es demasiado corto")
+    /// Teléfono válido
+    internal static let phoneCorrect = L10n.tr("Localizable", "textfield.phone_correct", fallback: "Teléfono válido")
+    /// El teléfono ingresado no es válido
+    internal static let phoneError = L10n.tr("Localizable", "textfield.phone_error", fallback: "El teléfono ingresado no es válido")
+    /// Textfield picker
+    internal static let pickerButton = L10n.tr("Localizable", "textfield.picker_button", fallback: "Textfield picker")
+    /// Rut válido
+    internal static let rutCorrect = L10n.tr("Localizable", "textfield.rut_correct", fallback: "Rut válido")
+    /// Ingrese un rut sin punto ni guión
+    internal static let rutEmpty = L10n.tr("Localizable", "textfield.rut_empty", fallback: "Ingrese un rut sin punto ni guión")
+    /// El rut ingresado no es válido
+    internal static let rutError = L10n.tr("Localizable", "textfield.rut_error", fallback: "El rut ingresado no es válido")
+    /// Campos de texto
+    internal static let title = L10n.tr("Localizable", "textfield.title", fallback: "Campos de texto")
   }
   internal enum Views {
     /// Cerrar

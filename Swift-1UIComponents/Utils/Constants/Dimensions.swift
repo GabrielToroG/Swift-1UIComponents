@@ -35,6 +35,8 @@ enum Dimensions {
     }
 
     enum BorderRadius {
+        /// CGFloat = 4
+        static let small: CGFloat = 4
         /// CGFloat = 8
         static let normal: CGFloat = 8
         /// CGFloat = 16
@@ -60,8 +62,17 @@ enum Dimensions {
     }
 
     enum View {
+        /// CGFloat = 40
+        static let smallSize: CGFloat = 40
         /// CGFloat = 64
         static let normalSize: CGFloat = 64
+    }
+
+    enum Textfield {
+        /// CGFloat = 64
+        static let leftWidth: CGFloat = 64
+        /// CGFloat = 16
+        static let descriptionWidth: CGFloat = 16
     }
 
     enum Button {
@@ -70,6 +81,8 @@ enum Dimensions {
     }
 
     enum Icon {
+        /// CGFloat = 24
+        static let smallSize: CGFloat = 24
         /// CGFloat = 28
         static let normalSize: CGFloat = 28
     }

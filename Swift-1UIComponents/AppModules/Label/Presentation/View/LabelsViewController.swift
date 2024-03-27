@@ -64,6 +64,9 @@ extension LabelsViewController {
         configBasic(L10n.Label.title, Asset.Colors.brandColor.color)
         configLabels()
         configConstraints()
+        let backButton = UIBarButtonItem()
+         backButton.title = "Regresar" // Cambia el texto del botón aquí
+         navigationItem.backBarButtonItem = backButton
     }
 
     private func configLabels() {

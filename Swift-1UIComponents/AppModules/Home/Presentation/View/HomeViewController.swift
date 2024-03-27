@@ -48,8 +48,15 @@ extension HomeViewController {
 extension HomeViewController {
     private func configUI() {
         configBasic(L10n.Home.title, Asset.Colors.brandColor.color)
+        configNavigation()
         configTableView()
         configConstraints()
+    }
+
+    private func configNavigation() {
+        let backButton = UIBarButtonItem()
+        backButton.title = L10n.General.back
+        navigationItem.backBarButtonItem = backButton
     }
 
     private func configTableView() {
@@ -95,8 +102,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.goToImagesView()
         case 2:
             viewModel.goToViewsView()
-        case 3:
+        case 4:
             viewModel.goToButtonsView()
+        case 5:
+            viewModel.goToTextFieldsView()
         default:
             return
         }

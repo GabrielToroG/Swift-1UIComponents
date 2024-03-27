@@ -1,8 +1,12 @@
+// General
+"general.back" = "Atrás";
+
 // Home
 "home.title" = "UI Components";
 "home.label_option" = "Labels";
 "home.image_option" = "Images";
 "home.view_option" = "Views";
+"home.progress_bar_option" = "Barras de progreso";
 "home.button_option" = "Buttons";
 "home.textfield_option" = "Text Fields";
 "home.table_option" = "Table Views";
@@ -36,3 +40,22 @@
 "button.filled" = "Botón relleno";
 "button.filled_shadow" = "Botón relleno con sombra";
 "button.bordered" = "Botón borde";
+
+// Textfields
+"textfield.title" = "Campos de texto";
+"textfield.labeled_button" = "TextField con etiqueta";
+"textfield.picker_button" = "Textfield picker";
+"textfield.rut_empty" = "Ingrese un rut sin punto ni guión";
+"textfield.rut_correct" = "Rut válido";
+"textfield.rut_error" = "El rut ingresado no es válido";
+
+"textfield.name_empty" = "Ingrese un nombre con al menos 3 caracteres";
+"textfield.name_correct" = "Nombre válido";
+"textfield.name_small_error" = "El nombre ingresado es demasiado corto";
+"textfield.name_large_error" = "El nombre ingresado es demasiado largo";
+
+"textfield.email_correct" = "Email válido";
+"textfield.email_error" = "El email ingresado no es válido";
+
+"textfield.phone_correct" = "Teléfono válido";
+"textfield.phone_error" = "El teléfono ingresado no es válido";
