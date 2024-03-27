@@ -80,7 +80,7 @@ extension LabelsViewController {
             NSAttributedString.Key.font: Fonts.Body.body1,
             NSAttributedString.Key.foregroundColor: UIColor.systemRed,
             NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue,
-            NSAttributedString.Key.strokeWidth: Dimensions.Label.strokeWidth
+            NSAttributedString.Key.strokeWidth: Dimensions.Label.Stroke.normalWidth
         ]
         let attributedString = NSAttributedString(string: labelText, attributes: attributes)
         strikethroughLabel.attributedText = attributedString
@@ -133,7 +133,7 @@ extension LabelsViewController {
                 equalTo: containerView.leadingAnchor,
                 constant: Dimensions.Margin.normal),
             maxWidthLeftLabel.widthAnchor.constraint(
-                lessThanOrEqualToConstant: Dimensions.Label.maxWidth)
+                lessThanOrEqualToConstant: Dimensions.Label.Width.extreme)
         ]
         let maxWidthRightLabelConstraints = [
             maxWidthRightLabel.centerYAnchor.constraint(

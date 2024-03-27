@@ -50,7 +50,7 @@ final class LabelTextFieldView: UIView {
     private lazy var horizontalFieldStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = Dimensions.StackView.small
+        stackView.spacing = Dimensions.StackView.smallSpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

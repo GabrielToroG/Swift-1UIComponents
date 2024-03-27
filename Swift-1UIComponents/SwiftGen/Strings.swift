@@ -68,6 +68,14 @@ internal enum L10n {
     /// Etiquetas
     internal static let title = L10n.tr("Localizable", "label.title", fallback: "Etiquetas")
   }
+  internal enum ProgressBar {
+    /// Barra gradiente
+    internal static let gradient = L10n.tr("Localizable", "progress_bar.gradient", fallback: "Barra gradiente")
+    /// Barra redondeada
+    internal static let rounded = L10n.tr("Localizable", "progress_bar.rounded", fallback: "Barra redondeada")
+    /// Barras de progreso
+    internal static let title = L10n.tr("Localizable", "progress_bar.title", fallback: "Barras de progreso")
+  }
   internal enum Textfield {
     /// Email válido
     internal static let emailCorrect = L10n.tr("Localizable", "textfield.email_correct", fallback: "Email válido")

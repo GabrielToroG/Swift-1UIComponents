@@ -35,6 +35,12 @@
 "views.alert_text" = "Presioname, mira mi función";
 "views.config_text" = "Vista configurada con parámetros";
 
+// Progress Bar
+"progress_bar.title" = "Barras de progreso";
+"progress_bar.rounded" = "Barra redondeada";
+"progress_bar.gradient" = "Barra gradiente";
+
+
 // Buttons
 "button.title" = "Botones";
 "button.filled" = "Botón relleno";

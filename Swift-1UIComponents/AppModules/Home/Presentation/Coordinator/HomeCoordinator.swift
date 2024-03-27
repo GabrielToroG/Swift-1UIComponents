@@ -12,6 +12,7 @@ final class HomeCoordinator: Coordinator {
         case labelsView
         case imagesView
         case viewsView
+        case progressBarView
         case buttonsView
         case textFieldsView
     }
@@ -37,6 +38,12 @@ final class HomeCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: ViewsViewController.self,
+                animated: true
+            )
+        case .progressBarView:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: ProgressBarViewController.self,
                 animated: true
             )
         case .buttonsView:

@@ -51,6 +51,10 @@ extension HomeViewModel {
         self.goTo = .viewsView
     }
 
+    func goToProgressBarsView() {
+        self.goTo = .progressBarView
+    }
+
     func goToButtonsView() {
         self.goTo = .buttonsView
     }

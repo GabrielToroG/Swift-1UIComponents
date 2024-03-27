@@ -14,7 +14,7 @@ final class LabeledTextFieldViewController: BaseViewController<LabeledTextFieldV
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fillEqually
-        stackView.spacing = Dimensions.StackView.small
+        stackView.spacing = Dimensions.StackView.tinySpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

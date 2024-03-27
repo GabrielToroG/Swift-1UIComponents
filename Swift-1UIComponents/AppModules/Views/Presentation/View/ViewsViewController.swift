@@ -12,7 +12,7 @@ final class ViewsViewController: BaseViewController<ViewsViewModel, ViewsCoordin
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = Dimensions.StackView.normal
+        stackView.spacing = Dimensions.StackView.normalSpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

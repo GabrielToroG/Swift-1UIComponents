@@ -25,6 +25,7 @@ final class Injection {
         LabelModule(container).inject()
         ImagesModule(container).inject()
         ViewsModule(container).inject()
+        ProgressBarModule(container).inject()
         ButtonsModule(container).inject()
         TextFieldsModule(container).inject()
     }

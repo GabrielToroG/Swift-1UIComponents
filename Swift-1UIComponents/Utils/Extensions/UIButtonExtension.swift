@@ -21,14 +21,14 @@ extension UIButton {
         switch type {
         case .filled:
             titleLabel?.font = Fonts.Button.button1
-            heightAnchor.constraint(equalToConstant: Dimensions.Button.normalHeight).isActive = true
+            heightAnchor.constraint(equalToConstant: Dimensions.Button.Height.normal).isActive = true
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = Asset.Colors.brownColor.color
             isEnabled = true
             layer.cornerRadius = Dimensions.BorderRadius.extreme
         case .shadowFilled:
             titleLabel?.font = Fonts.Button.button1
-            heightAnchor.constraint(equalToConstant: Dimensions.Button.normalHeight).isActive = true
+            heightAnchor.constraint(equalToConstant: Dimensions.Button.Height.normal).isActive = true
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = Asset.Colors.brownColor.color
             isEnabled = true
@@ -36,7 +36,7 @@ extension UIButton {
             configButtonShadow(show: true)
         case .bordered:
             titleLabel?.font = Fonts.Button.button1
-            heightAnchor.constraint(equalToConstant: Dimensions.Button.normalHeight).isActive = true
+            heightAnchor.constraint(equalToConstant: Dimensions.Button.Height.normal).isActive = true
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = .clear
             isEnabled = true

@@ -44,7 +44,7 @@ final class ViewWithConfigView: UIView {
         let label = UILabel()
         label.font = Fonts.Body.body1
         label.textColor = Asset.Colors.blackColor.color
-        label.numberOfLines = Dimensions.Label.normalLines
+        label.numberOfLines = Dimensions.Label.lines.one
         label.setContentHuggingPriority(Constants.huggingPriority, for: .horizontal)
         label.setContentHuggingPriority(Constants.huggingPriority, for: .vertical)
         label.translatesAutoresizingMaskIntoConstraints = false
