@@ -35,7 +35,7 @@ final class TextFieldsViewController: BaseViewController<TextFieldsViewModel, Te
     private lazy var pickersButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(L10n.Textfield.pickerButton, for: .normal)
-        button.style(like: .filled)
+        button.style(like: .disable)
         button.onClick { [weak self] in
             self?.viewModel.goToLabeledView()
         }

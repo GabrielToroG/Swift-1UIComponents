@@ -48,7 +48,12 @@ extension UIButton {
         case .noBackgroundGray:
             print("")
         case .disable:
-            print("")
+            titleLabel?.font = Fonts.Button.button1
+            heightAnchor.constraint(equalToConstant: Dimensions.Button.Height.normal).isActive = true
+            setTitleColor(Asset.Colors.blackColor.color.withAlphaComponent(0.3), for: .normal)
+            backgroundColor = Asset.Colors.brownColor.color.withAlphaComponent(0.3)
+            isEnabled = false
+            layer.cornerRadius = Dimensions.BorderRadius.extreme
         }
     }
 
