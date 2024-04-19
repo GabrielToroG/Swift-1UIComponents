@@ -108,6 +108,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.goToButtonsView()
         case 5:
             viewModel.goToTextFieldsView()
+        case 6:
+            viewModel.goToTablesMenuView()
         default:
             return
         }

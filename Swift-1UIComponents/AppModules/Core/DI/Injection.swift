@@ -28,6 +28,7 @@ final class Injection {
         ProgressBarModule(container).inject()
         ButtonsModule(container).inject()
         TextFieldsModule(container).inject()
+        TablesViewModule(container).inject()
     }
     
     func getContainer() -> Container {

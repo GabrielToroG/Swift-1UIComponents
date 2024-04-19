@@ -82,7 +82,7 @@ final class LabelTextFieldView: UIView {
     }()
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.Body.body3
+        label.font = Fonts.Body.body4
         label.textColor = Asset.Colors.blackColor.color
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

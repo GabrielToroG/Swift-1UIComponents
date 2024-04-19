@@ -16,12 +16,6 @@ final class TextFieldsViewController: BaseViewController<TextFieldsViewModel, Te
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    private lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemBlue
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
     private lazy var labeledButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(L10n.Textfield.labeledButton, for: .normal)

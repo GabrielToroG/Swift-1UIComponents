@@ -15,6 +15,7 @@ final class HomeCoordinator: Coordinator {
         case progressBarView
         case buttonsView
         case textFieldsView
+        case tablesMenu
     }
 
     func goToScene(
@@ -56,6 +57,12 @@ final class HomeCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: TextFieldsViewController.self,
+                animated: true
+            )
+        case .tablesMenu:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: TablesMenuViewController.self,
                 animated: true
             )
         }

@@ -76,6 +76,22 @@ internal enum L10n {
     /// Barras de progreso
     internal static let title = L10n.tr("Localizable", "progress_bar.title", fallback: "Barras de progreso")
   }
+  internal enum Tableview {
+    /// Encabezados scrolleables
+    internal static let scrollableHeaders = L10n.tr("Localizable", "tableview.scrollable_headers", fallback: "Encabezados scrolleables")
+    /// Encabezados pegadizas
+    internal static let stickyHeaders = L10n.tr("Localizable", "tableview.sticky_headers", fallback: "Encabezados pegadizas")
+    /// Tablas
+    internal static let title = L10n.tr("Localizable", "tableview.title", fallback: "Tablas")
+    internal enum StickyHeaders {
+      /// Botón
+      internal static let button = L10n.tr("Localizable", "tableview.sticky_headers.button", fallback: "Botón")
+      /// Header 1
+      internal static let first = L10n.tr("Localizable", "tableview.sticky_headers.first", fallback: "Header 1")
+      /// Header 2
+      internal static let second = L10n.tr("Localizable", "tableview.sticky_headers.second", fallback: "Header 2")
+    }
+  }
   internal enum Textfield {
     /// Email válido
     internal static let emailCorrect = L10n.tr("Localizable", "textfield.email_correct", fallback: "Email válido")

@@ -77,6 +77,15 @@ extension Dimensions {
         static let normalSize: CGFloat = 64
     }
 
+    enum Separator {
+        /// CGFloat = 1
+        static let normalHeight: CGFloat = 1
+        /// CGFloat = 2
+        static let bigHeight: CGFloat = 2
+        /// CGFloat =
+        static let underlineWidth: CGFloat = 30
+    }
+
     enum LoaderView {
         /// CGFloat = 146
         static let logoSize: CGFloat = 146
@@ -149,10 +158,17 @@ extension Dimensions {
         static let smallSize: CGFloat = 24
         /// CGFloat = 28
         static let normalSize: CGFloat = 28
+        /// CGFloat = 32
+        static let bigSize: CGFloat = 32
     }
 
     enum Images {
         /// CGFloat = 200
         static let bigSize: CGFloat = 160
+    }
+
+    enum TableView {
+        /// CGFloat = 40
+        static let headerViewHeight: CGFloat = 40
     }
 }

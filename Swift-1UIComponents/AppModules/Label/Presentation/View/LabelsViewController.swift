@@ -92,7 +92,7 @@ extension LabelsViewController {
         firstText.set(font: Fonts.Body.body1)
         let secondText = (L10n.Label.differentStylesSecond).mutableAttribute
         secondText.set(foreground: .blackColor)
-        secondText.set(font: Fonts.Body.body2)
+        secondText.set(font: Fonts.Body.body3)
         firstText.append(secondText)
         differentStyleLabel.attributedText = firstText
     }

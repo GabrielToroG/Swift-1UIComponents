@@ -65,3 +65,11 @@
 
 "textfield.phone_correct" = "Teléfono válido";
 "textfield.phone_error" = "El teléfono ingresado no es válido";
+
+// Tables
+"tableview.title" = "Tablas";
+"tableview.sticky_headers" = "Encabezados pegadizas";
+"tableview.scrollable_headers" = "Encabezados scrolleables";
+"tableview.sticky_headers.first" = "Header 1";
+"tableview.sticky_headers.second" = "Header 2";
+"tableview.sticky_headers.button" = "Botón";

@@ -19,3 +19,19 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: String(describing: type), for: indexPath) as! Cell
     }
 }
+
+// MARK: - HeaderFooterView
+extension UITableView {
+    /// Función para registar una clase del tipo UITableViewHeaderFooterView
+    func registerHeaderClass<T: UITableViewHeaderFooterView>(_ type: T.Type) where T: Reusable {
+        register(type.self, forHeaderFooterViewReuseIdentifier: T.identifier)
+    }
+
+    /// Función para inicializar el header o footer en viewForHeaderInSection
+    func reusableHeaderFooter<T: UITableViewHeaderFooterView>() -> T where T: Reusable {
+        guard let view = dequeueReusableHeaderFooterView(withIdentifier: T.identifier) as? T else {
+            fatalError("Expected view to be of type \(T.identifier)")
+        }
+        return view
+    }
+}

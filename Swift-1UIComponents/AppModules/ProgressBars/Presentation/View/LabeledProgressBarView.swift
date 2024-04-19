@@ -19,7 +19,7 @@ final class LabeledProgressBarView: UIView {
     }()
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.Body.body3
+        label.font = Fonts.Body.body4
         label.textColor = Asset.Colors.blackColor.color
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -46,7 +46,7 @@ final class LabeledProgressBarView: UIView {
     }()
     private lazy var discountLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.Body.body2
+        label.font = Fonts.Body.body3
         label.textColor = Asset.Colors.blackColor.color
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

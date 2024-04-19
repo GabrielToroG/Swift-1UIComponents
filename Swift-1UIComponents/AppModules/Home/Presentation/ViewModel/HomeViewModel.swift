@@ -62,4 +62,8 @@ extension HomeViewModel {
     func goToTextFieldsView() {
         self.goTo = .textFieldsView
     }
+
+    func goToTablesMenuView() {
+        self.goTo = .tablesMenu
+    }
 }
