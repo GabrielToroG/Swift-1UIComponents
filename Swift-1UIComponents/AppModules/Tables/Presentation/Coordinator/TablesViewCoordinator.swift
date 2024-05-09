@@ -11,6 +11,7 @@ final class TablesViewCoordinator: Coordinator {
     indirect enum GoToScene: Equatable {
         case stickyHeaders
         case scrollableHeaders
+        case reactiveSections
     }
 
     func goToScene(
@@ -28,6 +29,12 @@ final class TablesViewCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: ScrollableHeadersViewController.self,
+                animated: true
+            )
+        case .reactiveSections:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: ReactiveSectionsViewController.self,
                 animated: true
             )
         }

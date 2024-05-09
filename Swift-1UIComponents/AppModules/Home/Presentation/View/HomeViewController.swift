@@ -62,7 +62,7 @@ extension HomeViewController {
     private func configTableView() {
         mainTableView.dataSource = self
         mainTableView.delegate = self
-        mainTableView.registerCellClass(for: HomeTableViewCell.self)
+        mainTableView.registerCellClass(HomeTableViewCell.self)
     }
     
     private func configConstraints() {
@@ -88,7 +88,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(
+            forType: HomeTableViewCell.self,
+            at: indexPath
+        ) else {
+            return UITableViewCell()
+        }
         cell.item = viewModel.homeOptions?[indexPath.row]
         return cell
     }

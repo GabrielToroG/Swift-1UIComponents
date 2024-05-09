@@ -9,14 +9,19 @@ import UIKit
 
 extension UITableView {
     /// Función para registrar la celda programática más rápido
-    func registerCellClass(for cellClass: UITableViewCell.Type) {
-        let className = String(describing: cellClass)
-        register(cellClass, forCellReuseIdentifier: className)
+    func registerCellClass<T: UITableViewCell>(
+        _ type: T.Type
+    ) where T: Reusable {
+        register(type.self, forCellReuseIdentifier: T.identifier)
     }
 
     /// Función para inicializar la celda en cellForRowAt
-    func dequeueReusableCell<Cell: UITableViewCell>(with type: Cell.Type, for indexPath: IndexPath) -> Cell {
-        return dequeueReusableCell(withIdentifier: String(describing: type), for: indexPath) as! Cell
+    func dequeueReusableCell<T>(
+        forType type: T.Type,
+        at indexPath: IndexPath
+    ) -> T? where T: UITableViewCell {
+        let identifier = String(describing: type)
+        return dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? T
     }
 }
 

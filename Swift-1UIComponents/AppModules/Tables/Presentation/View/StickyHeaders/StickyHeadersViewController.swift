@@ -56,7 +56,7 @@ extension StickyHeadersViewController {
     }
 
     private func configTableView() {
-        mainTableView.registerCellClass(for: StickyHeadersTableViewCell.self)
+        mainTableView.registerCellClass(StickyHeadersTableViewCell.self)
         mainTableView.registerHeaderClass(StickyTableViewHeader.self)
         mainTableView.delegate = self
         mainTableView.dataSource = self
@@ -100,13 +100,22 @@ extension StickyHeadersViewController: UITableViewDataSource {
 
         switch tableSection {
         case .firstSection:
-            
-            let cell = tableView.dequeueReusableCell(with: StickyHeadersTableViewCell.self, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(
+                forType: StickyHeadersTableViewCell.self,
+                at: indexPath
+            ) else {
+                return UITableViewCell()
+            }
             cell.item = viewModel.stickyData[indexPath.row]
             cell.selectionStyle = .none
             return cell
         case .secondSection:
-            let cell = tableView.dequeueReusableCell(with: StickyHeadersTableViewCell.self, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(
+                forType: StickyHeadersTableViewCell.self,
+                at: indexPath
+            ) else {
+                return UITableViewCell()
+            }
             cell.item = viewModel.stickyData[indexPath.row]
             cell.selectionStyle = .none
             return cell

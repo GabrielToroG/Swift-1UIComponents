@@ -170,5 +170,9 @@ extension Dimensions {
     enum TableView {
         /// CGFloat = 40
         static let headerViewHeight: CGFloat = 40
+        enum Sections {
+            static let normalheight: CGFloat = 100
+            static let normalWidth: CGFloat = 200
+        }
     }
 }

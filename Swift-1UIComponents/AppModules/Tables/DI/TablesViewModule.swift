@@ -56,5 +56,16 @@ private extension TablesViewModule {
                 resolver.resolve(NotificationCenterWrapper.self)!
             )
         }
+
+        container.register(ReactiveSectionsViewModel.self) { resolver in
+            ReactiveSectionsViewModel()
+        }
+        container.register(ReactiveSectionsViewController.self) { resolver in
+            ReactiveSectionsViewController(
+                resolver.resolve(ReactiveSectionsViewModel.self)!,
+                resolver.resolve(TablesViewCoordinator.self)!,
+                resolver.resolve(NotificationCenterWrapper.self)!
+            )
+        }
     }
 }

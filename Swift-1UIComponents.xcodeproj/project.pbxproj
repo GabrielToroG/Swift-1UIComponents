@@ -13,6 +13,10 @@
 		7F0115CC2B97DD0B002A82A6 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CB2B97DD0B002A82A6 /* ButtonsViewController.swift */; };
 		7F0115CE2B97DD15002A82A6 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */; };
 		7F0115D02B97DEBA002A82A6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0115CF2B97DEBA002A82A6 /* UIButtonExtension.swift */; };
+		7F29E82E2BD306BE0076EA58 /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */; };
+		7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */; };
+		7F29E8352BD317AB0076EA58 /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */; };
+		7F29E8382BD3269B0076EA58 /* ClickableCarouselCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8372BD3269B0076EA58 /* ClickableCarouselCellView.swift */; };
 		7F7CD8642BB3667C00E3D477 /* RutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CD8632BB3667C00E3D477 /* RutHelper.swift */; };
 		7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */; };
 		7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */; };
@@ -36,10 +40,13 @@
 		7FB3F2102B96D16000E7B252 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F20F2B96D16000E7B252 /* LongPressGestureRecognizer.swift */; };
 		7FB3F2152B96D37200E7B252 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */; };
 		7FB465BA2BD2D5A90026C457 /* ScrollableHeadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465B92BD2D5A90026C457 /* ScrollableHeadersViewController.swift */; };
-		7FB465BC2BD2D5B80026C457 /* ScrollableHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465BB2BD2D5B80026C457 /* ScrollableHeaderTableViewCell.swift */; };
+		7FB465BC2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465BB2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift */; };
 		7FB465BE2BD2D5C50026C457 /* ScrollableTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465BD2BD2D5C50026C457 /* ScrollableTableViewHeader.swift */; };
 		7FB465C02BD2D6240026C457 /* ScrollableHeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465BF2BD2D6240026C457 /* ScrollableHeadersViewModel.swift */; };
 		7FB465C22BD2D6E60026C457 /* UIScrollableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465C12BD2D6E60026C457 /* UIScrollableHeader.swift */; };
+		7FB465C52BD2EDFC0026C457 /* ReactiveSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465C42BD2EDFC0026C457 /* ReactiveSectionsViewController.swift */; };
+		7FB465C72BD2EE3E0026C457 /* ReactiveSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465C62BD2EE3E0026C457 /* ReactiveSectionsViewModel.swift */; };
+		7FB465C92BD2FD070026C457 /* UISection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB465C82BD2FD070026C457 /* UISection.swift */; };
 		7FBD9BF72BBB865500767A6B /* TablesViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD9BF62BBB865500767A6B /* TablesViewModule.swift */; };
 		7FBD9BF92BBB86B800767A6B /* TablesViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD9BF82BBB86B800767A6B /* TablesViewCoordinator.swift */; };
 		7FBD9BFB2BBB86F600767A6B /* TablesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD9BFA2BBB86F600767A6B /* TablesMenuViewController.swift */; };
@@ -100,6 +107,8 @@
 		7FE018EF2B83C538008FC45A /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018EE2B83C538008FC45A /* ImagesViewController.swift */; };
 		7FE018F12B83C55D008FC45A /* ImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018F02B83C55D008FC45A /* ImagesViewModel.swift */; };
 		7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE018F42B83C72B008FC45A /* ImagesModule.swift */; };
+		7FEBF2022BEC787B009560DE /* ReactiveInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBF2012BEC787B009560DE /* ReactiveInfoSectionView.swift */; };
+		7FEBF20C2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBF20B2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift */; };
 		7FFD0C9C2BB38F7700B07B72 /* LabeledTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD0C9B2BB38F7700B07B72 /* LabeledTextFieldViewController.swift */; };
 		7FFD0C9E2BB39FEC00B07B72 /* LabeledTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD0C9D2BB39FEC00B07B72 /* LabeledTextFieldViewModel.swift */; };
 		C9A6081960357A8A8D89C1D4 /* Pods_Swift_1UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048B14AA6B518D70C4CE3C27 /* Pods_Swift_1UIComponents.framework */; };
@@ -113,6 +122,10 @@
 		7F0115CB2B97DD0B002A82A6 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		7F0115CF2B97DEBA002A82A6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
+		7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F29E8372BD3269B0076EA58 /* ClickableCarouselCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableCarouselCellView.swift; sourceTree = "<group>"; };
 		7F7CD8632BB3667C00E3D477 /* RutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutHelper.swift; sourceTree = "<group>"; };
 		7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitCoordinator.swift; sourceTree = "<group>"; };
@@ -136,10 +149,13 @@
 		7FB3F20F2B96D16000E7B252 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
 		7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		7FB465B92BD2D5A90026C457 /* ScrollableHeadersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHeadersViewController.swift; sourceTree = "<group>"; };
-		7FB465BB2BD2D5B80026C457 /* ScrollableHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		7FB465BB2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHeadersTableViewCell.swift; sourceTree = "<group>"; };
 		7FB465BD2BD2D5C50026C457 /* ScrollableTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableTableViewHeader.swift; sourceTree = "<group>"; };
 		7FB465BF2BD2D6240026C457 /* ScrollableHeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHeadersViewModel.swift; sourceTree = "<group>"; };
 		7FB465C12BD2D6E60026C457 /* UIScrollableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollableHeader.swift; sourceTree = "<group>"; };
+		7FB465C42BD2EDFC0026C457 /* ReactiveSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSectionsViewController.swift; sourceTree = "<group>"; };
+		7FB465C62BD2EE3E0026C457 /* ReactiveSectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSectionsViewModel.swift; sourceTree = "<group>"; };
+		7FB465C82BD2FD070026C457 /* UISection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISection.swift; sourceTree = "<group>"; };
 		7FBD9BF62BBB865500767A6B /* TablesViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewModule.swift; sourceTree = "<group>"; };
 		7FBD9BF82BBB86B800767A6B /* TablesViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewCoordinator.swift; sourceTree = "<group>"; };
 		7FBD9BFA2BBB86F600767A6B /* TablesMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesMenuViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +218,8 @@
 		7FE018EE2B83C538008FC45A /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		7FE018F02B83C55D008FC45A /* ImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModel.swift; sourceTree = "<group>"; };
 		7FE018F42B83C72B008FC45A /* ImagesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModule.swift; sourceTree = "<group>"; };
+		7FEBF2012BEC787B009560DE /* ReactiveInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveInfoSectionView.swift; sourceTree = "<group>"; };
+		7FEBF20B2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableCarouselSectionViewCell.swift; sourceTree = "<group>"; };
 		7FFD0C9B2BB38F7700B07B72 /* LabeledTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldViewController.swift; sourceTree = "<group>"; };
 		7FFD0C9D2BB39FEC00B07B72 /* LabeledTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldViewModel.swift; sourceTree = "<group>"; };
 		B71F65727C2F1CC595823B19 /* Pods-Swift-1UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-1UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-Swift-1UIComponents/Pods-Swift-1UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +304,23 @@
 				7F0115CD2B97DD15002A82A6 /* ButtonsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F29E82C2BD306A80076EA58 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */,
+				7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		7F29E82F2BD30A1A0076EA58 /* ReactiveInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7FEBF2012BEC787B009560DE /* ReactiveInfoSectionView.swift */,
+			);
+			path = ReactiveInfo;
 			sourceTree = "<group>";
 		};
 		7F7CD8622BB3666C00E3D477 /* Helpers */ = {
@@ -462,18 +497,29 @@
 				7FE018992B835405008FC45A /* Launch */,
 				7FE018D62B838351008FC45A /* Loader */,
 				7FB3F2042B96A25800E7B252 /* Custom */,
+				7F29E82C2BD306A80076EA58 /* Reusables */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		7FB465B82BD2D5640026C457 /* ScrollableSection */ = {
+		7FB465B82BD2D5640026C457 /* ScrollableHeaders */ = {
 			isa = PBXGroup;
 			children = (
 				7FB465B92BD2D5A90026C457 /* ScrollableHeadersViewController.swift */,
-				7FB465BB2BD2D5B80026C457 /* ScrollableHeaderTableViewCell.swift */,
+				7FB465BB2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift */,
 				7FB465BD2BD2D5C50026C457 /* ScrollableTableViewHeader.swift */,
 			);
-			path = ScrollableSection;
+			path = ScrollableHeaders;
+			sourceTree = "<group>";
+		};
+		7FB465C32BD2EC640026C457 /* ReactiveSections */ = {
+			isa = PBXGroup;
+			children = (
+				7FEBF20D2BED3166009560DE /* ClickableCarousel */,
+				7F29E82F2BD30A1A0076EA58 /* ReactiveInfo */,
+				7FB465C42BD2EDFC0026C457 /* ReactiveSectionsViewController.swift */,
+			);
+			path = ReactiveSections;
 			sourceTree = "<group>";
 		};
 		7FBD9BF02BBB852E00767A6B /* Tables */ = {
@@ -517,7 +563,8 @@
 			children = (
 				7FBD9BFE2BBBA26800767A6B /* Menu */,
 				7FBD9BFF2BBBA27300767A6B /* StickyHeaders */,
-				7FB465B82BD2D5640026C457 /* ScrollableSection */,
+				7FB465B82BD2D5640026C457 /* ScrollableHeaders */,
+				7FB465C32BD2EC640026C457 /* ReactiveSections */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +575,7 @@
 				7FBD9BFC2BBB873000767A6B /* TablesViewModel.swift */,
 				7FBD9C022BBBA33100767A6B /* StickyHeadersViewModel.swift */,
 				7FB465BF2BD2D6240026C457 /* ScrollableHeadersViewModel.swift */,
+				7FB465C62BD2EE3E0026C457 /* ReactiveSectionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -555,6 +603,7 @@
 			children = (
 				7FBD9C092BBBA48200767A6B /* UIStickyHeader.swift */,
 				7FB465C12BD2D6E60026C457 /* UIScrollableHeader.swift */,
+				7FB465C82BD2FD070026C457 /* UISection.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -840,6 +889,7 @@
 				7FE018B02B836503008FC45A /* StringExtension.swift */,
 				7FE018CA2B836D71008FC45A /* UIColorExtensions.swift */,
 				7FE018A42B8361CE008FC45A /* UITableViewExtension.swift */,
+				7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */,
 				7FE018C02B836936008FC45A /* UIViewControllerExtension.swift */,
 				7FB3F1F42B96794A00E7B252 /* UIImageViewExtension.swift */,
 				7FB3F2142B96D37200E7B252 /* UIViewExtensions.swift */,
@@ -980,6 +1030,15 @@
 				7FE018F42B83C72B008FC45A /* ImagesModule.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		7FEBF20D2BED3166009560DE /* ClickableCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				7FEBF20B2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift */,
+				7F29E8372BD3269B0076EA58 /* ClickableCarouselCellView.swift */,
+			);
+			path = ClickableCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1123,6 +1182,7 @@
 			files = (
 				7F0115CE2B97DD15002A82A6 /* ButtonsViewModel.swift in Sources */,
 				7FB3F2072B96A27E00E7B252 /* ViewWithShadow.swift in Sources */,
+				7F29E8382BD3269B0076EA58 /* ClickableCarouselCellView.swift in Sources */,
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
 				7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */,
 				7FE018BF2B83686D008FC45A /* Colors.swift in Sources */,
@@ -1130,11 +1190,13 @@
 				7FE018C12B836936008FC45A /* UIViewControllerExtension.swift in Sources */,
 				7FAF7ACA2BB3F67A008C3F5D /* ProgressBarViewController.swift in Sources */,
 				7FAF7AC62BB3F643008C3F5D /* ProgressBarCoordinator.swift in Sources */,
+				7FB465C52BD2EDFC0026C457 /* ReactiveSectionsViewController.swift in Sources */,
 				7FB465C02BD2D6240026C457 /* ScrollableHeadersViewModel.swift in Sources */,
 				7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */,
 				7FB3F2012B9697F100E7B252 /* ViewsViewModel.swift in Sources */,
 				7F0115CC2B97DD0B002A82A6 /* ButtonsViewController.swift in Sources */,
 				7FB465BA2BD2D5A90026C457 /* ScrollableHeadersViewController.swift in Sources */,
+				7F29E8352BD317AB0076EA58 /* ReusableCollectionViewCell.swift in Sources */,
 				7FBD9BF72BBB865500767A6B /* TablesViewModule.swift in Sources */,
 				7FE018D82B83835D008FC45A /* LoaderView.swift in Sources */,
 				7FE0188E2B833B41008FC45A /* Coordinator.swift in Sources */,
@@ -1144,6 +1206,7 @@
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
 				7F0115C42B97DCCD002A82A6 /* ButtonsModule.swift in Sources */,
 				7FB465BE2BD2D5C50026C457 /* ScrollableTableViewHeader.swift in Sources */,
+				7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
 				7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */,
 				7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */,
@@ -1156,9 +1219,11 @@
 				7F0115D02B97DEBA002A82A6 /* UIButtonExtension.swift in Sources */,
 				7FB465C22BD2D6E60026C457 /* UIScrollableHeader.swift in Sources */,
 				7FCBE1572BB3149D00D9C532 /* UITextFieldExtension.swift in Sources */,
+				7FEBF20C2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift in Sources */,
 				7FBD9BFD2BBB873000767A6B /* TablesViewModel.swift in Sources */,
 				7FFD0C9C2BB38F7700B07B72 /* LabeledTextFieldViewController.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
+				7FB465C92BD2FD070026C457 /* UISection.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
 				7FAF7AD02BB40E8C008C3F5D /* GradientProgressBar.swift in Sources */,
 				7FCE52D62BB264ED009B8943 /* TextFieldsViewController.swift in Sources */,
@@ -1179,6 +1244,7 @@
 				7FCE52D82BB26514009B8943 /* TextFieldsViewModel.swift in Sources */,
 				7FB3F2032B969F5F00E7B252 /* ViewsModule.swift in Sources */,
 				7FAF7AD22BB41669008C3F5D /* BaseProgressBar.swift in Sources */,
+				7FB465C72BD2EE3E0026C457 /* ReactiveSectionsViewModel.swift in Sources */,
 				7FE018772B82D813008FC45A /* MainControllerProvider.swift in Sources */,
 				7FB3F2092B96A9E900E7B252 /* ViewWithShadowArgs.swift in Sources */,
 				7FBD9C052BBBA3CA00767A6B /* StickyHeadersTableViewCell.swift in Sources */,
@@ -1186,11 +1252,13 @@
 				7FE018CB2B836D71008FC45A /* UIColorExtensions.swift in Sources */,
 				7FE018A52B8361CE008FC45A /* UITableViewExtension.swift in Sources */,
 				7FBD9C012BBBA2E100767A6B /* StickyHeadersViewController.swift in Sources */,
+				7FEBF2022BEC787B009560DE /* ReactiveInfoSectionView.swift in Sources */,
+				7F29E82E2BD306BE0076EA58 /* ReusableTableViewCell.swift in Sources */,
 				7FE018ED2B83C51D008FC45A /* ImagesCoordinator.swift in Sources */,
 				7FE018DA2B83843B008FC45A /* ProgressBarView.swift in Sources */,
 				7FBD9C0A2BBBA48200767A6B /* UIStickyHeader.swift in Sources */,
 				7FE018752B82D7FE008FC45A /* Injection.swift in Sources */,
-				7FB465BC2BD2D5B80026C457 /* ScrollableHeaderTableViewCell.swift in Sources */,
+				7FB465BC2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift in Sources */,
 				7FAF7ACC2BB3F91F008C3F5D /* LabeledProgressBarView.swift in Sources */,
 				7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */,
 				7FAF7AC82BB3F66B008C3F5D /* ProgressBarViewModel.swift in Sources */,

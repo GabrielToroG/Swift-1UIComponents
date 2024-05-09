@@ -1,5 +1,5 @@
 //
-//  ScrollableHeaderTableViewCell.swift
+//  ScrollableHeadersTableViewCell.swift
 //  Swift-1UIComponents
 //
 //  Created by Gabriel Alonso Toro Guzmán on 19-04-24.
@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Class
-final class ScrollableHeaderTableViewCell: UITableViewCell {
+final class ScrollableHeadersTableViewCell: UITableViewCell, Reusable {
     private enum Constants {
         enum View {
             enum Container {
@@ -72,7 +72,7 @@ final class ScrollableHeaderTableViewCell: UITableViewCell {
 }
 
 // MARK: - UI Functions
-extension ScrollableHeaderTableViewCell {
+extension ScrollableHeadersTableViewCell {
     private func configUI() {
         backgroundColor = .clear
         configConstraints()

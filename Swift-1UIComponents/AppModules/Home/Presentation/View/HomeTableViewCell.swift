@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell, Reusable {
 
     // Outlets
     private lazy var containerView: UIView = {

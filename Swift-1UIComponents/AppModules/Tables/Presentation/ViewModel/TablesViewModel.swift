@@ -25,4 +25,8 @@ extension TablesViewModel {
     func goToScrollableHeadersView() {
         self.goTo = .scrollableHeaders
     }
+
+    func goToReactiveSectionsView() {
+        self.goTo = .reactiveSections
+    }
 }

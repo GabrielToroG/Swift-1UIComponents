@@ -40,6 +40,17 @@ final class TablesMenuViewController: BaseViewController<TablesViewModel, Tables
         }
         return button
     }()
+    private lazy var reactiveSectionsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .filled)
+        button.setTitle(L10n.Tableview.reactiveSections, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.goToReactiveSectionsView()
+        }
+        return button
+    }()
 }
 
 // MARK: - Lifecycle
@@ -73,6 +84,7 @@ extension TablesMenuViewController {
         view.addSubview(mainStackView)
         mainStackView.addArrangedSubview(stickyHeadersButton)
         mainStackView.addArrangedSubview(scrollableHeadersButton)
+        mainStackView.addArrangedSubview(reactiveSectionsButton)
 
         let mainStackViewConstraints = [
             mainStackView.centerYAnchor.constraint(

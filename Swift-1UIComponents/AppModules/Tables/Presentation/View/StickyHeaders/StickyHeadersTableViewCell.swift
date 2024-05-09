@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StickyHeadersTableViewCell: UITableViewCell {
+final class StickyHeadersTableViewCell: UITableViewCell, Reusable {
 
     // Outlets
     private lazy var containerView: ViewWithShadow = {

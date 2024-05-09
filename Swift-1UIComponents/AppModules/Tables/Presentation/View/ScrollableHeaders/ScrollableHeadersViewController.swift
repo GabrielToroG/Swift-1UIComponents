@@ -65,7 +65,7 @@ extension ScrollableHeadersViewController {
     }
 
     private func configTableView() {
-        mainTableView.registerCellClass(for: ScrollableHeaderTableViewCell.self)
+        mainTableView.registerCellClass(ScrollableHeadersTableViewCell.self)
         mainTableView.registerHeaderClass(ScrollableTableViewHeader.self)
         mainTableView.delegate = self
         mainTableView.dataSource = self
@@ -106,13 +106,22 @@ extension ScrollableHeadersViewController: UITableViewDataSource {
         }
         switch tableSection {
         case .firstSection:
-            
-            let cell = tableView.dequeueReusableCell(with: ScrollableHeaderTableViewCell.self, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(
+                forType: ScrollableHeadersTableViewCell.self,
+                at: indexPath
+            ) else {
+                return UITableViewCell()
+            }
             cell.item = sicktyData[indexPath.row]
             cell.selectionStyle = .none
             return cell
         case .secondSection:
-            let cell = tableView.dequeueReusableCell(with: ScrollableHeaderTableViewCell.self, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(
+                forType: ScrollableHeadersTableViewCell.self,
+                at: indexPath
+            ) else {
+                return UITableViewCell()
+            }
             cell.item = sicktyData[indexPath.row]
             cell.selectionStyle = .none
             return cell
