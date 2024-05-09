@@ -2,7 +2,7 @@
 //  UISection.swift
 //  Swift-1UIComponents
 //
-//  Created by Gabriel Alonso Toro Guzmán on 19-04-24.
+//  Created by Gabriel Alonso Toro Guzmán on 09-05-24.
 //
 
 import Foundation

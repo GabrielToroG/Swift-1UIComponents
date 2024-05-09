@@ -81,8 +81,8 @@ internal enum L10n {
     internal static let reactiveSections = L10n.tr("Localizable", "tableview.reactive_sections", fallback: "Secciones reactivas")
     /// Encabezados scrolleables
     internal static let scrollableHeaders = L10n.tr("Localizable", "tableview.scrollable_headers", fallback: "Encabezados scrolleables")
-    /// Encabezados pegadizas
-    internal static let stickyHeaders = L10n.tr("Localizable", "tableview.sticky_headers", fallback: "Encabezados pegadizas")
+    /// Encabezados pegadizos
+    internal static let stickyHeaders = L10n.tr("Localizable", "tableview.sticky_headers", fallback: "Encabezados pegadizos")
     /// Tablas
     internal static let title = L10n.tr("Localizable", "tableview.title", fallback: "Tablas")
     internal enum StickyHeaders {

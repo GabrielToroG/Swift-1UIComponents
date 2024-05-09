@@ -68,7 +68,7 @@
 
 // Tables
 "tableview.title" = "Tablas";
-"tableview.sticky_headers" = "Encabezados pegadizas";
+"tableview.sticky_headers" = "Encabezados pegadizos";
 "tableview.scrollable_headers" = "Encabezados scrolleables";
 "tableview.reactive_sections" = "Secciones reactivas";
 "tableview.sticky_headers.first" = "Header 1";

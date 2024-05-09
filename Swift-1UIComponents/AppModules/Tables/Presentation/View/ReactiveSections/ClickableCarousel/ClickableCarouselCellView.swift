@@ -8,7 +8,7 @@
 import UIKit
 
 final class ClickableCarouselCellView: UIView {
-
+    // Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = Dimensions.BorderRadius.normal
@@ -27,8 +27,7 @@ final class ClickableCarouselCellView: UIView {
         return label
     }()
 
-    var data: [String] = []
-
+    // Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configUI()
@@ -37,22 +36,36 @@ final class ClickableCarouselCellView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
+// MARK: - Config
+extension ClickableCarouselCellView {
     func config(data: UIClickableCarouselSectionArgs) {
         titleLabel.text = data.title
 
         containerView.onClick {
-            data.onSelectedOption?()
+            data.onSelectionAction?()
         }
 
-        if let state = data.stateSelected, state {
+        if let state = data.isSelected, state {
             changeBorderColor()
         } else {
             removeBorderColor()
         }
     }
+
+    private func changeBorderColor() {
+        containerView.layer.borderColor = Asset.Colors.brownColor.color.cgColor
+        titleLabel.textColor = Asset.Colors.brownColor.color
+    }
+
+    private func removeBorderColor() {
+        containerView.layer.borderColor = Asset.Colors.darkGreyColor.color.cgColor
+        titleLabel.textColor = Asset.Colors.darkGreyColor.color
+    }
 }
 
+// MARK: - UI
 extension ClickableCarouselCellView {
     func configUI() {
         configConstraints()
@@ -89,15 +102,5 @@ extension ClickableCarouselCellView {
             containerViewConstraints +
             titleLabelConstraints
         )
-    }
-
-    private func changeBorderColor() {
-        containerView.layer.borderColor = Asset.Colors.brownColor.color.cgColor
-        titleLabel.textColor = Asset.Colors.brownColor.color
-    }
-
-    private func removeBorderColor() {
-        containerView.layer.borderColor = Asset.Colors.darkGreyColor.color.cgColor
-        titleLabel.textColor = Asset.Colors.darkGreyColor.color
     }
 }

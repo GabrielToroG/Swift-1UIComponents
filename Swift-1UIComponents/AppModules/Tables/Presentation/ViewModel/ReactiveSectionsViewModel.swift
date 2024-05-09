@@ -7,18 +7,6 @@
 
 import UIKit
 
-struct UIClickableCarouselSectionArgs {
-    let id: Int
-    let title: String
-    let onSelectedOption: (() -> Void)?
-    var stateSelected: Bool?
-}
-
-struct UIReactiveInformationArgs {
-    let id: Int
-    let backgroundColor: UIColor
-}
-
 final class ReactiveSectionsViewModel: BaseViewModel {
 
     enum Sections: String {
@@ -26,69 +14,26 @@ final class ReactiveSectionsViewModel: BaseViewModel {
         case reactiveInformation = "reactive_information"
     }
 
-    @Published private(set) var refreshData: Bool?
-
+    // Properties
     private(set) var sectionsView: [UISection]?
-    private(set) var isClickableDataLoaded: Bool = true
+    private(set) var clickableDataLoaded: Bool = false
+    private(set) var clickableIdSelected: Int = -Dimensions.Index.one
     private(set) var clickableData: [UIClickableCarouselSectionArgs] = []
     private(set) var reactiveData: [UIReactiveInformationArgs] = []
-    private(set) var informationIdSelected: Int = -1
-    
-    private(set) var isFirstTime = true
-    private(set) var sectionsViewSAVE: [UISection]?
+
+    // Combine
+    @Published private(set) var refreshData: Bool?
 }
 
+// MARK: - OnViewDidLoad
 extension ReactiveSectionsViewModel {
     func onViewDidLoad() {
-        buildInformation()
-    }
-
-    func buildInformation() {
         buildReactiveData()
-        buildUISections()
     }
+}
 
-    func buildClickableData() -> [UIClickableCarouselSectionArgs]{
-        return [
-            UIClickableCarouselSectionArgs(
-                id: 1,
-                title: "Celda 1",
-                onSelectedOption: { [weak self] in
-                    guard let self = self else { return }
-                    self.changeCardStateSelected(id: 1)
-                },
-                stateSelected: false
-            ),
-            UIClickableCarouselSectionArgs(
-                id: 4,
-                title: "Celda 4",
-                onSelectedOption: { [weak self] in
-                    guard let self = self else { return }
-                    self.changeCardStateSelected(id: 4)
-                },
-                stateSelected: false
-            ),
-            UIClickableCarouselSectionArgs(
-                id: 7,
-                title: "Celda 7",
-                onSelectedOption: { [weak self] in
-                    guard let self = self else { return }
-                    self.changeCardStateSelected(id: 7)
-                },
-                stateSelected: false
-            ),
-            UIClickableCarouselSectionArgs(
-                id: 8,
-                title: "Celda 8",
-                onSelectedOption: { [weak self] in
-                    guard let self = self else { return }
-                    self.changeCardStateSelected(id: 8)
-                },
-                stateSelected: false
-            )
-        ]
-    }
-
+// MARK: - Fake Data
+extension ReactiveSectionsViewModel {
     func buildReactiveData() {
         reactiveData = [
             UIReactiveInformationArgs(
@@ -108,22 +53,83 @@ extension ReactiveSectionsViewModel {
                 backgroundColor: .systemGreen
             ),
         ]
+
+        buildUISections()
     }
 
-    func buildUISections() {
-        var sections = [UISection]()
-        
-        sections.append(setNewUISection(with: Sections.clickableCarousel))
-        if isClickableDataLoaded {
-            clickableData = buildClickableData()
-            isClickableDataLoaded = false
-        }
-        sections.append(setNewUISection(with: Sections.reactiveInformation))
-        sectionsView = sections
-        refreshData = true
+    func buildClickableData() -> [UIClickableCarouselSectionArgs]{
+        return [
+            UIClickableCarouselSectionArgs(
+                id: 1,
+                title: "Celda 1",
+                onSelectionAction: { [weak self] in
+                    guard let self = self else { return }
+                    self.updateAllCardSelectionStates(id: 1)
+                },
+                isSelected: false
+            ),
+            UIClickableCarouselSectionArgs(
+                id: 4,
+                title: "Celda 4",
+                onSelectionAction: { [weak self] in
+                    guard let self = self else { return }
+                    self.updateAllCardSelectionStates(id: 4)
+                },
+                isSelected: false
+            ),
+            UIClickableCarouselSectionArgs(
+                id: 7,
+                title: "Celda 7",
+                onSelectionAction: { [weak self] in
+                    guard let self = self else { return }
+                    self.updateAllCardSelectionStates(id: 7)
+                },
+                isSelected: false
+            ),
+            UIClickableCarouselSectionArgs(
+                id: 8,
+                title: "Celda 8",
+                onSelectionAction: { [weak self] in
+                    guard let self = self else { return }
+                    self.updateAllCardSelectionStates(id: 8)
+                },
+                isSelected: false
+            )
+        ]
     }
 }
 
+// MARK: - UI
+extension ReactiveSectionsViewModel {
+    func buildUISections() {
+        var sections = [UISection]()
+
+        setClickableSection(into: &sections)
+        setReactiveSection(into: &sections)
+
+        sectionsView = sections
+        refreshData = true
+    }
+    
+    private func setClickableSection(into sections: inout [UISection]) {
+        sections.append(setNewUISection(with: Sections.clickableCarousel))
+        if !clickableDataLoaded {
+            clickableData = buildClickableData()
+            clickableDataLoaded = true
+        }
+    }
+
+    private func setReactiveSection(into sections: inout [UISection]) {
+        let show = reactiveData.contains { category in
+            return category.id == clickableIdSelected
+        }
+        if show {
+            sections.append(setNewUISection(with: Sections.reactiveInformation))
+        }
+    }
+}
+
+// MARK: - Complementary UI
 extension ReactiveSectionsViewModel {
     func setNewUISection(with section: Sections) -> UISection {
         return UISection(
@@ -133,34 +139,21 @@ extension ReactiveSectionsViewModel {
     }
 }
 
+// MARK: - Actions
 extension ReactiveSectionsViewModel {
-    func changeCardStateSelected(id: Int) {
-        // Si se selecciona la celda activa, se desactiva
-        if informationIdSelected == id {
-            clickableData = clickableData.map { product in
-                var newProduct = product
-                if newProduct.id == id {
-                    informationIdSelected = -1
-                    newProduct.stateSelected = false
-                }
-                return newProduct
-            }
-        // Se activa la celda seleccionada
-        } else {
-            clickableData = clickableData.map { product in
-                var newProduct = product
-                if newProduct.id == id {
-                    informationIdSelected = id
-                    newProduct.stateSelected = true
-                } else {
-                    newProduct.stateSelected = false
-                }
-                return newProduct
-            }
+    func updateAllCardSelectionStates(id: Int) {
+        guard let index = clickableData.firstIndex(where: { $0.id == id }) else {
+            return
         }
 
-        if let section = sectionsView {
-            buildUISections()
+        if clickableIdSelected == id {
+            clickableIdSelected = -Dimensions.Index.one
+            clickableData[index].isSelected = false
+        } else {
+            clickableIdSelected = id
+            clickableData.indices.forEach { clickableData[$0].isSelected = clickableData[$0].id == id }
         }
+
+        buildUISections()
     }
 }

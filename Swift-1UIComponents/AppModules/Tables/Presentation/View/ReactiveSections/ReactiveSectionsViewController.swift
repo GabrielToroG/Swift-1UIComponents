@@ -8,6 +8,7 @@
 import UIKit
 
 final class ReactiveSectionsViewController: BaseViewController<ReactiveSectionsViewModel, TablesViewCoordinator> {
+
     // Outlets
     private lazy var mainTableView: UITableView = {
         let tableView = UITableView()
@@ -20,8 +21,6 @@ final class ReactiveSectionsViewController: BaseViewController<ReactiveSectionsV
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-
-    // Properties
 }
 
 // MARK: - Lifecycle
@@ -49,7 +48,7 @@ extension ReactiveSectionsViewController {
 // MARK: - UI Functions
 extension ReactiveSectionsViewController {
     private func configUI() {
-        configBasic("Sección reactiva", Asset.Colors.brandColor.color)
+        configBasic(L10n.Tableview.reactiveSections, Asset.Colors.brandColor.color)
         setupTableView()
         configConstraints()
     }
@@ -132,7 +131,10 @@ extension ReactiveSectionsViewController: UITableViewDataSource, UITableViewDele
             return UITableViewCell()
         }
         let view = ReactiveInfoSectionView(frame: .zero)
-//        view.config()
+        view.config(
+            viewModel.reactiveData,
+            viewModel.clickableIdSelected
+        )
         cell.set(subview: view)
         return cell
     }

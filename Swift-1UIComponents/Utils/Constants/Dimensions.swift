@@ -58,6 +58,11 @@ enum Dimensions {
         /// CGFloat = 16
         static let big: CGFloat = 16
     }
+
+    enum Index {
+        /// Int = 1
+        static let one: Int = 1
+    }
 }
 
 extension Dimensions {
@@ -170,9 +175,21 @@ extension Dimensions {
     enum TableView {
         /// CGFloat = 40
         static let headerViewHeight: CGFloat = 40
-        enum Sections {
-            static let normalheight: CGFloat = 100
+        enum Cell {
+            /// CGFloat = 100
+            static let normalHeight: CGFloat = 100
+        }
+    }
+
+    enum CollectionView {
+        /// CGFloat = 2
+        static let normalSpacing: CGFloat = 2
+        static let normalHeight: CGFloat = 116
+        enum Cell {
+            /// CGFloat = 200
             static let normalWidth: CGFloat = 200
+            /// CGFloat = 100
+            static let normalHeight: CGFloat = 100
         }
     }
 }

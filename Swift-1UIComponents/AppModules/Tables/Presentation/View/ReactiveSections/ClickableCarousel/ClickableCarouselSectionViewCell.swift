@@ -9,8 +9,9 @@ import UIKit
 
 final class ClickableCarouselSectionViewCell: UITableViewCell, Reusable {
 
+    // Outlet
     private lazy var mainCollectionView: UICollectionView = {
-        let spacing: CGFloat = 2
+        let spacing: CGFloat = Dimensions.CollectionView.normalSpacing
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -20,9 +21,10 @@ final class ClickableCarouselSectionViewCell: UITableViewCell, Reusable {
         return collectionView
     }()
 
-    var data: [UIClickableCarouselSectionArgs] = []
+    // Properties
+    private var data: [UIClickableCarouselSectionArgs] = []
 
-
+    // Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configUI()
@@ -32,13 +34,17 @@ final class ClickableCarouselSectionViewCell: UITableViewCell, Reusable {
         super.init(coder: coder)
         configUI()
     }
+}
 
+// MARK: - Config
+extension ClickableCarouselSectionViewCell {
     func config(_ data: [UIClickableCarouselSectionArgs]) {
         self.data = data
         self.mainCollectionView.reloadData()
     }
 }
 
+// MARK: - Config UI
 extension ClickableCarouselSectionViewCell {
     func configUI() {
         contentView.backgroundColor = Asset.Colors.brandColor.color
@@ -55,21 +61,32 @@ extension ClickableCarouselSectionViewCell {
     func configConstraints() {
         contentView.addSubview(mainCollectionView)
         let mainCollectionViewConstraints = [
-            mainCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            mainCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            mainCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            mainCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            mainCollectionView.heightAnchor.constraint(equalToConstant: Dimensions.TableView.Sections.normalheight)
+            mainCollectionView.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: Dimensions.Margin.small),
+            mainCollectionView.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor),
+            mainCollectionView.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor),
+            mainCollectionView.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: -Dimensions.Margin.small),
+            mainCollectionView.heightAnchor.constraint(
+                equalToConstant: Dimensions.CollectionView.normalHeight)
         ]
         NSLayoutConstraint.activate(mainCollectionViewConstraints)
     }
 }
 
-extension ClickableCarouselSectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+// MARK: - UICollectionViewDelegate
+extension ClickableCarouselSectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
-    
+}
+
+// MARK: - UICollectionViewDataSource
+extension ClickableCarouselSectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             forType: ReusableCollectionViewCell.self,
@@ -84,6 +101,7 @@ extension ClickableCarouselSectionViewCell: UICollectionViewDelegate, UICollecti
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ClickableCarouselSectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -91,8 +109,8 @@ extension ClickableCarouselSectionViewCell: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         return CGSize(
-            width: Dimensions.TableView.Sections.normalWidth,
-            height: Dimensions.TableView.Sections.normalheight)
+            width: Dimensions.CollectionView.Cell.normalWidth,
+            height: Dimensions.CollectionView.Cell.normalHeight)
     }
 
     func collectionView(
