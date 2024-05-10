@@ -23,6 +23,10 @@ internal enum L10n {
   internal enum General {
     /// Atrás
     internal static let back = L10n.tr("Localizable", "general.back", fallback: "Atrás")
+    /// Cancelar
+    internal static let cancel = L10n.tr("Localizable", "general.cancel", fallback: "Cancelar")
+    /// Editar
+    internal static let edit = L10n.tr("Localizable", "general.edit", fallback: "Editar")
   }
   internal enum Home {
     /// Buttons

@@ -1,5 +1,7 @@
 // General
 "general.back" = "Atrás";
+"general.cancel" = "Cancelar";
+"general.edit" = "Editar";
 
 // Home
 "home.title" = "UI Components";

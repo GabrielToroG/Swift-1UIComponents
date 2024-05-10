@@ -108,12 +108,7 @@ extension ViewWithReactionView {
 // MARK: - Complementary UI
 extension ViewWithReactionView {
     func editMode(editing: Bool) {
-        if editing {
-            editButton.setTitle("Cancelar", for: .normal)
-            markAllButton.isHidden = false
-        } else {
-            editButton.setTitle("Editar", for: .normal)
-            markAllButton.isHidden = true
-        }
+        editButton.setTitle(editing ? L10n.General.cancel : L10n.General.edit, for: .normal)
+        markAllButton.isHidden = !editing
     }
 }
