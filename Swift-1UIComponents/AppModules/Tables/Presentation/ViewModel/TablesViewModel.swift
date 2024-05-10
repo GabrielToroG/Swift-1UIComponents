@@ -29,4 +29,8 @@ extension TablesViewModel {
     func goToReactiveSectionsView() {
         self.goTo = .reactiveSections
     }
+
+    func goToEditableCellsView() {
+        self.goTo = .editableCells
+    }
 }

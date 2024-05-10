@@ -12,6 +12,7 @@ final class TablesViewCoordinator: Coordinator {
         case stickyHeaders
         case scrollableHeaders
         case reactiveSections
+        case editableCells
     }
 
     func goToScene(
@@ -35,6 +36,12 @@ final class TablesViewCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: ReactiveSectionsViewController.self,
+                animated: true
+            )
+        case .editableCells:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: EditableCellsViewController.self,
                 animated: true
             )
         }

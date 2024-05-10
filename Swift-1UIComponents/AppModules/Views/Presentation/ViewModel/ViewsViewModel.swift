@@ -8,13 +8,14 @@
 import Foundation
 
 final class ViewsViewModel: BaseViewModel {
-    @Published private(set) var goTo: ViewsCoordinator.GoToScene?
 
+    @Published private(set) var goTo: ViewsCoordinator.GoToScene?
+    @Published private(set) var isActive: Bool = false
 }
 
 extension ViewsViewModel {
-    func onViewDidLoad() {
-        
+    func toggleIsActive() {
+        isActive.toggle()
     }
 }
 

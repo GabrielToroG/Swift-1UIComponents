@@ -77,6 +77,8 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "progress_bar.title", fallback: "Barras de progreso")
   }
   internal enum Tableview {
+    /// Celdas editables
+    internal static let editableCells = L10n.tr("Localizable", "tableview.editable_cells", fallback: "Celdas editables")
     /// Secciones reactivas
     internal static let reactiveSections = L10n.tr("Localizable", "tableview.reactive_sections", fallback: "Secciones reactivas")
     /// Encabezados scrolleables

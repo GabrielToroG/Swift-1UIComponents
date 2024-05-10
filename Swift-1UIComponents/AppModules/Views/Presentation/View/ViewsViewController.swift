@@ -52,6 +52,15 @@ final class ViewsViewController: BaseViewController<ViewsViewModel, ViewsCoordin
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    private lazy var viewWithReactionView: ViewWithReactionView = {
+        let view = ViewWithReactionView()
+        view.config { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.toggleIsActive()
+        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 }
 
 // MARK: - Lifecycle
@@ -60,7 +69,6 @@ extension ViewsViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
-        viewModel.onViewDidLoad()
     }
 }
 
@@ -70,6 +78,11 @@ extension ViewsViewController {
         viewModel.$goTo.sink { [weak self] scene in
             guard let self = self, let scene = scene else { return }
             self.coordinator.goToScene(scene: scene, from: self)
+        }.store(in: &anyCancellable)
+
+        viewModel.$isActive.sink { [weak self] isActive in
+            guard let self = self else { return }
+            self.viewWithReactionView.editMode(editing: isActive)
         }.store(in: &anyCancellable)
     }
 }
@@ -87,6 +100,7 @@ extension ViewsViewController {
         shadowView.addSubview(shadowLabel)
         mainStackView.addArrangedSubview(viewWithConfigView)
         mainStackView.addArrangedSubview(viewWithActionsView)
+        mainStackView.addArrangedSubview(viewWithReactionView)
 
         let mainStackViewConstraints = [
             mainStackView.topAnchor.constraint(

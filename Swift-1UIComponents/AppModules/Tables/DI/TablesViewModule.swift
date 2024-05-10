@@ -67,5 +67,16 @@ private extension TablesViewModule {
                 resolver.resolve(NotificationCenterWrapper.self)!
             )
         }
+
+        container.register(EditableCellsViewModel.self) { resolver in
+            EditableCellsViewModel()
+        }
+        container.register(EditableCellsViewController.self) { resolver in
+            EditableCellsViewController(
+                resolver.resolve(EditableCellsViewModel.self)!,
+                resolver.resolve(TablesViewCoordinator.self)!,
+                resolver.resolve(NotificationCenterWrapper.self)!
+            )
+        }
     }
 }
