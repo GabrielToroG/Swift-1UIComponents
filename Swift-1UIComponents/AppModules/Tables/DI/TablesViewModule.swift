@@ -78,5 +78,16 @@ private extension TablesViewModule {
                 resolver.resolve(NotificationCenterWrapper.self)!
             )
         }
+
+        container.register(SwipeableCellsViewModel.self) { resolver in
+            SwipeableCellsViewModel()
+        }
+        container.register(SwipeableCellsViewController.self) { resolver in
+            SwipeableCellsViewController(
+                resolver.resolve(SwipeableCellsViewModel.self)!,
+                resolver.resolve(TablesViewCoordinator.self)!,
+                resolver.resolve(NotificationCenterWrapper.self)!
+            )
+        }
     }
 }

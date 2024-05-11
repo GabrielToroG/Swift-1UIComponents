@@ -62,6 +62,17 @@ final class TablesMenuViewController: BaseViewController<TablesViewModel, Tables
         }
         return button
     }()
+    private lazy var swipeActionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .filled)
+        button.setTitle(L10n.Tableview.swipeAction, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.goToSwipableCellsView()
+        }
+        return button
+    }()
 }
 
 // MARK: - Lifecycle
@@ -97,6 +108,7 @@ extension TablesMenuViewController {
         mainStackView.addArrangedSubview(scrollableHeadersButton)
         mainStackView.addArrangedSubview(reactiveSectionsButton)
         mainStackView.addArrangedSubview(editableCellsButton)
+        mainStackView.addArrangedSubview(swipeActionButton)
 
         let mainStackViewConstraints = [
             mainStackView.centerYAnchor.constraint(

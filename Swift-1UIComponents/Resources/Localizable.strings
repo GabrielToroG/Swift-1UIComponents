@@ -74,6 +74,7 @@
 "tableview.scrollable_headers" = "Encabezados scrolleables";
 "tableview.reactive_sections" = "Secciones reactivas";
 "tableview.editable_cells" = "Celdas editables";
+"tableview.swipe_action" = "Celdas desplazables";
 "tableview.sticky_headers.first" = "Header 1";
 "tableview.sticky_headers.second" = "Header 2";
 "tableview.sticky_headers.button" = "Botón";

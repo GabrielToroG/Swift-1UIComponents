@@ -33,4 +33,8 @@ extension TablesViewModel {
     func goToEditableCellsView() {
         self.goTo = .editableCells
     }
+
+    func goToSwipableCellsView() {
+        self.goTo = .swipebleCells
+    }
 }

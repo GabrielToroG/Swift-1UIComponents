@@ -7,21 +7,7 @@
 
 import UIKit
 
-struct UIEditModeProduct {
-    let product: String
-    let description: String
-    let price: String
-}
-
-// MARK: - Class
 final class EditableTableViewCell: UITableViewCell, Reusable {
-    private enum Constants {
-        enum Label {
-            enum ProductPrice {
-
-            }
-        }
-    }
 
     // Outlets
     private lazy var containerStackView: UIStackView = {
