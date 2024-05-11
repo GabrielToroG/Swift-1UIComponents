@@ -107,9 +107,9 @@ extension ScrollableHeadersTableViewCell {
                 equalTo: containerView.bottomAnchor,
                 constant: -Dimensions.Margin.normal),
             optionImageView.widthAnchor.constraint(
-                equalToConstant: Dimensions.Icon.bigSize),
+                equalToConstant: Dimensions.Icon.mediumSize),
             optionImageView.heightAnchor.constraint(
-                equalToConstant: Dimensions.Icon.bigSize)
+                equalToConstant: Dimensions.Icon.mediumSize)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(

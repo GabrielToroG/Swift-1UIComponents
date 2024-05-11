@@ -133,7 +133,7 @@ extension LabelsViewController {
                 equalTo: containerView.leadingAnchor,
                 constant: Dimensions.Margin.normal),
             maxWidthLeftLabel.widthAnchor.constraint(
-                lessThanOrEqualToConstant: Dimensions.Label.Width.extreme)
+                lessThanOrEqualToConstant: Dimensions.Label.Width.large)
         ]
         let maxWidthRightLabelConstraints = [
             maxWidthRightLabel.centerYAnchor.constraint(

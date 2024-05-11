@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Cell Register
 extension UITableView {
     /// Función para registrar la celda programática más rápido
     func registerCellClass<T: UITableViewCell>(
@@ -25,7 +26,7 @@ extension UITableView {
     }
 }
 
-// MARK: - HeaderFooterView
+// MARK: - HeaderFooterView Register
 extension UITableView {
     /// Función para registar una clase del tipo UITableViewHeaderFooterView
     func registerHeaderClass<T: UITableViewHeaderFooterView>(_ type: T.Type) where T: Reusable {
@@ -38,5 +39,47 @@ extension UITableView {
             fatalError("Expected view to be of type \(T.identifier)")
         }
         return view
+    }
+}
+
+// MARK: - Cells Control
+extension UITableView {
+    /// Función para seleccionar todas las celdas de una casilla
+    func selectAllRows() {
+        let totalRows = self.numberOfRows(inSection: .zero)
+        for row in .zero..<totalRows {
+            self.selectRow(at: IndexPath(row: row, section: .zero), animated: true, scrollPosition: .none)
+        }
+    }
+    /// Función para des-seleccionar todas las celdas de una casilla
+    func deselectAllRows() {
+        let totalRows = self.numberOfRows(inSection: .zero)
+        for row in .zero..<totalRows {
+            self.deselectRow(at: IndexPath(row: row, section: .zero), animated: true)
+        }
+    }
+
+    /// Devuelve los IndexPath de las celdas que han sido seleccionados
+    func getSelectedRows() -> [IndexPath] {
+        guard let selectedIndexPaths = indexPathsForSelectedRows else {
+            return []
+        }
+        return selectedIndexPaths
+    }
+
+    /// Devuelve los IndexPath de las celdas que han sido seleccionados, ordenados de mayor a menor
+    func getSelectedRowsForDeletion() -> [IndexPath] {
+        guard let selectedIndexPaths = indexPathsForSelectedRows else {
+            return []
+        }
+
+        let sortedIndexPaths = selectedIndexPaths.sorted { $0.row > $1.row }
+        var indexPathsToDelete: [IndexPath] = []
+
+        for indexPath in sortedIndexPaths {
+            indexPathsToDelete.append(indexPath)
+        }
+
+        return indexPathsToDelete
     }
 }

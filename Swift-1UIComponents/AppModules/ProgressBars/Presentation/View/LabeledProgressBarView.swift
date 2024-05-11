@@ -99,7 +99,7 @@ final class LabeledProgressBarView: UIView {
         progressBarView.centerYAnchor.constraint(
             equalTo: progressContainerView.centerYAnchor).isActive = true
         progressBarView.heightAnchor.constraint(
-            equalToConstant: Dimensions.ProgressBar.Height.normalHeight).isActive = true
+            equalToConstant: Dimensions.ProgressBar.Height.normal).isActive = true
     }
 }
 
@@ -124,7 +124,7 @@ extension LabeledProgressBarView {
             containerView.bottomAnchor.constraint(
                 equalTo: bottomAnchor),
             containerView.heightAnchor.constraint(
-                equalToConstant: Dimensions.ProgressBar.Height.bigHeight)
+                equalToConstant: Dimensions.ProgressBar.Height.medium)
         ]
         let titleLabelConstraints = [
             titleLabel.widthAnchor.constraint(

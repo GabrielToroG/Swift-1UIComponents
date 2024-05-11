@@ -100,7 +100,7 @@ extension StickyTableViewHeader {
             separatorView.widthAnchor.constraint(
                 equalToConstant: Dimensions.Separator.underlineWidth),
             separatorView.heightAnchor.constraint(
-                equalToConstant: Dimensions.Separator.bigHeight),
+                equalToConstant: Dimensions.Separator.mediumHeight),
             separatorView.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
                 constant: Dimensions.Margin.normal),

@@ -86,10 +86,10 @@ extension LoaderView {
                 equalTo: containerView.centerYAnchor),
             logoContainerView.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
-                constant: Dimensions.Margin.extreme),
+                constant: Dimensions.Margin.extraLarge),
             logoContainerView.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor,
-                constant: -Dimensions.Margin.extreme)
+                constant: -Dimensions.Margin.extraLarge)
         ]
         let logoImageViewConstraints = [
             logoImageView.centerXAnchor.constraint(
@@ -105,7 +105,7 @@ extension LoaderView {
         let progressContainerViewConstraints = [
             progressContainerView.topAnchor.constraint(
                 equalTo: logoImageView.bottomAnchor,
-                constant: Dimensions.Margin.big),
+                constant: Dimensions.Margin.medium),
             progressContainerView.leadingAnchor.constraint(
                 equalTo: logoContainerView.leadingAnchor,
                 constant: Dimensions.Margin.normal),
@@ -114,7 +114,7 @@ extension LoaderView {
                 constant: -Dimensions.Margin.normal),
             progressContainerView.bottomAnchor.constraint(
                 equalTo: logoContainerView.bottomAnchor,
-                constant: -Dimensions.Margin.big),
+                constant: -Dimensions.Margin.medium),
             progressContainerView.heightAnchor.constraint(
                 equalToConstant: Dimensions.LoaderView.barHeight)
         ]

@@ -38,10 +38,10 @@ internal enum Asset {
     internal static let yellowColor = ColorAsset(name: "yellowColor")
   }
   internal enum General {
+    internal static let check = ImageAsset(name: "check")
     internal static let generalLogo = ImageAsset(name: "general-logo")
-    internal static let generalCheck = ImageAsset(name: "general.check")
     internal static let generalToastInfo = ImageAsset(name: "general.toast.info")
-    internal static let generalUncheck = ImageAsset(name: "general.uncheck")
+    internal static let uncheck = ImageAsset(name: "uncheck")
   }
   internal enum Home {
     internal static let homeButtonOption = ImageAsset(name: "home.button.option")

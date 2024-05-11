@@ -27,18 +27,35 @@ final class ViewWithReactionView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    private lazy var deleteButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.isHidden = true
+        button.setTitle("Eliminar", for: .normal)
+        button.setTitleColor(Asset.Colors.blackColor.color, for: .normal)
+        button.titleLabel?.font = Fonts.Button.button1
+        button.onClick { [weak self] in
+            self?.didTapDeleteButton?()
+        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     private lazy var markAllButton: UIButton = {
         let button = UIButton(type: .custom)
         button.isHidden = true
         button.setTitle("Marcar todos", for: .normal)
         button.setTitleColor(Asset.Colors.blackColor.color, for: .normal)
         button.titleLabel?.font = Fonts.Button.button1
+        button.onClick { [weak self] in
+            self?.didTapMarkAllButton?()
+        }
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     // Properties
     private var didTapEditButton: (() -> Void)?
+    private var didTapDeleteButton: (() -> Void)?
+    private var didTapMarkAllButton: (() -> Void)?
 
     // Init
     override init(frame: CGRect = .zero) {
@@ -54,8 +71,14 @@ final class ViewWithReactionView: UIView {
 
 // MARK: - Config
 extension ViewWithReactionView {
-    func config(didTapEditButton: @escaping () -> Void) {
+    func config(
+        didTapEditButton: @escaping () -> Void,
+        didTapDeleteButton: @escaping () -> Void,
+        didTapMarkAllButton: @escaping () -> Void
+    ) {
         self.didTapEditButton = didTapEditButton
+        self.didTapDeleteButton = didTapDeleteButton
+        self.didTapMarkAllButton = didTapMarkAllButton
     }
 }
 
@@ -68,6 +91,7 @@ extension ViewWithReactionView {
     private func configConstraints() {
         addSubview(containerView)
         containerView.addSubview(editButton)
+        containerView.addSubview(deleteButton)
         containerView.addSubview(markAllButton)
 
         let containerViewConstraints = [
@@ -89,6 +113,10 @@ extension ViewWithReactionView {
                 equalTo: containerView.trailingAnchor,
                 constant: -Dimensions.Margin.normal)
         ]
+        let deleteButtonConstraints = [
+            deleteButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            deleteButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
+        ]
         let markAllButtonConstraints = [
             markAllButton.centerYAnchor.constraint(
                 equalTo: containerView.centerYAnchor),
@@ -100,6 +128,7 @@ extension ViewWithReactionView {
         NSLayoutConstraint.activate(
             containerViewConstraints +
             editButtonConstraints +
+            deleteButtonConstraints +
             markAllButtonConstraints
         )
     }
@@ -110,5 +139,6 @@ extension ViewWithReactionView {
     func editMode(editing: Bool) {
         editButton.setTitle(editing ? L10n.General.cancel : L10n.General.edit, for: .normal)
         markAllButton.isHidden = !editing
+        deleteButton.isHidden = !editing
     }
 }

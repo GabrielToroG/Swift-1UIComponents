@@ -54,10 +54,13 @@ final class ViewsViewController: BaseViewController<ViewsViewModel, ViewsCoordin
     }()
     private lazy var viewWithReactionView: ViewWithReactionView = {
         let view = ViewWithReactionView()
-        view.config { [weak self] in
-            guard let self = self else { return }
-            self.viewModel.toggleIsActive()
-        }
+        view.config(
+            didTapEditButton: { [weak self] in
+                self?.viewModel.toggleIsActive()
+            },
+            didTapDeleteButton: {},
+            didTapMarkAllButton: {}
+        )
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

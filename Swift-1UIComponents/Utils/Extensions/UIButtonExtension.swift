@@ -25,14 +25,14 @@ extension UIButton {
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = Asset.Colors.brownColor.color
             isEnabled = true
-            layer.cornerRadius = Dimensions.BorderRadius.extreme
+            layer.cornerRadius = Dimensions.BorderRadius.large
         case .shadowFilled:
             titleLabel?.font = Fonts.Button.button1
             heightAnchor.constraint(equalToConstant: Dimensions.Button.Height.normal).isActive = true
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = Asset.Colors.brownColor.color
             isEnabled = true
-            layer.cornerRadius = Dimensions.BorderRadius.extreme
+            layer.cornerRadius = Dimensions.BorderRadius.large
             configButtonShadow(show: true)
         case .bordered:
             titleLabel?.font = Fonts.Button.button1
@@ -40,7 +40,7 @@ extension UIButton {
             setTitleColor(Asset.Colors.blackColor.color, for: .normal)
             backgroundColor = .clear
             isEnabled = true
-            layer.cornerRadius = Dimensions.BorderRadius.extreme
+            layer.cornerRadius = Dimensions.BorderRadius.large
             layer.borderWidth = Dimensions.BorderWidth.minimum
             layer.borderColor = Asset.Colors.blackColor.color.cgColor
         case .noBackgroundColor:
@@ -53,7 +53,7 @@ extension UIButton {
             setTitleColor(Asset.Colors.blackColor.color.withAlphaComponent(0.3), for: .normal)
             backgroundColor = Asset.Colors.brownColor.color.withAlphaComponent(0.3)
             isEnabled = false
-            layer.cornerRadius = Dimensions.BorderRadius.extreme
+            layer.cornerRadius = Dimensions.BorderRadius.large
         }
     }
 

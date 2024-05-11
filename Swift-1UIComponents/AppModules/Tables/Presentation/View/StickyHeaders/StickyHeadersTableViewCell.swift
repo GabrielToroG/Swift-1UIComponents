@@ -14,7 +14,7 @@ final class StickyHeadersTableViewCell: UITableViewCell, Reusable {
         let view = ViewWithShadow()
         view.backgroundColor = Asset.Colors.brownColor.color
         view.config(ViewWithShadowArgs())
-        view.layer.cornerRadius = Dimensions.BorderRadius.big
+        view.layer.cornerRadius = Dimensions.BorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -89,9 +89,9 @@ extension StickyHeadersTableViewCell {
                 equalTo: containerView.bottomAnchor,
                 constant: -Dimensions.Margin.normal),
             optionImageView.widthAnchor.constraint(
-                equalToConstant: Dimensions.Icon.bigSize),
+                equalToConstant: Dimensions.Icon.mediumSize),
             optionImageView.heightAnchor.constraint(
-                equalToConstant: Dimensions.Icon.bigSize)
+                equalToConstant: Dimensions.Icon.mediumSize)
         ]
         let optionLabelConstraints = [
             optionLabel.centerYAnchor.constraint(
