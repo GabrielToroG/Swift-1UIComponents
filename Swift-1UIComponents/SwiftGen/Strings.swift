@@ -83,6 +83,8 @@ internal enum L10n {
   internal enum Tableview {
     /// Celdas editables
     internal static let editableCells = L10n.tr("Localizable", "tableview.editable_cells", fallback: "Celdas editables")
+    /// Celdas agrandables
+    internal static let expandableCells = L10n.tr("Localizable", "tableview.expandable_cells", fallback: "Celdas agrandables")
     /// Secciones reactivas
     internal static let reactiveSections = L10n.tr("Localizable", "tableview.reactive_sections", fallback: "Secciones reactivas")
     /// Encabezados scrolleables

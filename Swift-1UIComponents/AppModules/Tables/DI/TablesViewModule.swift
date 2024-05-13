@@ -89,5 +89,16 @@ private extension TablesViewModule {
                 resolver.resolve(NotificationCenterWrapper.self)!
             )
         }
+
+        container.register(ExpandableCellsViewModel.self) { resolver in
+            ExpandableCellsViewModel()
+        }
+        container.register(ExpandableCellsViewController.self) { resolver in
+            ExpandableCellsViewController(
+                resolver.resolve(ExpandableCellsViewModel.self)!,
+                resolver.resolve(TablesViewCoordinator.self)!,
+                resolver.resolve(NotificationCenterWrapper.self)!
+            )
+        }
     }
 }

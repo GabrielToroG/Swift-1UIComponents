@@ -75,6 +75,7 @@
 "tableview.reactive_sections" = "Secciones reactivas";
 "tableview.editable_cells" = "Celdas editables";
 "tableview.swipe_action" = "Celdas desplazables";
+"tableview.expandable_cells" = "Celdas agrandables";
 "tableview.sticky_headers.first" = "Header 1";
 "tableview.sticky_headers.second" = "Header 2";
 "tableview.sticky_headers.button" = "Botón";

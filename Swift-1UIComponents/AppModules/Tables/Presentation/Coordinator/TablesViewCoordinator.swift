@@ -14,6 +14,7 @@ final class TablesViewCoordinator: Coordinator {
         case reactiveSections
         case editableCells
         case swipebleCells
+        case expandibleCells
     }
 
     func goToScene(
@@ -49,6 +50,12 @@ final class TablesViewCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: SwipeableCellsViewController.self,
+                animated: true
+            )
+        case .expandibleCells:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: ExpandableCellsViewController.self,
                 animated: true
             )
         }

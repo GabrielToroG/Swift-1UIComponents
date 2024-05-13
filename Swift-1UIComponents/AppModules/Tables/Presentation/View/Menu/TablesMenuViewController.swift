@@ -73,6 +73,17 @@ final class TablesMenuViewController: BaseViewController<TablesViewModel, Tables
         }
         return button
     }()
+    private lazy var expandableCellsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .filled)
+        button.setTitle(L10n.Tableview.expandableCells, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.goToExpandableCellsView()
+        }
+        return button
+    }()
 }
 
 // MARK: - Lifecycle
@@ -109,6 +120,7 @@ extension TablesMenuViewController {
         mainStackView.addArrangedSubview(reactiveSectionsButton)
         mainStackView.addArrangedSubview(editableCellsButton)
         mainStackView.addArrangedSubview(swipeActionButton)
+        mainStackView.addArrangedSubview(expandableCellsButton)
 
         let mainStackViewConstraints = [
             mainStackView.centerYAnchor.constraint(
