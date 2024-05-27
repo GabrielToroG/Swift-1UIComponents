@@ -101,3 +101,47 @@ extension BaseViewController {
             .store(in: &anyCancellable)
     }
 }
+
+// MARK: - generar txt y pdf
+extension BaseViewController {
+//    let data = "Datos a escribir en el archivo asdasdjaskdmaskdaks fjnvdfkvdfv dfdfvdfvdfv."
+//    writeToFile(data: data, fileName: "archivo", fileType: "txt")
+//    if let readData = readFromFile(fileName: "archivo", fileType: "txt") {
+//        print("Contenido leído del archivo: \(readData)")
+//    } else {
+//        print("No se pudo leer el archivo.")
+//    }
+
+    func getDocumentsDirectory() -> URL? {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+    }
+
+    func writeToFile(data: String, fileName: String, fileType: String) {
+        guard let documentsDirectory = getDocumentsDirectory() else {
+            print("Error al acceder al directorio de documentos.")
+            return
+        }
+        let fileURL = documentsDirectory.appendingPathComponent("\(fileName).\(fileType)")
+        do {
+            try data.write(to: fileURL, atomically: true, encoding: .utf8)
+            print("Archivo creado y datos escritos correctamente en \(fileURL.path).")
+        } catch {
+            print("Error al escribir en el archivo: \(error)")
+        }
+    }
+
+    func readFromFile(fileName: String, fileType: String) -> String? {
+        guard let documentsDirectory = getDocumentsDirectory() else {
+            print("Error al acceder al directorio de documentos.")
+            return nil
+        }
+        let fileURL = documentsDirectory.appendingPathComponent("\(fileName).\(fileType)")
+        do {
+            let content = try String(contentsOf: fileURL, encoding: .utf8)
+            return content
+        } catch {
+            print("Error al leer el archivo: \(error)")
+            return nil
+        }
+    }
+}
