@@ -13,10 +13,10 @@ final class HomeViewModel: BaseViewModel {
     }
     @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var homeOptions: [UiHomeOption]?
-}
 
-extension HomeViewModel {
-    func onViewDidLoad() {
+    // override
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
         self.isLoadingSubject.send(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.dispatchTime) { [weak self] in
             guard let self = self else { return }

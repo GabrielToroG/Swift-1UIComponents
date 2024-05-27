@@ -23,11 +23,9 @@ final class ReactiveSectionsViewModel: BaseViewModel {
 
     // Combine
     @Published private(set) var refreshData: Bool?
-}
 
-// MARK: - OnViewDidLoad
-extension ReactiveSectionsViewModel {
-    func onViewDidLoad() {
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
         buildReactiveData()
     }
 }

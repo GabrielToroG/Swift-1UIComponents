@@ -11,10 +11,8 @@ final class SwipeableCellsViewModel: BaseViewModel {
 
     private(set) var cellData: [UISwipeableModeCell] = []
 
-}
-
-extension SwipeableCellsViewModel {
-    func onViewDidLoad() {
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
         cellData = [
             UISwipeableModeCell(name: "Celda 1"),
             UISwipeableModeCell(name: "Celda 2"),
@@ -24,6 +22,9 @@ extension SwipeableCellsViewModel {
             UISwipeableModeCell(name: "Celda 6"),
         ]
     }
+}
+
+extension SwipeableCellsViewModel {
 
     func removeCells(at index: Int) {
         cellData.remove(at: index)

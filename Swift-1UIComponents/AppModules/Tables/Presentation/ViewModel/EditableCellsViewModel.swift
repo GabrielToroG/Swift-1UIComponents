@@ -14,10 +14,9 @@ final class EditableCellsViewModel: BaseViewModel {
     @Published private(set) var deletedDone: [IndexPath] = []
     
     private(set) var cellData: [UIEditModeCell] = []
-}
 
-extension EditableCellsViewModel {
-    func onViewDidLoad() {
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
         cellData = [
             UIEditModeCell(
                 product: "Crema",
@@ -42,6 +41,10 @@ extension EditableCellsViewModel {
         ]
         refreshData = true
     }
+}
+
+extension EditableCellsViewModel {
+    
 }
 
 extension EditableCellsViewModel {

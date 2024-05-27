@@ -92,7 +92,6 @@ extension TablesMenuViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
-        viewModel.onViewDidLoad()
     }
 }
 

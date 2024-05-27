@@ -10,10 +10,9 @@ import Foundation
 final class StickyHeadersViewModel: BaseViewModel {
 
     @Published private(set) var stickyData: [UIStickyHeader] = []
-}
 
-extension StickyHeadersViewModel {
-    func onViewDidLoad() {
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
         stickyData =  [
             UIStickyHeader(title: "Primera casilla"),
             UIStickyHeader(title: "Segunda casilla"),
@@ -21,4 +20,8 @@ extension StickyHeadersViewModel {
             UIStickyHeader(title: "Casilla casilla"),
         ]
     }
+}
+
+extension StickyHeadersViewModel {
+    
 }

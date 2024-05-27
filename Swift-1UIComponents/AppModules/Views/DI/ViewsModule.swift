@@ -20,15 +20,26 @@ final class ViewsModule {
 
 private extension ViewsModule {
     func injectPresentation() {
-        container.register(ViewsViewModel.self) { resolver in
-            ViewsViewModel()
-        }
         container.register(ViewsCoordinator.self) { resolver in
             ViewsCoordinator(container: self.container)
+        }
+        container.register(ViewsViewModel.self) { resolver in
+            ViewsViewModel()
         }
         container.register(ViewsViewController.self) { resolver in
             ViewsViewController(
                 resolver.resolve(ViewsViewModel.self)!,
+                resolver.resolve(ViewsCoordinator.self)!,
+                resolver.resolve(NotificationCenterWrapper.self)!
+            )
+        }
+
+        container.register(ModalFeedbackViewModel.self) { (_, args: ModalFeedbackArgs) in
+            ModalFeedbackViewModel(args: args)
+        }
+        container.register(ModalFeedbackViewController.self) { (resolver, args: ModalFeedbackArgs) in
+            ModalFeedbackViewController(
+                resolver.resolve(ModalFeedbackViewModel.self, argument: args)!,
                 resolver.resolve(ViewsCoordinator.self)!,
                 resolver.resolve(NotificationCenterWrapper.self)!
             )

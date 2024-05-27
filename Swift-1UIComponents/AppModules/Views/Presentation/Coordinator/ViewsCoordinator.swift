@@ -10,6 +10,7 @@ import UIKit
 final class ViewsCoordinator: Coordinator {
     indirect enum GoToScene: Equatable {
         case showAlert
+        case modalFeedback(ModalFeedbackArgs)
     }
 
     func goToScene(
@@ -30,6 +31,15 @@ final class ViewsCoordinator: Coordinator {
             )
             alertController.addAction(okAction)
             viewController.present(alertController, animated: true, completion: nil)
+
+        case .modalFeedback(let args):
+            presentLikeBottomSheet(
+                viewController: viewController,
+                newViewControllerType: ModalFeedbackViewController.self,
+                args: [args],
+                style: .pageSheet,
+                animated: true
+            )
         }
     }
 }

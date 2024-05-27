@@ -41,7 +41,6 @@ extension ImagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        viewModel.onViewDidLoad()
     }
 }
 

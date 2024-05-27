@@ -26,6 +26,7 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
     var anyCancellable: [AnyCancellable] = []
     private var loadConstraints: [NSLayoutConstraint] = []
 
+    // Init
     init(
         _ viewModel: V,
         _ coordinator: C,
@@ -41,8 +42,10 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Current ViewController: \(type(of: self))")
         suscribeToLoading()
     }
 
@@ -55,7 +58,7 @@ class BaseViewController<V: BaseViewModel, C: Coordinator>: UIViewController {
         super.viewWillDisappear(animated)
         view.endEditing(true)
     }
-    
+
     deinit {
         anyCancellable.forEach { $0.cancel() }
     }
@@ -87,7 +90,7 @@ extension BaseViewController {
         loadConstraints.removeAll()
         self.loadingView.removeFromSuperview()
     }
-    
+
     func suscribeToLoading() {
         viewModel.isLoadingPublisher
             .receive(on: DispatchQueue.main)

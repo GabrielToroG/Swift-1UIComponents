@@ -49,7 +49,6 @@ extension ButtonsViewController {
         super.viewDidLoad()
         configUI()
         configBindings()
-        viewModel.onViewDidLoad()
     }
 }
 

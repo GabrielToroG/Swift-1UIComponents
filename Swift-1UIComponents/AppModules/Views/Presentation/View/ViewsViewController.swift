@@ -64,6 +64,17 @@ final class ViewsViewController: BaseViewController<ViewsViewModel, ViewsCoordin
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    private lazy var bottomSheetButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.style(like: .filled)
+        button.setTitle("Bottom shett", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.onClick { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.presentBottomShet()
+        }
+        return button
+    }()
 }
 
 // MARK: - Lifecycle
@@ -104,6 +115,7 @@ extension ViewsViewController {
         mainStackView.addArrangedSubview(viewWithConfigView)
         mainStackView.addArrangedSubview(viewWithActionsView)
         mainStackView.addArrangedSubview(viewWithReactionView)
+        mainStackView.addArrangedSubview(bottomSheetButton)
 
         let mainStackViewConstraints = [
             mainStackView.topAnchor.constraint(

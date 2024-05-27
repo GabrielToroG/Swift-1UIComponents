@@ -10,9 +10,3 @@ import Foundation
 final class ImagesViewModel: BaseViewModel {
     
 }
-
-extension ImagesViewModel {
-    func onViewDidLoad() {
-        
-    }
-}

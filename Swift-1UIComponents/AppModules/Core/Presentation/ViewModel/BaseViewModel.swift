@@ -17,4 +17,9 @@ open class BaseViewModel {
     }
     public final var isTopToast = PassthroughSubject<Bool, Error>()
     public final var isLoadingCircle = PassthroughSubject<Bool, Never>()
+
+    func onViewDidLoad() {
+        print("Current ViewModel: \(type(of: self))")
+    }
+    func onViewWillAppear() {}
 }

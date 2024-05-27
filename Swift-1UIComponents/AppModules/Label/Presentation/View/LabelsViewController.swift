@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class LabelsViewController: BaseViewController<LabelsViewModel, LabelsCoordinator> {
     // Outlets
@@ -46,6 +47,24 @@ final class LabelsViewController: BaseViewController<LabelsViewModel, LabelsCoor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    private lazy var reactiveMapLabel: UILabel = {
+        let label = UILabel()
+        label.font = Fonts.Body.body1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    private lazy var reactiveFilterLabel: UILabel = {
+        let label = UILabel()
+        label.font = Fonts.Body.body1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    private lazy var reactiveCompactMapLabel: UILabel = {
+        let label = UILabel()
+        label.font = Fonts.Body.body1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 }
 
 // MARK: - Lifecycle
@@ -53,6 +72,7 @@ extension LabelsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        configBindings()
         viewModel.onViewDidLoad()
     }
 }
@@ -60,6 +80,28 @@ extension LabelsViewController {
 
 // MARK: - UI Functions
 extension LabelsViewController {
+    private func configBindings() {
+        viewModel.$numbers
+            .map { number in
+                number.map { "\($0 * 2)" }.joined(separator: ", ")
+            }
+            .assign(to: \.text, on: reactiveMapLabel)
+            .store(in: &anyCancellable)
+
+        viewModel.$numbers
+            .map { number in
+                number.filter { $0 % 2 == 0 }.map { "\($0)" }.joined(separator: ", ")
+            }
+            .assign(to: \.text, on: reactiveFilterLabel)
+            .store(in: &anyCancellable)
+
+        viewModel.$numbers
+            .map { numbers in
+                numbers.compactMap { $0 % 3 == 0 ? "\($0)" : nil }.joined(separator: ", ")
+            }
+            .assign(to: \.text, on: reactiveCompactMapLabel)
+            .store(in: &anyCancellable)
+    }
     private func configUI() {
         configBasic(L10n.Label.title, Asset.Colors.brandColor.color)
         configLabels()
@@ -103,6 +145,9 @@ extension LabelsViewController {
         containerView.addSubview(maxWidthLeftLabel)
         containerView.addSubview(maxWidthRightLabel)
         containerView.addSubview(differentStyleLabel)
+        containerView.addSubview(reactiveMapLabel)
+        containerView.addSubview(reactiveFilterLabel)
+        containerView.addSubview(reactiveCompactMapLabel)
 
         let containerViewContraints = [
             containerView.topAnchor.constraint(
@@ -156,13 +201,49 @@ extension LabelsViewController {
                 equalTo: containerView.trailingAnchor,
                 constant: Dimensions.Margin.normal)
         ]
+        let reactiveMapLabelConstraints = [
+            reactiveMapLabel.topAnchor.constraint(
+                equalTo: differentStyleLabel.bottomAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveMapLabel.leadingAnchor.constraint(
+                equalTo: containerView.leadingAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveMapLabel.trailingAnchor.constraint(
+                equalTo: containerView.trailingAnchor,
+                constant: Dimensions.Margin.normal)
+        ]
+        let reactiveFilterLabelConstraints = [
+            reactiveFilterLabel.topAnchor.constraint(
+                equalTo: reactiveMapLabel.bottomAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveFilterLabel.leadingAnchor.constraint(
+                equalTo: containerView.leadingAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveFilterLabel.trailingAnchor.constraint(
+                equalTo: containerView.trailingAnchor,
+                constant: Dimensions.Margin.normal)
+        ]
+        let reactiveCompactMapLabelConstraints = [
+            reactiveCompactMapLabel.topAnchor.constraint(
+                equalTo: reactiveFilterLabel.bottomAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveCompactMapLabel.leadingAnchor.constraint(
+                equalTo: containerView.leadingAnchor,
+                constant: Dimensions.Margin.normal),
+            reactiveCompactMapLabel.trailingAnchor.constraint(
+                equalTo: containerView.trailingAnchor,
+                constant: Dimensions.Margin.normal)
+        ]
 
         NSLayoutConstraint.activate(
             containerViewContraints +
             strikethroughLabelConstraints +
             maxWidthLeftLabelConstraints +
             maxWidthRightLabelConstraints +
-            differentStyleLabelConstraints
+            differentStyleLabelConstraints +
+            reactiveMapLabelConstraints +
+            reactiveFilterLabelConstraints +
+            reactiveCompactMapLabelConstraints
         )
     }
 }

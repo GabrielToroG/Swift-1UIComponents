@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinator> {    
     // Outlets
@@ -14,6 +15,11 @@ final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinato
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
+    }()
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 }
 

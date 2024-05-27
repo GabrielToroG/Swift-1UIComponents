@@ -12,12 +12,6 @@ final class TablesViewModel: BaseViewModel {
 }
 
 extension TablesViewModel {
-    func onViewDidLoad() {
-        
-    }
-}
-
-extension TablesViewModel {
     func goToStickyHeadersView() {
         self.goTo = .stickyHeaders
     }

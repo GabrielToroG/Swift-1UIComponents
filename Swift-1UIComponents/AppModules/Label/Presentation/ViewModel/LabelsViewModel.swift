@@ -8,11 +8,12 @@
 import Foundation
 
 final class LabelsViewModel: BaseViewModel {
-    
-}
+    @Published private(set) var numbers: [Int] = []
+    @Published private(set) var numbersTwo: [Int] = []
 
-extension LabelsViewModel {
-    func onViewDidLoad() {
-        
+    override func onViewDidLoad() {
+        super.onViewDidLoad()
+        numbers = [1, 2, 3, 4]
+        numbersTwo = [11, 12, 13, 14]
     }
 }

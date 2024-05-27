@@ -10,9 +10,3 @@ import Foundation
 final class ButtonsViewModel: BaseViewModel {
     
 }
-
-extension ButtonsViewModel {
-    func onViewDidLoad() {
-        
-    }
-}

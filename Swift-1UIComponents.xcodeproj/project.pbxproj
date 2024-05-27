@@ -23,6 +23,7 @@
 		7F29E8352BD317AB0076EA58 /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */; };
 		7F29E8382BD3269B0076EA58 /* ClickableCarouselCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8372BD3269B0076EA58 /* ClickableCarouselCellView.swift */; };
 		7F2C1B412BF129860002F3D2 /* ExpandableCellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C1B402BF129860002F3D2 /* ExpandableCellsViewModel.swift */; };
+		7F4361D22C0479180012C83F /* BaseNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4361D12C0479180012C83F /* BaseNotificationViewController.swift */; };
 		7F7CD8642BB3667C00E3D477 /* RutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CD8632BB3667C00E3D477 /* RutHelper.swift */; };
 		7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */; };
 		7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */; };
@@ -120,6 +121,9 @@
 		7FEBF21A2BED5E1A009560DE /* EditableCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBF2192BED5E1A009560DE /* EditableCellsViewController.swift */; };
 		7FEBF21C2BED5EA1009560DE /* EditableCellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBF21B2BED5EA1009560DE /* EditableCellsViewModel.swift */; };
 		7FEBF21E2BED6A78009560DE /* ViewWithReactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBF21D2BED6A78009560DE /* ViewWithReactionView.swift */; };
+		7FECE4872BF1DB6C0027D84E /* ModalFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECE4862BF1DB6C0027D84E /* ModalFeedbackViewController.swift */; };
+		7FECE48A2BF1DBAB0027D84E /* ModalFeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECE4892BF1DBAB0027D84E /* ModalFeedbackViewModel.swift */; };
+		7FECE48D2BF1DC330027D84E /* ModalFeedbackArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECE48C2BF1DC330027D84E /* ModalFeedbackArgs.swift */; };
 		7FF9ECC32BF11AA400CB8361 /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9ECC22BF11AA400CB8361 /* ExpandableTableViewCell.swift */; };
 		7FF9ECC62BF11C8A00CB8361 /* UIExpandableModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9ECC52BF11C8A00CB8361 /* UIExpandableModeCell.swift */; };
 		7FFD0C9C2BB38F7700B07B72 /* LabeledTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD0C9B2BB38F7700B07B72 /* LabeledTextFieldViewController.swift */; };
@@ -146,6 +150,7 @@
 		7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F29E8372BD3269B0076EA58 /* ClickableCarouselCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableCarouselCellView.swift; sourceTree = "<group>"; };
 		7F2C1B402BF129860002F3D2 /* ExpandableCellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCellsViewModel.swift; sourceTree = "<group>"; };
+		7F4361D12C0479180012C83F /* BaseNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNotificationViewController.swift; sourceTree = "<group>"; };
 		7F7CD8632BB3667C00E3D477 /* RutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutHelper.swift; sourceTree = "<group>"; };
 		7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitCoordinator.swift; sourceTree = "<group>"; };
@@ -245,6 +250,9 @@
 		7FEBF2192BED5E1A009560DE /* EditableCellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableCellsViewController.swift; sourceTree = "<group>"; };
 		7FEBF21B2BED5EA1009560DE /* EditableCellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableCellsViewModel.swift; sourceTree = "<group>"; };
 		7FEBF21D2BED6A78009560DE /* ViewWithReactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithReactionView.swift; sourceTree = "<group>"; };
+		7FECE4862BF1DB6C0027D84E /* ModalFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeedbackViewController.swift; sourceTree = "<group>"; };
+		7FECE4892BF1DBAB0027D84E /* ModalFeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeedbackViewModel.swift; sourceTree = "<group>"; };
+		7FECE48C2BF1DC330027D84E /* ModalFeedbackArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeedbackArgs.swift; sourceTree = "<group>"; };
 		7FF9ECC22BF11AA400CB8361 /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 		7FF9ECC52BF11C8A00CB8361 /* UIExpandableModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExpandableModeCell.swift; sourceTree = "<group>"; };
 		7FFD0C9B2BB38F7700B07B72 /* LabeledTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextFieldViewController.swift; sourceTree = "<group>"; };
@@ -468,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB3F1F92B96978B00E7B252 /* Coordinator */,
+				7FECE48B2BF1DC250027D84E /* Entity */,
 				7FB3F1FA2B96979000E7B252 /* View */,
 				7FB3F1FB2B96979400E7B252 /* ViewModel */,
 			);
@@ -485,6 +494,10 @@
 		7FB3F1FA2B96979000E7B252 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7FECE4822BF1DA7B0027D84E /* ViewWithAction */,
+				7FECE4832BF1DA860027D84E /* ViewWithConfig */,
+				7FECE4842BF1DA900027D84E /* ViewWithReaction */,
+				7FECE4852BF1DAA30027D84E /* ViewBottomSheet */,
 				7FB3F1FC2B9697B600E7B252 /* ViewsViewController.swift */,
 				7FB3F20A2B96B23900E7B252 /* ViewWithActionView.swift */,
 				7F0115BF2B9787DD002A82A6 /* ViewWithConfigView.swift */,
@@ -497,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB3F2002B9697F100E7B252 /* ViewsViewModel.swift */,
+				7FECE4892BF1DBAB0027D84E /* ModalFeedbackViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -532,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				7FE018892B833978008FC45A /* BaseViewController.swift */,
+				7F4361D12C0479180012C83F /* BaseNotificationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1146,6 +1161,43 @@
 			path = EditableCells;
 			sourceTree = "<group>";
 		};
+		7FECE4822BF1DA7B0027D84E /* ViewWithAction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewWithAction;
+			sourceTree = "<group>";
+		};
+		7FECE4832BF1DA860027D84E /* ViewWithConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewWithConfig;
+			sourceTree = "<group>";
+		};
+		7FECE4842BF1DA900027D84E /* ViewWithReaction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewWithReaction;
+			sourceTree = "<group>";
+		};
+		7FECE4852BF1DAA30027D84E /* ViewBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				7FECE4862BF1DB6C0027D84E /* ModalFeedbackViewController.swift */,
+			);
+			path = ViewBottomSheet;
+			sourceTree = "<group>";
+		};
+		7FECE48B2BF1DC250027D84E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7FECE48C2BF1DC330027D84E /* ModalFeedbackArgs.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		7FF9ECC42BF11C0300CB8361 /* ExpandableCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,9 +1387,11 @@
 				7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
 				7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */,
+				7FECE4872BF1DB6C0027D84E /* ModalFeedbackViewController.swift in Sources */,
 				7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */,
 				7FB3F20E2B96D13F00E7B252 /* ClickableGestureRecognizer.swift in Sources */,
 				7FCBE1592BB3161100D9C532 /* LabeledTextFieldViewArgs.swift in Sources */,
+				7FECE48A2BF1DBAB0027D84E /* ModalFeedbackViewModel.swift in Sources */,
 				7FE018E52B8389AA008FC45A /* LabelsCoordinator.swift in Sources */,
 				7FE0188C2B833A7F008FC45A /* BaseViewModel.swift in Sources */,
 				7FCE52D42BB264B8009B8943 /* TextFieldsCoordinator.swift in Sources */,
@@ -1350,6 +1404,7 @@
 				7FFD0C9C2BB38F7700B07B72 /* LabeledTextFieldViewController.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
+				7F4361D22C0479180012C83F /* BaseNotificationViewController.swift in Sources */,
 				7FAF7AD02BB40E8C008C3F5D /* GradientProgressBar.swift in Sources */,
 				7FCE52D62BB264ED009B8943 /* TextFieldsViewController.swift in Sources */,
 				7FF9ECC62BF11C8A00CB8361 /* UIExpandableModeCell.swift in Sources */,
@@ -1383,6 +1438,7 @@
 				7F099E612BEFCD4700AEE763 /* SwipeableCellsViewModel.swift in Sources */,
 				7FBD9C012BBBA2E100767A6B /* StickyHeadersViewController.swift in Sources */,
 				7FEBF2022BEC787B009560DE /* ReactiveInfoSectionView.swift in Sources */,
+				7FECE48D2BF1DC330027D84E /* ModalFeedbackArgs.swift in Sources */,
 				7F29E82E2BD306BE0076EA58 /* ReusableTableViewCell.swift in Sources */,
 				7F2C1B412BF129860002F3D2 /* ExpandableCellsViewModel.swift in Sources */,
 				7F099E5F2BEFCD1400AEE763 /* SwipeableCellsViewController.swift in Sources */,
