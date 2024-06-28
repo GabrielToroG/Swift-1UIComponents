@@ -70,7 +70,7 @@ extension HomeViewController {
         mainTableView.delegate = self
         mainTableView.registerCellClass(HomeTableViewCell.self)
     }
-    
+
     private func configConstraints() {
         view.addSubview(mainTableView)
         let mainTableViewConstraints = [

@@ -10,7 +10,7 @@ import UIKit
 struct UiHomeOption {
     let icon: UIImage
     let title: String
-    
+
     init(
         icon: UIImage = UIImage(),
         title: String = ""

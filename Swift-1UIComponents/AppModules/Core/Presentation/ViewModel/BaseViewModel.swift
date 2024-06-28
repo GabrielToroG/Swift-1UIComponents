@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 open class BaseViewModel {
-    public init() {
-    }
+
+    public init() {}
     private(set) var isLoadingSubject = PassthroughSubject<Bool, Never>()
     var isLoadingPublisher: AnyPublisher<Bool, Never> {
         isLoadingSubject.eraseToAnyPublisher()

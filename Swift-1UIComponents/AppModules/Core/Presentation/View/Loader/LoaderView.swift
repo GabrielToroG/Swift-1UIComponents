@@ -9,6 +9,11 @@ import UIKit
 
 class LoaderView: UIView {
 
+    // Constants
+    private enum Constants {
+        static let contentContainerWidth = UIScreen.main.bounds.width * 0.7
+    }
+
     // Outlets
     private lazy var containerView: UIView = {
         let view = UIView()
@@ -16,7 +21,7 @@ class LoaderView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private lazy var logoContainerView: UIView = {
+    private lazy var contentContainerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -62,9 +67,9 @@ class LoaderView: UIView {
 extension LoaderView {
     private func configViews() {
         addSubview(containerView)
-        containerView.addSubview(logoContainerView)
-        logoContainerView.addSubview(logoImageView)
-        logoContainerView.addSubview(progressContainerView)
+        containerView.addSubview(contentContainerView)
+        contentContainerView.addSubview(logoImageView)
+        contentContainerView.addSubview(progressContainerView)
         progressContainerView.addSubview(progressView)
 
         let containerViewConstraints = [
@@ -81,21 +86,19 @@ extension LoaderView {
                 equalTo: bottomAnchor,
                 constant: Dimensions.Margin.zero)
         ]
-        let logoContainerViewConstraints = [
-            logoContainerView.centerYAnchor.constraint(
+        let contentContainerViewConstraints = [
+            contentContainerView.centerYAnchor.constraint(
                 equalTo: containerView.centerYAnchor),
-            logoContainerView.leadingAnchor.constraint(
-                equalTo: containerView.leadingAnchor,
-                constant: Dimensions.Margin.extraLarge),
-            logoContainerView.trailingAnchor.constraint(
-                equalTo: containerView.trailingAnchor,
-                constant: -Dimensions.Margin.extraLarge)
+            contentContainerView.centerXAnchor.constraint(
+                equalTo: containerView.centerXAnchor),
+            contentContainerView.widthAnchor.constraint(
+                equalToConstant: Constants.contentContainerWidth)
         ]
         let logoImageViewConstraints = [
             logoImageView.centerXAnchor.constraint(
-                equalTo: logoContainerView.centerXAnchor),
+                equalTo: contentContainerView.centerXAnchor),
             logoImageView.topAnchor.constraint(
-                equalTo: logoContainerView.topAnchor,
+                equalTo: contentContainerView.topAnchor,
                 constant: Dimensions.Margin.normal),
             logoImageView.heightAnchor.constraint(
                 equalToConstant: Dimensions.LoaderView.logoSize),
@@ -107,13 +110,13 @@ extension LoaderView {
                 equalTo: logoImageView.bottomAnchor,
                 constant: Dimensions.Margin.medium),
             progressContainerView.leadingAnchor.constraint(
-                equalTo: logoContainerView.leadingAnchor,
+                equalTo: contentContainerView.leadingAnchor,
                 constant: Dimensions.Margin.normal),
             progressContainerView.trailingAnchor.constraint(
-                equalTo: logoContainerView.trailingAnchor,
+                equalTo: contentContainerView.trailingAnchor,
                 constant: -Dimensions.Margin.normal),
             progressContainerView.bottomAnchor.constraint(
-                equalTo: logoContainerView.bottomAnchor,
+                equalTo: contentContainerView.bottomAnchor,
                 constant: -Dimensions.Margin.medium),
             progressContainerView.heightAnchor.constraint(
                 equalToConstant: Dimensions.LoaderView.barHeight)
@@ -135,7 +138,7 @@ extension LoaderView {
 
         NSLayoutConstraint.activate(
             containerViewConstraints +
-            logoContainerViewConstraints +
+            contentContainerViewConstraints +
             logoImageViewConstraints +
             progressContainerViewConstraints +
             progressViewConstraints

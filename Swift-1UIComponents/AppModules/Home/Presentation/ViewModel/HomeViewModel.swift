@@ -8,13 +8,15 @@
 import Foundation
 
 final class HomeViewModel: BaseViewModel {
+
     private enum Constants {
         static let dispatchTime: Double = 5
     }
+
     @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var homeOptions: [UiHomeOption]?
 
-    // override
+    // Override
     override func onViewDidLoad() {
         super.onViewDidLoad()
         self.isLoadingSubject.send(true)

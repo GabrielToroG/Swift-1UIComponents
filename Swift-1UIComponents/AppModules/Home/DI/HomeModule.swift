@@ -21,10 +21,9 @@ final class HomeModule {
 
 private extension HomeModule {
     func injectPresentation() {
-        container.register(HomeViewModel.self) { resolver in
+        container.register(HomeViewModel.self) { _ in
             HomeViewModel()
         }
-
         container.register(HomeCoordinator.self) { _ in
             HomeCoordinator(container: self.container)
         }
