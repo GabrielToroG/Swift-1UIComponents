@@ -9,10 +9,12 @@ import Foundation
 
 final class HomeViewModel: BaseViewModel {
 
+    // Constants
     private enum Constants {
         static let dispatchTime: Double = 5
     }
 
+    // Combine
     @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var homeOptions: [UiHomeOption]?
 
@@ -40,6 +42,7 @@ final class HomeViewModel: BaseViewModel {
     }
 }
 
+// MARK: - Coordinator
 extension HomeViewModel {
     func goToLabelView() {
         self.goTo = .labelsView

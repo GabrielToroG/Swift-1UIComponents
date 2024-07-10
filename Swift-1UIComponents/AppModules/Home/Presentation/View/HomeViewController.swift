@@ -8,7 +8,8 @@
 import UIKit
 import UserNotifications
 
-final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinator> {    
+final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinator> {
+
     // Outlets
     private lazy var mainTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)

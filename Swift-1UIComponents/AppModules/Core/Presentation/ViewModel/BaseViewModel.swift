@@ -10,16 +10,19 @@ import Combine
 
 open class BaseViewModel {
 
-    public init() {}
+    // Combine
     private(set) var isLoadingSubject = PassthroughSubject<Bool, Never>()
     var isLoadingPublisher: AnyPublisher<Bool, Never> {
         isLoadingSubject.eraseToAnyPublisher()
     }
-    public final var isTopToast = PassthroughSubject<Bool, Error>()
-    public final var isLoadingCircle = PassthroughSubject<Bool, Never>()
 
+    // Init
+    public init() {}
+
+    // Lifecycle
     func onViewDidLoad() {
         print("Current ViewModel: \(type(of: self))")
     }
+
     func onViewWillAppear() {}
 }
