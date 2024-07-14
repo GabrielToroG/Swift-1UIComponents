@@ -16,6 +16,9 @@ open class BaseViewModel {
         isLoadingSubject.eraseToAnyPublisher()
     }
 
+    // Properties
+    let dispatchGroup = DispatchGroup()
+
     // Init
     public init() {}
 

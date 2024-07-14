@@ -8,7 +8,8 @@
 import Foundation
 
 /// Usado para las peticiones API o cualquier Remote data source
-protocol ClosureUseCase {
+protocol ClosureUseCase: Reusable {
+
     associatedtype RequestType
     associatedtype ResultType
 

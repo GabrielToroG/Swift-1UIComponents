@@ -34,7 +34,7 @@ class HomeTableViewCell: UITableViewCell, Reusable {
     var item: UiHomeOption? {
         didSet {
             guard let item = item else { return }
-            optionImageView.image = item.icon
+            optionImageView.image = UIImage(named: item.icon)
             optionLabel.text = item.title
         }
     }

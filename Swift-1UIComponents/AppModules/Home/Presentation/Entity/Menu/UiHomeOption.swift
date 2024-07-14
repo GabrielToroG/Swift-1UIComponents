@@ -8,11 +8,11 @@
 import UIKit
 
 struct UiHomeOption {
-    let icon: UIImage
+    let icon: String
     let title: String
 
     init(
-        icon: UIImage = UIImage(),
+        icon: String = "",
         title: String = ""
     ) {
         self.icon = icon

@@ -42,12 +42,21 @@ extension HomeViewController {
             self.coordinator.goToScene(scene: scene, from: self)
         }.store(in: &anyCancellable)
 
-        viewModel.$homeOptions.sink { [weak self] _ in
+        viewModel.$loadIsDone.sink { [weak self] value in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.mainTableView.reloadData()
+            if value {
+                DispatchQueue.main.async {
+                    self.mainTableView.reloadData()
+                }
             }
         }.store(in: &anyCancellable)
+        
+//        viewModel.$homeOptions.sink { [weak self] _ in
+//            guard let self = self else { return }
+//            DispatchQueue.main.async {
+//                self.mainTableView.reloadData()
+//            }
+//        }.store(in: &anyCancellable)
     }
 }
 
@@ -91,7 +100,7 @@ extension HomeViewController {
 // MARK: - UITableView Extension
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.homeOptions?.count ?? .zero
+        return viewModel.homeOptions?.options.count ?? .zero
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -101,7 +110,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         ) else {
             return UITableViewCell()
         }
-        cell.item = viewModel.homeOptions?[indexPath.row]
+        cell.item = viewModel.homeOptions?.options[indexPath.row]
         return cell
     }
 
