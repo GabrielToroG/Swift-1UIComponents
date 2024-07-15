@@ -31,10 +31,10 @@ class HomeTableViewCell: UITableViewCell, Reusable {
     }()
 
     // Config
-    var item: UiHomeOption? {
+    var item: UiHomeOptionCorrect? {
         didSet {
             guard let item = item else { return }
-            optionImageView.image = UIImage(named: item.icon)
+            optionImageView.image = item.icon
             optionLabel.text = item.title
         }
     }
@@ -68,18 +68,15 @@ extension HomeTableViewCell {
             containerView.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(
-                equalTo: contentView.bottomAnchor)
+                equalTo: contentView.bottomAnchor),
+            containerView.heightAnchor.constraint(equalToConstant: 44)
         ]
         let optionImageViewConstraints = [
-            optionImageView.topAnchor.constraint(
-                equalTo: containerView.topAnchor,
-                constant: Dimensions.Margin.small),
+            optionImageView.centerYAnchor.constraint(
+                equalTo: containerView.centerYAnchor),
             optionImageView.leadingAnchor.constraint(
                 equalTo: containerView.leadingAnchor,
                 constant: Dimensions.Margin.normal),
-            optionImageView.bottomAnchor.constraint(
-                equalTo: containerView.bottomAnchor,
-                constant: -Dimensions.Margin.small),
             optionImageView.widthAnchor.constraint(
                 equalToConstant: Dimensions.Icon.normalSize),
             optionImageView.heightAnchor.constraint(

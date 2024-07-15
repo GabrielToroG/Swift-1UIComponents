@@ -10,6 +10,8 @@ import Foundation
 final class NetworkManagerImpl: NetworkManager {
     private enum Constants {
         enum ResponseStatus {
+            static let ok: Int = 200
+            static let created: Int = 201
             static let noContent: Int = 204
         }
     }
@@ -99,7 +101,7 @@ extension NetworkManagerImpl {
         onCompletion: @escaping (ApiResult<R>) -> Void
     ) {
         guard let httpResponse = response as? HTTPURLResponse else {
-            return onCompletion(.error(error: .inward(.emptyResponse)))
+            return onCompletion(.error(error: .serverUnavailable))
         }
 
         if let url = response?.url,
@@ -169,7 +171,7 @@ extension NetworkManagerImpl {
                 return onCompletion(.error(error: .notFound))
             }
             guard isInvalidToken(statusCode: statusCode) else {
-                return onCompletion(ApiResult.unauthorized(error: error))
+                return onCompletion(.unauthorized(error: error))
             }
             if isAuthorized(statusCode: statusCode) {
                 decodeErrorBody(data: data, onCompletion: onCompletion)

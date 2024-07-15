@@ -33,6 +33,8 @@ internal enum L10n {
     internal static let buttonOption = L10n.tr("Localizable", "home.button_option", fallback: "Buttons")
     /// Collection Views
     internal static let collectionOption = L10n.tr("Localizable", "home.collection_option", fallback: "Collection Views")
+    /// Graficos
+    internal static let graphicsOption = L10n.tr("Localizable", "home.graphics_option", fallback: "Graficos")
     /// Images
     internal static let imageOption = L10n.tr("Localizable", "home.image_option", fallback: "Images")
     /// Labels

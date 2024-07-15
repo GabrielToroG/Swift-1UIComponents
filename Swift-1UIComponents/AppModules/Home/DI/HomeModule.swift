@@ -65,12 +65,17 @@ private extension HomeModule {
                 getHomeUseCase: resolver.resolve(
                     GetHomeMenuUseCase.Alias.self,
                     name: GetHomeMenuUseCase.identifier
-                )
+                ), 
+                mapper: resolver.resolve(HomePresentationMapper.self)
             )
         }
 
         container.register(HomeCoordinator.self) { _ in
             HomeCoordinator(container: self.container)
+        }
+
+        container.register(HomePresentationMapper.self) { _ in
+                HomePresentationMapperImpl()
         }
 
         container.register(HomeViewController.self) { resolver in

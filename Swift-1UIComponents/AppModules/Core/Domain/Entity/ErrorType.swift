@@ -8,12 +8,21 @@
 import Foundation
 
 enum ErrorType: Error {
-    case notFound
-    case connection
-    case api(_ apiError: ApiError)
-    case general(_ error: Error? = nil)
     /// Error Interno
     case inward(_ error: InwardError)
+    
+    /// No se ha iniciado el backend
+    case serverUnavailable
+
+    /// 404
+    case notFound
+
+
+    case api(_ apiError: ApiError)
+
+    case general(_ error: Error? = nil)
+
+
     case generic(_ error: String)
 }
 

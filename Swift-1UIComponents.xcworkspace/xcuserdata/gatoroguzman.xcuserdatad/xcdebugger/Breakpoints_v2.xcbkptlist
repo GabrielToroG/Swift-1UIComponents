@@ -27,5 +27,101 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36718734-E148-4061-9B33-22C062109B1A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "handleResponse(_:_:data:error:onCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "36718734-E148-4061-9B33-22C062109B1A - 74b68cec0b467e73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_1UIComponents.NetworkManagerImpl.handleResponse&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.Optional&lt;__C.NSURLResponse&gt;, _: Foundation.URLRequest, data: Swift.Optional&lt;Foundation.Data&gt;, error: Swift.Optional&lt;Swift.Error&gt;, onCompletion: (Swift_1UIComponents.ApiResult&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Swift-1UIComponents"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gatoroguzman/Documents/Proyectos/Swift/GitHub/Swift-1UIComponents/Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "3244">
+               </Location>
+               <Location
+                  uuid = "36718734-E148-4061-9B33-22C062109B1A - 74b68cec0b467e3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_1UIComponents.NetworkManagerImpl.handleResponse&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.Optional&lt;__C.NSURLResponse&gt;, _: Foundation.URLRequest, data: Swift.Optional&lt;Foundation.Data&gt;, error: Swift.Optional&lt;Swift.Error&gt;, onCompletion: (Swift_1UIComponents.ApiResult&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Swift-1UIComponents"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gatoroguzman/Documents/Proyectos/Swift/GitHub/Swift-1UIComponents/Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "3244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D1C8E1B-0CA0-4E07-BD39-0F86EC1289CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "request(endpoint:method:headerType:onCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1D1C8E1B-0CA0-4E07-BD39-0F86EC1289CB - 590d1802c6451b92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_1UIComponents.NetworkManagerImpl.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(endpoint: Swift.String, method: Swift_1UIComponents.HttpMethod, headerType: Swift_1UIComponents.ApiHeaderType, onCompletion: (Swift_1UIComponents.ApiResult&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Swift-1UIComponents"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gatoroguzman/Documents/Proyectos/Swift/GitHub/Swift-1UIComponents/Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1712">
+               </Location>
+               <Location
+                  uuid = "1D1C8E1B-0CA0-4E07-BD39-0F86EC1289CB - 590d1802c6451bd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_1UIComponents.NetworkManagerImpl.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(endpoint: Swift.String, method: Swift_1UIComponents.HttpMethod, headerType: Swift_1UIComponents.ApiHeaderType, onCompletion: (Swift_1UIComponents.ApiResult&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Swift-1UIComponents"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gatoroguzman/Documents/Proyectos/Swift/GitHub/Swift-1UIComponents/Swift-1UIComponents/AppModules/Network/Manager/NetworkManagerImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

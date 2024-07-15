@@ -9,6 +9,7 @@
 "home.image_option" = "Images";
 "home.view_option" = "Views";
 "home.progress_bar_option" = "Barras de progreso";
+"home.graphics_option" = "Graficos";
 "home.button_option" = "Buttons";
 "home.textfield_option" = "Text Fields";
 "home.table_option" = "Table Views";

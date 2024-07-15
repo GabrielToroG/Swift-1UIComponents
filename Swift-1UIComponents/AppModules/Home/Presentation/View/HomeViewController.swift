@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 final class HomeViewController: BaseViewController<HomeViewModel, HomeCoordinator> {
 
@@ -50,13 +49,6 @@ extension HomeViewController {
                 }
             }
         }.store(in: &anyCancellable)
-        
-//        viewModel.$homeOptions.sink { [weak self] _ in
-//            guard let self = self else { return }
-//            DispatchQueue.main.async {
-//                self.mainTableView.reloadData()
-//            }
-//        }.store(in: &anyCancellable)
     }
 }
 
@@ -100,7 +92,7 @@ extension HomeViewController {
 // MARK: - UITableView Extension
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.homeOptions?.options.count ?? .zero
+        return viewModel.homeOptions?.count ?? .zero
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,29 +102,47 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         ) else {
             return UITableViewCell()
         }
-        cell.item = viewModel.homeOptions?.options[indexPath.row]
+        cell.item = viewModel.homeOptions?[indexPath.row]
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        44
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        switch indexPath.row {
-        case 0:
-            viewModel.goToLabelView()
-        case 1:
-            viewModel.goToImagesView()
-        case 2:
-            viewModel.goToViewsView()
-        case 3:
-            viewModel.goToProgressBarsView()
-        case 4:
-            viewModel.goToButtonsView()
-        case 5:
-            viewModel.goToTextFieldsView()
-        case 6:
-            viewModel.goToTablesMenuView()
-        default:
+        guard let position = viewModel.homeOptions?[indexPath.row],
+              let row = HomeTableViewRowsString(rawValue: position.title) else {
             return
+        }
+
+        tableView.deselectRow(at: indexPath, animated: false)
+
+        switch row {
+        case .label:
+            viewModel.goToLabelView()
+        case .images:
+            viewModel.goToImagesView()
+        case .buttons:
+            viewModel.goToButtonsView()
+        case .textFields:
+            viewModel.goToTextFieldsView()
+        case .switchs:
+            viewModel.goToSwitchView()
+        case .progressBars:
+            viewModel.goToProgressBarsView()
+        case .graphics:
+            viewModel.goToGraphicsView()
+        case .tablesMenu:
+            viewModel.goToTablesMenuView()
+        case .collectionsMenu:
+            viewModel.goToCollectionMenuView()
+        case .webViews:
+            viewModel.goToWebViews()
+        case .views:
+            viewModel.goToViewsView()
+        case .toast:
+            viewModel.goToToastView()
         }
     }
 }

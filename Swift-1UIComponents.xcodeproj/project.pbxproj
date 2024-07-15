@@ -49,6 +49,10 @@
 		7FAC79532C443C9900F2550A /* UIHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79522C443C9900F2550A /* UIHomeMenuRequest.swift */; };
 		7FAC79552C443DA700F2550A /* DomainHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79542C443DA700F2550A /* DomainHomeMenuRequest.swift */; };
 		7FAC79572C443E4C00F2550A /* ApiHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79562C443E4C00F2550A /* ApiHomeMenuRequest.swift */; };
+		7FAC795A2C4454DE00F2550A /* HomeTableViewRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79592C4454DE00F2550A /* HomeTableViewRows.swift */; };
+		7FAC795D2C44D15500F2550A /* HomePresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC795C2C44D15500F2550A /* HomePresentationMapper.swift */; };
+		7FAC795F2C44D29500F2550A /* UiHomeOptionCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC795E2C44D29500F2550A /* UiHomeOptionCorrect.swift */; };
+		7FAC79612C44D30F00F2550A /* HomePresentationMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79602C44D30F00F2550A /* HomePresentationMapperImpl.swift */; };
 		7FAF7AC12BB3F361008C3F5D /* ProgressBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF7AC02BB3F361008C3F5D /* ProgressBarModule.swift */; };
 		7FAF7AC62BB3F643008C3F5D /* ProgressBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF7AC52BB3F643008C3F5D /* ProgressBarCoordinator.swift */; };
 		7FAF7AC82BB3F66B008C3F5D /* ProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF7AC72BB3F66B008C3F5D /* ProgressBarViewModel.swift */; };
@@ -209,6 +213,10 @@
 		7FAC79522C443C9900F2550A /* UIHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHomeMenuRequest.swift; sourceTree = "<group>"; };
 		7FAC79542C443DA700F2550A /* DomainHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainHomeMenuRequest.swift; sourceTree = "<group>"; };
 		7FAC79562C443E4C00F2550A /* ApiHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHomeMenuRequest.swift; sourceTree = "<group>"; };
+		7FAC79592C4454DE00F2550A /* HomeTableViewRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewRows.swift; sourceTree = "<group>"; };
+		7FAC795C2C44D15500F2550A /* HomePresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationMapper.swift; sourceTree = "<group>"; };
+		7FAC795E2C44D29500F2550A /* UiHomeOptionCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiHomeOptionCorrect.swift; sourceTree = "<group>"; };
+		7FAC79602C44D30F00F2550A /* HomePresentationMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentationMapperImpl.swift; sourceTree = "<group>"; };
 		7FAF7AC02BB3F361008C3F5D /* ProgressBarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarModule.swift; sourceTree = "<group>"; };
 		7FAF7AC52BB3F643008C3F5D /* ProgressBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarCoordinator.swift; sourceTree = "<group>"; };
 		7FAF7AC72BB3F66B008C3F5D /* ProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewModel.swift; sourceTree = "<group>"; };
@@ -514,6 +522,23 @@
 				7FD1598C2B82C6FA00347CA1 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
+			sourceTree = "<group>";
+		};
+		7FAC79582C4454CB00F2550A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC79592C4454DE00F2550A /* HomeTableViewRows.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		7FAC795B2C44D14C00F2550A /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC795C2C44D15500F2550A /* HomePresentationMapper.swift */,
+				7FAC79602C44D30F00F2550A /* HomePresentationMapperImpl.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		7FAF7ABD2BB3F321008C3F5D /* ProgressBars */ = {
@@ -1023,7 +1048,9 @@
 		7FE018812B82D8C4008FC45A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7FAC795B2C44D14C00F2550A /* Mapper */,
 				7FE0189A2B835483008FC45A /* Entity */,
+				7FAC79582C4454CB00F2550A /* Enum */,
 				7FE018922B83457E008FC45A /* Coordinator */,
 				7FE018822B82D8CD008FC45A /* View */,
 				7FE018832B82D8D2008FC45A /* ViewModel */,
@@ -1373,6 +1400,7 @@
 				7FAC79522C443C9900F2550A /* UIHomeMenuRequest.swift */,
 				7FE292C22C3F56D0007A695F /* UiHomeMenu.swift */,
 				7FE0189D2B8354C9008FC45A /* UiHomeOption.swift */,
+				7FAC795E2C44D29500F2550A /* UiHomeOptionCorrect.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -1625,6 +1653,7 @@
 				7F0115CE2B97DD15002A82A6 /* ButtonsViewModel.swift in Sources */,
 				7FB3F2072B96A27E00E7B252 /* ViewWithShadow.swift in Sources */,
 				7F29E8382BD3269B0076EA58 /* ClickableCarouselCellView.swift in Sources */,
+				7FAC795A2C4454DE00F2550A /* HomeTableViewRows.swift in Sources */,
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
 				7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */,
 				7FDC6ECF2C365FAA00681B3A /* URLExtension.swift in Sources */,
@@ -1658,10 +1687,12 @@
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
 				7F0115C42B97DCCD002A82A6 /* ButtonsModule.swift in Sources */,
 				7F0FE59E2C349D14007DFD5D /* ApiHeaderType.swift in Sources */,
+				7FAC795D2C44D15500F2550A /* HomePresentationMapper.swift in Sources */,
 				7FB465BE2BD2D5C50026C457 /* ScrollableTableViewHeader.swift in Sources */,
 				7F0579DD2C3F57EE005D14AF /* ApiHomeOption.swift in Sources */,
 				7F0579DB2C3F57E6005D14AF /* ApiHomeMenu.swift in Sources */,
 				7FAC79532C443C9900F2550A /* UIHomeMenuRequest.swift in Sources */,
+				7FAC795F2C44D29500F2550A /* UiHomeOptionCorrect.swift in Sources */,
 				7FEBF21C2BED5EA1009560DE /* EditableCellsViewModel.swift in Sources */,
 				7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */,
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
@@ -1755,6 +1786,7 @@
 				7FE018D12B837937008FC45A /* Assets.swift in Sources */,
 				7FE018852B82D966008FC45A /* HomeViewController.swift in Sources */,
 				7F099E592BEEA9EF00AEE763 /* EditableTableViewCell.swift in Sources */,
+				7FAC79612C44D30F00F2550A /* HomePresentationMapperImpl.swift in Sources */,
 				7FAF7ACE2BB40B18008C3F5D /* RoundedProgressBar.swift in Sources */,
 				7FBD9BF92BBB86B800767A6B /* TablesViewCoordinator.swift in Sources */,
 				7FBD9C0D2BBBA5F000767A6B /* Reusable.swift in Sources */,
