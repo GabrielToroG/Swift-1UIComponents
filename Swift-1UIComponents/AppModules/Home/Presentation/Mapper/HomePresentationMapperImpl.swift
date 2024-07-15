@@ -11,11 +11,11 @@ import UIKit
 final class HomePresentationMapperImpl: HomePresentationMapper {
     func format(_ value: [UiHomeOption]) -> [UiHomeOptionCorrect] {
         return value.map { icon in
-            guard let iconEnum = HomeTableViewRows(rawValue: icon.icon) else {
+            guard let element = HomeTableViewRows(rawValue: icon.icon) else {
                 return UiHomeOptionCorrect(icon: UIImage(), title: "")
             }
 
-            switch iconEnum {
+            switch element {
             case .label:
                 return UiHomeOptionCorrect(
                     icon: Asset.Home.homeLabelOption.image,

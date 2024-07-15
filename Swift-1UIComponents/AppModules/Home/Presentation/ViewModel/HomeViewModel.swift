@@ -8,16 +8,16 @@
 import Foundation
 
 final class HomeViewModel: BaseViewModel {
-    
+
     // Constants
     private enum Constants {
         static let requestApp: String = "uikit"
     }
-    
+
     // Combine
     @Published private(set) var goTo: HomeCoordinator.GoToScene?
     @Published private(set) var loadIsDone: Bool = false
-    
+
     // Properties
     private(set) var homeOptions: [UiHomeOptionCorrect]?
 

@@ -55,6 +55,7 @@ extension HomeTableViewCell {
     private func configUI() {
         configConstraints()
     }
+
     private func configConstraints() {
         contentView.addSubview(containerView)
         containerView.addSubview(optionImageView)
@@ -69,7 +70,6 @@ extension HomeTableViewCell {
                 equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor),
-            containerView.heightAnchor.constraint(equalToConstant: 44)
         ]
         let optionImageViewConstraints = [
             optionImageView.centerYAnchor.constraint(

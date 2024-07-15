@@ -107,12 +107,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        44
+        Dimensions.TableView.Cell.tinyHeight
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let position = viewModel.homeOptions?[indexPath.row],
-              let row = HomeTableViewRowsString(rawValue: position.title) else {
+              let row = HomeTableViewRows(rawValue: position.title) else {
             return
         }
 

@@ -204,6 +204,8 @@ extension Dimensions {
             static let normalWidth: CGFloat = 48
         }
         enum Cell {
+            /// CGFloat = 44
+            static let tinyHeight: CGFloat = 44
             /// CGFloat = 100
             static let normalHeight: CGFloat = 100
         }
