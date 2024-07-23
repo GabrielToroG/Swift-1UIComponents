@@ -134,6 +134,10 @@ extension HomeViewModel {
         
     }
 
+    func goToSegmentedControlView() {
+        
+    }
+
     func goToViewsView() {
         self.goTo = .viewsView
     }

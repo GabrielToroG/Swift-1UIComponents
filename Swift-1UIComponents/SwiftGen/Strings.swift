@@ -45,6 +45,8 @@ internal enum L10n {
     internal static let progressBarOption = L10n.tr("Localizable", "home.progress_bar_option", fallback: "Barras de progreso")
     /// La informacion del Home ha sido GUARDADA con exito
     internal static let saveMenuMessage = L10n.tr("Localizable", "home.save_menu_message", fallback: "La informacion del Home ha sido GUARDADA con exito")
+    /// Segmented Control
+    internal static let segmentedControlOption = L10n.tr("Localizable", "home.segmented_control_option", fallback: "Segmented Control")
     /// Server Driven
     internal static let serverDrivenOption = L10n.tr("Localizable", "home.server_driven_option", fallback: "Server Driven")
     /// Switchs

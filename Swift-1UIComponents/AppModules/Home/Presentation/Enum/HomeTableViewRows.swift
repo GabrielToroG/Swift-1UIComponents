@@ -18,6 +18,7 @@ enum HomeTableViewRows: String {
     case tablesMenu = "home_table_option"
     case collectionsMenu = "home_collection_option"
     case webViews = "home_web_option"
+    case segmentedControl = "home_segmented_control_option"
     case views = "home_view_option"
     case toast = "home_toast_option"
     case serverDriven = "home_server_driven_option"

@@ -66,6 +66,12 @@ final class HomePresentationMapperImpl: HomePresentationMapper {
                     icon: Asset.Home.homeWebOption.image,
                     title: L10n.Home.webOption,
                     row: icon.title)
+            case .segmentedControl:
+                return UiHomeOptionCorrect(
+                    icon: Asset.Home.homeSegmentedControlOption.image,
+                    title: L10n.Home.segmentedControlOption,
+                    row: icon.title
+                )
             case .views:
                 return UiHomeOptionCorrect(
                     icon: Asset.Home.homeViewOption.image,

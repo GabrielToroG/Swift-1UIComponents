@@ -139,6 +139,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.goToCollectionMenuView()
         case .webViews:
             viewModel.goToWebViews()
+        case .segmentedControl:
+            print("")
         case .views:
             viewModel.goToViewsView()
         case .toast:
