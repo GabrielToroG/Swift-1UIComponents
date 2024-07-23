@@ -112,7 +112,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let position = viewModel.homeOptions?[indexPath.row],
-              let row = HomeTableViewRows(rawValue: position.title) else {
+              let row = HomeTableViewRows(rawValue: position.row) else {
             return
         }
 
