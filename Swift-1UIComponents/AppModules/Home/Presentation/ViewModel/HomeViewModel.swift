@@ -23,15 +23,18 @@ final class HomeViewModel: BaseViewModel {
 
     // Init
     private let getHomeMenuUseCase: GetHomeMenuUseCase.Alias
+    private let getLocalHomeMenuUseCase: GetLocalHomeMenuUseCase.Alias
     private let saveLocalHomeMenuUseCase: SaveLocalHomeMenuUseCase.Alias
     private let mapper: HomePresentationMapper
 
     init(
         getHomeMenuUseCase: GetHomeMenuUseCase.Alias,
+        getLocalHomeMenuUseCase: GetLocalHomeMenuUseCase.Alias,
         saveLocalHomeMenuUseCase: SaveLocalHomeMenuUseCase.Alias,
         mapper: HomePresentationMapper
     ) {
         self.getHomeMenuUseCase = getHomeMenuUseCase
+        self.getLocalHomeMenuUseCase = getLocalHomeMenuUseCase
         self.saveLocalHomeMenuUseCase = saveLocalHomeMenuUseCase
         self.mapper = mapper
     }
@@ -54,6 +57,20 @@ final class HomeViewModel: BaseViewModel {
 // MARK: - Use Cases
 extension HomeViewModel {
     func getHomeMenuInfo() {
+        let result = getLocalHomeMenuUseCase.execute(nil)
+        switch result {
+        case .success(let data):
+            if let data = data {
+                self.homeOptions = mapper.format(data.options)
+            } else {
+                getRemoteHomeMenuInfo()
+            }
+        default:
+            getRemoteHomeMenuInfo()
+        }
+    }
+
+    func getRemoteHomeMenuInfo() {
         dispatchGroup.enter()
         let request = UIHomeMenuRequest(app: Constants.requestApp)
         getHomeMenuUseCase.execute(request) { [weak self] result in

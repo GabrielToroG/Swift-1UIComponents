@@ -14,6 +14,11 @@ final class HomeLocalDataSourceImpl: HomeLocalDataSource {
     init(fileStorage: DirectoryLocalStorage) {
         self.fileStorage = fileStorage
     }
+
+    func getMenuOptions() -> ApiHomeMenu? {
+        guard fileStorage.contains(key: .homeMenu, directory: .caches) else { return nil }
+        return fileStorage.load(ApiHomeMenu.self, key: .homeMenu, directory: .caches)
+    }
     
     func saveMenuOptions(_ menu: ApiHomeMenu) {
         fileStorage.save(menu, key: .homeMenu, directory: .caches)    }

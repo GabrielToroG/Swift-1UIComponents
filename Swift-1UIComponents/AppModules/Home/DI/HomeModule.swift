@@ -66,6 +66,18 @@ private extension HomeModule {
         }
 
         container.register(
+            GetLocalHomeMenuUseCase.Alias.self,
+            name: GetLocalHomeMenuUseCase.identifier
+        ) { resolver in
+            GetLocalHomeMenuUseCase.Alias(
+                GetLocalHomeMenuUseCase(
+                    repository: resolver.resolve(HomeDataSource.self),
+                    mapper: resolver.resolve(HomeDomainMapper.self)
+                )
+            )
+        }
+
+        container.register(
             SaveLocalHomeMenuUseCase.Alias.self,
             name: SaveLocalHomeMenuUseCase.identifier
         ) { resolver in
@@ -84,7 +96,11 @@ private extension HomeModule {
                 getHomeMenuUseCase: resolver.resolve(
                     GetHomeMenuUseCase.Alias.self,
                     name: GetHomeMenuUseCase.identifier
-                ), 
+                ),
+                getLocalHomeMenuUseCase: resolver.resolve(
+                    GetLocalHomeMenuUseCase.Alias.self,
+                    name: GetLocalHomeMenuUseCase.identifier
+                ),
                 saveLocalHomeMenuUseCase: resolver.resolve(
                     SaveLocalHomeMenuUseCase.Alias.self,
                     name: SaveLocalHomeMenuUseCase.identifier

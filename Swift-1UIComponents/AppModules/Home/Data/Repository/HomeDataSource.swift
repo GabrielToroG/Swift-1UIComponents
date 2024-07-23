@@ -12,5 +12,6 @@ protocol HomeDataSource {
         appName: DomainHomeMenuRequest,
         onCompletion: @escaping (ApiResult<DomainHomeMenu>) -> Void
     )
-    func saveMenuOptions(_ menu: ApiHomeMenu)
+    func getLocalMenuOptions() -> DomainHomeMenu?
+    func saveLocalMenuOptions(_ menu: ApiHomeMenu)
 }

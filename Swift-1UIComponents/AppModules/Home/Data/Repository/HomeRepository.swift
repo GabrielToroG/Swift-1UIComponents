@@ -32,7 +32,12 @@ class HomeRepository: HomeDataSource {
         }
     }
 
-    func saveMenuOptions(_ menu: ApiHomeMenu) {
+    func getLocalMenuOptions() -> DomainHomeMenu? {
+        guard let homeOptions = local.getMenuOptions() else { return nil }
+        return mapper.dataToDomain(homeOptions)
+    }
+
+    func saveLocalMenuOptions(_ menu: ApiHomeMenu) {
         local.saveMenuOptions(menu)
     }
 }

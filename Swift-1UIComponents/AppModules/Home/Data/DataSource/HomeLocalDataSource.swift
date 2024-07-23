@@ -8,5 +8,6 @@
 import Foundation
 
 protocol HomeLocalDataSource {
+    func getMenuOptions() -> ApiHomeMenu?
     func saveMenuOptions(_ menu: ApiHomeMenu)
 }

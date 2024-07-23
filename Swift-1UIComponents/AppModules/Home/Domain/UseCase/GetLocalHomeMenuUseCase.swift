@@ -1,15 +1,15 @@
 //
-//  SaveLocalHomeMenuUseCase.swift
+//  GetLocalHomeMenuUseCase.swift
 //  Swift-1UIComponents
 //
-//  Created by Gabriel Alonso Toro Guzmán on 15-07-24.
+//  Created by Gabriel Alonso Toro Guzmán on 23-07-24.
 //
 
 import Foundation
 
-final class SaveLocalHomeMenuUseCase: UseCase {
-    typealias RequestType = DomainHomeMenu
-    typealias ResultType = Bool
+final class GetLocalHomeMenuUseCase: UseCase {
+    typealias RequestType = Void?
+    typealias ResultType = UiHomeMenu?
     typealias Alias = AnyUseCase<RequestType, ResultType>
 
     let repository: HomeDataSource
@@ -24,7 +24,10 @@ final class SaveLocalHomeMenuUseCase: UseCase {
     }
 
     func execute(_ parameters: RequestType) -> ApiResult<ResultType> {
-        repository.saveLocalMenuOptions(mapper.domainToData(parameters))
-        return .success(data: true)
+        var homeMenu: UiHomeMenu?
+        if let aux = repository.getLocalMenuOptions() {
+            homeMenu = mapper.domainToPresentation(aux)
+        }
+        return .success(data: homeMenu)
     }
 }
