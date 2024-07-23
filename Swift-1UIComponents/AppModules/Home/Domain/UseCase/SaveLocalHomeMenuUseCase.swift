@@ -24,6 +24,7 @@ final class SaveLocalHomeMenuUseCase: UseCase {
     }
 
     func execute(_ parameters: RequestType) -> ApiResult<ResultType> {
+        print(L10n.Home.saveMenuMessage)
         repository.saveLocalMenuOptions(mapper.domainToData(parameters))
         return .success(data: true)
     }

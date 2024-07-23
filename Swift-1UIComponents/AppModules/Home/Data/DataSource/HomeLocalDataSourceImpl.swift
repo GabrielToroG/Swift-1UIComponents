@@ -21,5 +21,6 @@ final class HomeLocalDataSourceImpl: HomeLocalDataSource {
     }
     
     func saveMenuOptions(_ menu: ApiHomeMenu) {
-        fileStorage.save(menu, key: .homeMenu, directory: .caches)    }
+        fileStorage.save(menu, key: .homeMenu, directory: .caches)
+    }
 }

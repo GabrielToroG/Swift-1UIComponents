@@ -20,4 +20,5 @@ enum HomeTableViewRows: String {
     case webViews = "home_web_option"
     case views = "home_view_option"
     case toast = "home_toast_option"
+    case serverDriven = "home_server_driven_option"
 }

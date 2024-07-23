@@ -43,7 +43,6 @@ final class HomeViewModel: BaseViewModel {
     override func onViewDidLoad() {
         super.onViewDidLoad()
 
-        self.isLoadingSubject.send(true)
         self.getHomeMenuInfo()
 
         dispatchGroup.notify(queue: .main) { [weak self] in
@@ -57,20 +56,24 @@ final class HomeViewModel: BaseViewModel {
 // MARK: - Use Cases
 extension HomeViewModel {
     func getHomeMenuInfo() {
-        let result = getLocalHomeMenuUseCase.execute(nil)
-        switch result {
-        case .success(let data):
-            if let data = data {
-                self.homeOptions = mapper.format(data.options)
-            } else {
-                getRemoteHomeMenuInfo()
-            }
-        default:
+        guard let data = getLocalHomeMenuInfo() else {
+            isLoadingSubject.send(true)
             getRemoteHomeMenuInfo()
+            return
+        }
+        self.homeOptions = mapper.format(data.options)
+    }
+
+    private func getLocalHomeMenuInfo() -> UiHomeMenu? {
+        let result = getLocalHomeMenuUseCase.execute(nil)
+        if case .success(let menu) = result {
+            return menu
+        } else {
+            return nil
         }
     }
 
-    func getRemoteHomeMenuInfo() {
+    private func getRemoteHomeMenuInfo() {
         dispatchGroup.enter()
         let request = UIHomeMenuRequest(app: Constants.requestApp)
         getHomeMenuUseCase.execute(request) { [weak self] result in
@@ -87,16 +90,6 @@ extension HomeViewModel {
             }
         }
     }
-
-//    private func getAddress() -> UiAddress? {
-//        let result = getAddressUseCase.execute(nil)
-//        if case .success(let address) = result {
-//            return address
-//        } else {
-//            return nil
-//        }
-//    }
-
 }
 
 // MARK: - Coordinator
@@ -146,6 +139,10 @@ extension HomeViewModel {
     }
 
     func goToToastView() {
+        
+    }
+
+    func goToServerDrivenView() {
         
     }
 }

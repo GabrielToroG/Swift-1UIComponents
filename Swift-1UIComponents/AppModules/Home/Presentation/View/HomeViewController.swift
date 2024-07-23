@@ -143,6 +143,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.goToViewsView()
         case .toast:
             viewModel.goToToastView()
+        case .serverDriven:
+            viewModel.goToServerDrivenView()
         }
     }
 }

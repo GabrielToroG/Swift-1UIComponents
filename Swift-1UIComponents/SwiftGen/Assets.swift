@@ -56,6 +56,7 @@ internal enum Asset {
     internal static let homeToastOption = ImageAsset(name: "home.toast.option")
     internal static let homeViewOption = ImageAsset(name: "home.view.option")
     internal static let homeWebOption = ImageAsset(name: "home.web.option")
+    internal static let homeServerDrivenOption = ImageAsset(name: "home_server_driven_option")
   }
   internal enum Images {
     internal static let imagesWebpage = ImageAsset(name: "images.webpage")

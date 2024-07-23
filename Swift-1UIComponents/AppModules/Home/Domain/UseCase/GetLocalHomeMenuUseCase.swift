@@ -26,6 +26,7 @@ final class GetLocalHomeMenuUseCase: UseCase {
     func execute(_ parameters: RequestType) -> ApiResult<ResultType> {
         var homeMenu: UiHomeMenu?
         if let aux = repository.getLocalMenuOptions() {
+            print(L10n.Home.getMenuMessage)
             homeMenu = mapper.domainToPresentation(aux)
         }
         return .success(data: homeMenu)

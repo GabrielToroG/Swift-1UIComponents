@@ -76,6 +76,12 @@ final class HomePresentationMapperImpl: HomePresentationMapper {
                     icon: Asset.Home.homeToastOption.image,
                     title: L10n.Home.toastOption,
                     row: icon.title)
+            case .serverDriven:
+                return UiHomeOptionCorrect(
+                    icon: Asset.Home.homeServerDrivenOption.image,
+                    title: L10n.Home.serverDrivenOption,
+                    row: icon.title
+                )
             }
         }
     }

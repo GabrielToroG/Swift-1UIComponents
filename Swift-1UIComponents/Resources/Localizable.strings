@@ -17,6 +17,9 @@
 "home.web_option" = "Web Views";
 "home.switch_option" = "Switchs";
 "home.toast_option" = "Toasts";
+"home.server_driven_option" = "Server Driven";
+"home.save_menu_message" = "La informacion del Home ha sido GUARDADA con exito";
+"home.get_menu_message" = "La informacion del Home ha sido RECUPERADA con exito";
 
 // Labels
 "label.title" = "Etiquetas";
