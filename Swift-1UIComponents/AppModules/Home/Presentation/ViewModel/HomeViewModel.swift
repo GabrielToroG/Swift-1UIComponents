@@ -22,14 +22,17 @@ final class HomeViewModel: BaseViewModel {
     private(set) var homeOptions: [UiHomeOptionCorrect]?
 
     // Init
-    private let getHomeUseCase: GetHomeMenuUseCase.Alias
+    private let getHomeMenuUseCase: GetHomeMenuUseCase.Alias
+    private let saveLocalHomeMenuUseCase: SaveLocalHomeMenuUseCase.Alias
     private let mapper: HomePresentationMapper
 
     init(
-        getHomeUseCase: GetHomeMenuUseCase.Alias,
+        getHomeMenuUseCase: GetHomeMenuUseCase.Alias,
+        saveLocalHomeMenuUseCase: SaveLocalHomeMenuUseCase.Alias,
         mapper: HomePresentationMapper
     ) {
-        self.getHomeUseCase = getHomeUseCase
+        self.getHomeMenuUseCase = getHomeMenuUseCase
+        self.saveLocalHomeMenuUseCase = saveLocalHomeMenuUseCase
         self.mapper = mapper
     }
 
@@ -53,11 +56,12 @@ extension HomeViewModel {
     func getHomeMenuInfo() {
         dispatchGroup.enter()
         let request = UIHomeMenuRequest(app: Constants.requestApp)
-        getHomeUseCase.execute(request) { [weak self] result in
+        getHomeMenuUseCase.execute(request) { [weak self] result in
             guard let self = self else { return }
             defer { self.dispatchGroup.leave() }
             switch result {
             case .success(let data):
+                _ = self.saveLocalHomeMenuUseCase.execute(mapper.presentationToDomain(data))
                 self.homeOptions = mapper.format(data.options)
             case .error(let error):
                 print(error)
@@ -66,6 +70,16 @@ extension HomeViewModel {
             }
         }
     }
+
+//    private func getAddress() -> UiAddress? {
+//        let result = getAddressUseCase.execute(nil)
+//        if case .success(let address) = result {
+//            return address
+//        } else {
+//            return nil
+//        }
+//    }
+
 }
 
 // MARK: - Coordinator

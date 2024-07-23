@@ -14,14 +14,18 @@ final class NetworkModule {
     }
     
     func inject() {
-        injectPresentation()
+        injectData()
     }
 }
 
 private extension NetworkModule {
-    func injectPresentation() {
+    func injectData() {
         container.register(NetworkManager.self) { _ in
             NetworkManagerImpl()
+        }
+
+        container.register(DirectoryLocalStorage.self) { _ in
+            FilesDirectoryStorage()
         }
     }
 }

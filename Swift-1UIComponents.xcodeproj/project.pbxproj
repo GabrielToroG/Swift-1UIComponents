@@ -37,6 +37,7 @@
 		7F0FE5A22C349D38007DFD5D /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FE5A12C349D38007DFD5D /* HttpMethod.swift */; };
 		7F116F9F2C430BBD00DFC95B /* AnyClosureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F116F9E2C430BBD00DFC95B /* AnyClosureUseCase.swift */; };
 		7F116FA12C43175C00DFC95B /* ResolverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F116FA02C43175C00DFC95B /* ResolverExtension.swift */; };
+		7F1DC2732C5009BA00E2668A /* AnyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2722C5009BA00E2668A /* AnyUseCase.swift */; };
 		7F29E82E2BD306BE0076EA58 /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */; };
 		7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */; };
 		7F29E8352BD317AB0076EA58 /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */; };
@@ -46,6 +47,14 @@
 		7F7CD8642BB3667C00E3D477 /* RutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CD8632BB3667C00E3D477 /* RutHelper.swift */; };
 		7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */; };
 		7F8CD24C2B82D43D0045D49D /* InitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */; };
+		7FA874D12C457B5900A900B3 /* SaveLocalHomeMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874D02C457B5900A900B3 /* SaveLocalHomeMenuUseCase.swift */; };
+		7FA874D32C459C1200A900B3 /* HomeLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874D22C459C1200A900B3 /* HomeLocalDataSource.swift */; };
+		7FA874D52C459C6C00A900B3 /* DomainHomeOptionCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874D42C459C6C00A900B3 /* DomainHomeOptionCorrect.swift */; };
+		7FA874D72C459CB900A900B3 /* ApiHomeOptionCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874D62C459CB900A900B3 /* ApiHomeOptionCorrect.swift */; };
+		7FA874D92C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874D82C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift */; };
+		7FA874DC2C46085000A900B3 /* DirectoryLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874DB2C46085000A900B3 /* DirectoryLocalStorage.swift */; };
+		7FA874DE2C4608C800A900B3 /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874DD2C4608C800A900B3 /* LocalStorageKeys.swift */; };
+		7FA874E22C46098500A900B3 /* FilesDirectoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA874E12C46098500A900B3 /* FilesDirectoryStorage.swift */; };
 		7FAC79532C443C9900F2550A /* UIHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79522C443C9900F2550A /* UIHomeMenuRequest.swift */; };
 		7FAC79552C443DA700F2550A /* DomainHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79542C443DA700F2550A /* DomainHomeMenuRequest.swift */; };
 		7FAC79572C443E4C00F2550A /* ApiHomeMenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC79562C443E4C00F2550A /* ApiHomeMenuRequest.swift */; };
@@ -201,6 +210,7 @@
 		7F0FE5A12C349D38007DFD5D /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		7F116F9E2C430BBD00DFC95B /* AnyClosureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyClosureUseCase.swift; sourceTree = "<group>"; };
 		7F116FA02C43175C00DFC95B /* ResolverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverExtension.swift; sourceTree = "<group>"; };
+		7F1DC2722C5009BA00E2668A /* AnyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUseCase.swift; sourceTree = "<group>"; };
 		7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
 		7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +220,14 @@
 		7F7CD8632BB3667C00E3D477 /* RutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutHelper.swift; sourceTree = "<group>"; };
 		7F8CD2492B82D4310045D49D /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		7F8CD24B2B82D43D0045D49D /* InitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitCoordinator.swift; sourceTree = "<group>"; };
+		7FA874D02C457B5900A900B3 /* SaveLocalHomeMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocalHomeMenuUseCase.swift; sourceTree = "<group>"; };
+		7FA874D22C459C1200A900B3 /* HomeLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalDataSource.swift; sourceTree = "<group>"; };
+		7FA874D42C459C6C00A900B3 /* DomainHomeOptionCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainHomeOptionCorrect.swift; sourceTree = "<group>"; };
+		7FA874D62C459CB900A900B3 /* ApiHomeOptionCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHomeOptionCorrect.swift; sourceTree = "<group>"; };
+		7FA874D82C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		7FA874DB2C46085000A900B3 /* DirectoryLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryLocalStorage.swift; sourceTree = "<group>"; };
+		7FA874DD2C4608C800A900B3 /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
+		7FA874E12C46098500A900B3 /* FilesDirectoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesDirectoryStorage.swift; sourceTree = "<group>"; };
 		7FAC79522C443C9900F2550A /* UIHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHomeMenuRequest.swift; sourceTree = "<group>"; };
 		7FAC79542C443DA700F2550A /* DomainHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainHomeMenuRequest.swift; sourceTree = "<group>"; };
 		7FAC79562C443E4C00F2550A /* ApiHomeMenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHomeMenuRequest.swift; sourceTree = "<group>"; };
@@ -422,6 +440,7 @@
 				7FAC79562C443E4C00F2550A /* ApiHomeMenuRequest.swift */,
 				7F0579DA2C3F57E6005D14AF /* ApiHomeMenu.swift */,
 				7F0579DC2C3F57EE005D14AF /* ApiHomeOption.swift */,
+				7FA874D62C459CB900A900B3 /* ApiHomeOptionCorrect.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -522,6 +541,16 @@
 				7FD1598C2B82C6FA00347CA1 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
+			sourceTree = "<group>";
+		};
+		7FA874DA2C45A24B00A900B3 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				7FA874DD2C4608C800A900B3 /* LocalStorageKeys.swift */,
+				7FA874DB2C46085000A900B3 /* DirectoryLocalStorage.swift */,
+				7FA874E12C46098500A900B3 /* FilesDirectoryStorage.swift */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 		7FAC79582C4454CB00F2550A /* Enum */ = {
@@ -973,6 +1002,7 @@
 			isa = PBXGroup;
 			children = (
 				7F116F9E2C430BBD00DFC95B /* AnyClosureUseCase.swift */,
+				7F1DC2722C5009BA00E2668A /* AnyUseCase.swift */,
 				7FDC6ED22C3661AC00681B3A /* ClosureUseCase.swift */,
 				7FDC6ED42C3661B300681B3A /* UseCase.swift */,
 			);
@@ -1020,6 +1050,7 @@
 		7FE0187A2B82D883008FC45A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7FA874DA2C45A24B00A900B3 /* LocalStorage */,
 				7FE0187B2B82D88C008FC45A /* NotificationCenterWrapper */,
 			);
 			path = Data;
@@ -1338,6 +1369,8 @@
 			children = (
 				7F0579E02C3F7A29005D14AF /* HomeRemoteDataSource.swift */,
 				7F0579E22C3F7A32005D14AF /* HomeRemoteDataSourceImpl.swift */,
+				7FA874D22C459C1200A900B3 /* HomeLocalDataSource.swift */,
+				7FA874D82C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1380,6 +1413,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0579EC2C3F8262005D14AF /* GetHomeMenuUseCase.swift */,
+				7FA874D02C457B5900A900B3 /* SaveLocalHomeMenuUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1390,6 +1424,7 @@
 				7FAC79542C443DA700F2550A /* DomainHomeMenuRequest.swift */,
 				7FE292BD2C3F564E007A695F /* DomainHomeOptions.swift */,
 				7FE292BF2C3F5656007A695F /* DomainHomeOption.swift */,
+				7FA874D42C459C6C00A900B3 /* DomainHomeOptionCorrect.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -1655,6 +1690,7 @@
 				7F29E8382BD3269B0076EA58 /* ClickableCarouselCellView.swift in Sources */,
 				7FAC795A2C4454DE00F2550A /* HomeTableViewRows.swift in Sources */,
 				7FE0188A2B833978008FC45A /* BaseViewController.swift in Sources */,
+				7FA874D72C459CB900A900B3 /* ApiHomeOptionCorrect.swift in Sources */,
 				7F0115C02B9787DD002A82A6 /* ViewWithConfigView.swift in Sources */,
 				7FDC6ECF2C365FAA00681B3A /* URLExtension.swift in Sources */,
 				7FE018BF2B83686D008FC45A /* Colors.swift in Sources */,
@@ -1665,8 +1701,10 @@
 				7FB465C52BD2EDFC0026C457 /* ReactiveSectionsViewController.swift in Sources */,
 				7FEBF21E2BED6A78009560DE /* ViewWithReactionView.swift in Sources */,
 				7F0579E12C3F7A29005D14AF /* HomeRemoteDataSource.swift in Sources */,
+				7FA874D12C457B5900A900B3 /* SaveLocalHomeMenuUseCase.swift in Sources */,
 				7FEBF2122BED552B009560DE /* UISection.swift in Sources */,
 				7FDC6ED92C3661F100681B3A /* ErrorType.swift in Sources */,
+				7FA874DC2C46085000A900B3 /* DirectoryLocalStorage.swift in Sources */,
 				7FB465C02BD2D6240026C457 /* ScrollableHeadersViewModel.swift in Sources */,
 				7FE0189E2B8354C9008FC45A /* UiHomeOption.swift in Sources */,
 				7F116F9F2C430BBD00DFC95B /* AnyClosureUseCase.swift in Sources */,
@@ -1686,6 +1724,7 @@
 				7FB3F2152B96D37200E7B252 /* UIViewExtensions.swift in Sources */,
 				7FD1598B2B82C6FA00347CA1 /* AppDelegate.swift in Sources */,
 				7F0115C42B97DCCD002A82A6 /* ButtonsModule.swift in Sources */,
+				7FA874D92C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift in Sources */,
 				7F0FE59E2C349D14007DFD5D /* ApiHeaderType.swift in Sources */,
 				7FAC795D2C44D15500F2550A /* HomePresentationMapper.swift in Sources */,
 				7FB465BE2BD2D5C50026C457 /* ScrollableTableViewHeader.swift in Sources */,
@@ -1716,6 +1755,7 @@
 				7FCBE1572BB3149D00D9C532 /* UITextFieldExtension.swift in Sources */,
 				7FEBF20C2BED11BC009560DE /* ClickableCarouselSectionViewCell.swift in Sources */,
 				7FBD9BFD2BBB873000767A6B /* TablesViewModel.swift in Sources */,
+				7FA874D32C459C1200A900B3 /* HomeLocalDataSource.swift in Sources */,
 				7FFD0C9C2BB38F7700B07B72 /* LabeledTextFieldViewController.swift in Sources */,
 				7FE018D02B837937008FC45A /* Strings.swift in Sources */,
 				7FE0187D2B82D895008FC45A /* NotificationCenterWrapper.swift in Sources */,
@@ -1770,6 +1810,7 @@
 				7F099E5F2BEFCD1400AEE763 /* SwipeableCellsViewController.swift in Sources */,
 				7FE018ED2B83C51D008FC45A /* ImagesCoordinator.swift in Sources */,
 				7FF9ECC32BF11AA400CB8361 /* ExpandableTableViewCell.swift in Sources */,
+				7FA874E22C46098500A900B3 /* FilesDirectoryStorage.swift in Sources */,
 				7FE018DA2B83843B008FC45A /* ProgressBarView.swift in Sources */,
 				7FBD9C0A2BBBA48200767A6B /* UIStickyHeader.swift in Sources */,
 				7FE018752B82D7FE008FC45A /* Injection.swift in Sources */,
@@ -1777,6 +1818,7 @@
 				7FB465BC2BD2D5B80026C457 /* ScrollableHeadersTableViewCell.swift in Sources */,
 				7FAF7ACC2BB3F91F008C3F5D /* LabeledProgressBarView.swift in Sources */,
 				7F8CD24A2B82D4310045D49D /* CoordinatorProtocol.swift in Sources */,
+				7F1DC2732C5009BA00E2668A /* AnyUseCase.swift in Sources */,
 				7FAF7AC82BB3F66B008C3F5D /* ProgressBarViewModel.swift in Sources */,
 				7F099E5C2BEF147700AEE763 /* UIEditModeCell.swift in Sources */,
 				7FE018912B8344DC008FC45A /* HomeModule.swift in Sources */,
@@ -1792,6 +1834,8 @@
 				7FBD9C0D2BBBA5F000767A6B /* Reusable.swift in Sources */,
 				7FE0187F2B82D8A4008FC45A /* NotificationCenterWrapperImpl.swift in Sources */,
 				7FE018792B82D832008FC45A /* MainModule.swift in Sources */,
+				7FA874D52C459C6C00A900B3 /* DomainHomeOptionCorrect.swift in Sources */,
+				7FA874DE2C4608C800A900B3 /* LocalStorageKeys.swift in Sources */,
 				7FB3F2102B96D16000E7B252 /* LongPressGestureRecognizer.swift in Sources */,
 				7FE018B12B836503008FC45A /* StringExtension.swift in Sources */,
 				7F0FE5942C349A79007DFD5D /* NetworkModule.swift in Sources */,

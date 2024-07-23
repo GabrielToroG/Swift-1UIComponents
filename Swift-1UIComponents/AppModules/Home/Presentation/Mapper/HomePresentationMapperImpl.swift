@@ -68,3 +68,17 @@ final class HomePresentationMapperImpl: HomePresentationMapper {
         }
     }
 }
+
+extension HomePresentationMapperImpl {
+    func presentationToDomain(_ value: UiHomeMenu) -> DomainHomeMenu {
+        return DomainHomeMenu(
+            options: value.options.map(presentationToDomain(_:)))
+    }
+
+    private func presentationToDomain(_ value: UiHomeOption) -> DomainHomeOption {
+        return DomainHomeOption(
+            icon:  value.icon,
+            title: value.title
+        )
+    }
+}

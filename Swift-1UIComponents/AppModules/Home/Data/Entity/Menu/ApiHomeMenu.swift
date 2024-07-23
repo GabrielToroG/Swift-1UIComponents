@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ApiHomeMenu: Decodable {
+struct ApiHomeMenu: Codable {
     let options: [ApiHomeOption]
 }

@@ -28,10 +28,17 @@ private extension HomeModule {
                 manager: resolver.resolve(NetworkManager.self)
             )
         }
-        
+
+        container.register(HomeLocalDataSource.self) { resolver in
+            HomeLocalDataSourceImpl(
+                fileStorage: resolver.resolve(DirectoryLocalStorage.self)
+            )
+        }
+
         container.register(HomeDataSource.self) { resolver in
             HomeRepository(
                 remote: resolver.resolve(HomeRemoteDataSource.self),
+                local: resolver.resolve(HomeLocalDataSource.self),
                 mapper: resolver.resolve(HomeDataMapper.self)
             )
         }
@@ -57,15 +64,31 @@ private extension HomeModule {
                 )
             )
         }
+
+        container.register(
+            SaveLocalHomeMenuUseCase.Alias.self,
+            name: SaveLocalHomeMenuUseCase.identifier
+        ) { resolver in
+            SaveLocalHomeMenuUseCase.Alias(
+                SaveLocalHomeMenuUseCase(
+                    repository: resolver.resolve(HomeDataSource.self),
+                    mapper: resolver.resolve(HomeDomainMapper.self)
+                )
+            )
+        }
     }
 
     func injectPresentation() {
         container.register(HomeViewModel.self) { resolver in
             HomeViewModel(
-                getHomeUseCase: resolver.resolve(
+                getHomeMenuUseCase: resolver.resolve(
                     GetHomeMenuUseCase.Alias.self,
                     name: GetHomeMenuUseCase.identifier
                 ), 
+                saveLocalHomeMenuUseCase: resolver.resolve(
+                    SaveLocalHomeMenuUseCase.Alias.self,
+                    name: SaveLocalHomeMenuUseCase.identifier
+                ),
                 mapper: resolver.resolve(HomePresentationMapper.self)
             )
         }

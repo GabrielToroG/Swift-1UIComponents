@@ -10,13 +10,16 @@ import Foundation
 class HomeRepository: HomeDataSource {
 
     private let remote: HomeRemoteDataSource
+    private let local: HomeLocalDataSource
     private let mapper: HomeDataMapper
 
     init(
         remote: HomeRemoteDataSource,
+        local: HomeLocalDataSource,
         mapper: HomeDataMapper
     ) {
         self.remote = remote
+        self.local = local
         self.mapper = mapper
     }
 
@@ -27,5 +30,9 @@ class HomeRepository: HomeDataSource {
         remote.getMenuOptions(appName: mapper.domainToData(appName)) { [mapper] in
             onCompletion($0.map(mapper.dataToDomain))
         }
+    }
+
+    func saveMenuOptions(_ menu: ApiHomeMenu) {
+        local.saveMenuOptions(menu)
     }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol HomePresentationMapper {
     func format(_ value: [UiHomeOption]) -> [UiHomeOptionCorrect]
+    func presentationToDomain(_ value: UiHomeMenu) -> DomainHomeMenu
 }

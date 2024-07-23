@@ -26,7 +26,7 @@ final class GetHomeMenuUseCase: ClosureUseCase {
 
     func execute(
         _ parameters: RequestType,
-        _ onCompletion: @escaping (ApiResult<UiHomeMenu>) -> Void
+        _ onCompletion: @escaping (ApiResult<ResultType>) -> Void
     ) {
         repository.getMenuOptions(appName: mapper.presentationToDomain(parameters)) { [weak self] in
             guard let self = self else { return }

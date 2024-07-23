@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApiHomeOption: Decodable {
+struct ApiHomeOption: Codable {
     let icon: String
     let title: String
 }

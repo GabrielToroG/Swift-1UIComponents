@@ -10,5 +10,6 @@ import Foundation
 protocol HomeDomainMapper {
     func presentationToDomain(_ value: UIHomeMenuRequest) -> DomainHomeMenuRequest
     func domainToPresentation(_ value: DomainHomeMenu) -> UiHomeMenu
+    func domainToData(_ value: DomainHomeMenu) -> ApiHomeMenu
 }
 
