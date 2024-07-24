@@ -90,6 +90,14 @@ internal enum L10n {
     /// Barras de progreso
     internal static let title = L10n.tr("Localizable", "progress_bar.title", fallback: "Barras de progreso")
   }
+  internal enum Switch {
+    /// Cobertura
+    internal static let label = L10n.tr("Localizable", "switch.label", fallback: "Cobertura")
+    /// Daño sobre objetos de limpieza
+    internal static let reactiveLabel = L10n.tr("Localizable", "switch.reactive_label", fallback: "Daño sobre objetos de limpieza")
+    /// Interruptores
+    internal static let title = L10n.tr("Localizable", "switch.title", fallback: "Interruptores")
+  }
   internal enum Tableview {
     /// Celdas editables
     internal static let editableCells = L10n.tr("Localizable", "tableview.editable_cells", fallback: "Celdas editables")

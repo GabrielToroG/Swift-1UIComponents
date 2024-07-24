@@ -39,6 +39,10 @@
 		7F116FA12C43175C00DFC95B /* ResolverExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F116FA02C43175C00DFC95B /* ResolverExtension.swift */; };
 		7F1DC2732C5009BA00E2668A /* AnyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2722C5009BA00E2668A /* AnyUseCase.swift */; };
 		7F1DC2752C500EF300E2668A /* GetLocalHomeMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2742C500EF300E2668A /* GetLocalHomeMenuUseCase.swift */; };
+		7F1DC27A2C50538800E2668A /* SwitchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2792C50538800E2668A /* SwitchModule.swift */; };
+		7F1DC27F2C5053BE00E2668A /* SwitchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC27E2C5053BE00E2668A /* SwitchCoordinator.swift */; };
+		7F1DC2812C50548900E2668A /* SwitchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2802C50548900E2668A /* SwitchViewModel.swift */; };
+		7F1DC2832C5056F900E2668A /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DC2822C5056F900E2668A /* SwitchViewController.swift */; };
 		7F29E82E2BD306BE0076EA58 /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */; };
 		7F29E8332BD312020076EA58 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */; };
 		7F29E8352BD317AB0076EA58 /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */; };
@@ -213,6 +217,10 @@
 		7F116FA02C43175C00DFC95B /* ResolverExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverExtension.swift; sourceTree = "<group>"; };
 		7F1DC2722C5009BA00E2668A /* AnyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUseCase.swift; sourceTree = "<group>"; };
 		7F1DC2742C500EF300E2668A /* GetLocalHomeMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocalHomeMenuUseCase.swift; sourceTree = "<group>"; };
+		7F1DC2792C50538800E2668A /* SwitchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchModule.swift; sourceTree = "<group>"; };
+		7F1DC27E2C5053BE00E2668A /* SwitchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCoordinator.swift; sourceTree = "<group>"; };
+		7F1DC2802C50548900E2668A /* SwitchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewModel.swift; sourceTree = "<group>"; };
+		7F1DC2822C5056F900E2668A /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		7F29E82D2BD306BE0076EA58 /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
 		7F29E8322BD312020076EA58 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		7F29E8342BD317AB0076EA58 /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -509,6 +517,57 @@
 				7FDC6ECA2C365F3D00681B3A /* ComponentsEndpoint.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7F1DC2762C5052B500E2668A /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC2772C5052C700E2668A /* DI */,
+				7F1DC2782C5052CC00E2668A /* Presentation */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		7F1DC2772C5052C700E2668A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC2792C50538800E2668A /* SwitchModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7F1DC2782C5052CC00E2668A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC27D2C5053B200E2668A /* Coordinator */,
+				7F1DC27C2C5053AE00E2668A /* View */,
+				7F1DC27B2C5053A900E2668A /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F1DC27B2C5053A900E2668A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC2802C50548900E2668A /* SwitchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F1DC27C2C5053AE00E2668A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC2822C5056F900E2668A /* SwitchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F1DC27D2C5053B200E2668A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7F1DC27E2C5053BE00E2668A /* SwitchCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		7F29E82C2BD306A80076EA58 /* Reusables */ = {
@@ -1021,6 +1080,7 @@
 				7FE018E82B83C4BC008FC45A /* Images */,
 				7F0115C12B97DA8B002A82A6 /* Buttons */,
 				7FCE52C92BB26397009B8943 /* TextFields */,
+				7F1DC2762C5052B500E2668A /* Switch */,
 				7FAF7ABD2BB3F321008C3F5D /* ProgressBars */,
 				7FBD9BF02BBB852E00767A6B /* Tables */,
 				7FB3F1F62B96976900E7B252 /* Views */,
@@ -1730,6 +1790,7 @@
 				7FA874D92C459D1D00A900B3 /* HomeLocalDataSourceImpl.swift in Sources */,
 				7F0FE59E2C349D14007DFD5D /* ApiHeaderType.swift in Sources */,
 				7FAC795D2C44D15500F2550A /* HomePresentationMapper.swift in Sources */,
+				7F1DC2832C5056F900E2668A /* SwitchViewController.swift in Sources */,
 				7FB465BE2BD2D5C50026C457 /* ScrollableTableViewHeader.swift in Sources */,
 				7F0579DD2C3F57EE005D14AF /* ApiHomeOption.swift in Sources */,
 				7F0579DB2C3F57E6005D14AF /* ApiHomeMenu.swift in Sources */,
@@ -1740,6 +1801,7 @@
 				7FE018AA2B836243008FC45A /* Dimensions.swift in Sources */,
 				7FE018F52B83C72B008FC45A /* ImagesModule.swift in Sources */,
 				7FECE4872BF1DB6C0027D84E /* ModalFeedbackViewController.swift in Sources */,
+				7F1DC27A2C50538800E2668A /* SwitchModule.swift in Sources */,
 				7FDC6ED32C3661AC00681B3A /* ClosureUseCase.swift in Sources */,
 				7FB3F1FF2B9697DC00E7B252 /* ViewsCoordinator.swift in Sources */,
 				7FB3F20E2B96D13F00E7B252 /* ClickableGestureRecognizer.swift in Sources */,
@@ -1805,6 +1867,7 @@
 				7FAC79572C443E4C00F2550A /* ApiHomeMenuRequest.swift in Sources */,
 				7F099E612BEFCD4700AEE763 /* SwipeableCellsViewModel.swift in Sources */,
 				7FBD9C012BBBA2E100767A6B /* StickyHeadersViewController.swift in Sources */,
+				7F1DC27F2C5053BE00E2668A /* SwitchCoordinator.swift in Sources */,
 				7FEBF2022BEC787B009560DE /* ReactiveInfoSectionView.swift in Sources */,
 				7F0579EB2C3F7D70005D14AF /* HomeDomainMapperImpl.swift in Sources */,
 				7FECE48D2BF1DC330027D84E /* ModalFeedbackArgs.swift in Sources */,
@@ -1842,6 +1905,7 @@
 				7FA874DE2C4608C800A900B3 /* LocalStorageKeys.swift in Sources */,
 				7FB3F2102B96D16000E7B252 /* LongPressGestureRecognizer.swift in Sources */,
 				7FE018B12B836503008FC45A /* StringExtension.swift in Sources */,
+				7F1DC2812C50548900E2668A /* SwitchViewModel.swift in Sources */,
 				7F0FE5942C349A79007DFD5D /* NetworkModule.swift in Sources */,
 				7FD1598D2B82C6FA00347CA1 /* SceneDelegate.swift in Sources */,
 				7FDC6ED52C3661B300681B3A /* UseCase.swift in Sources */,

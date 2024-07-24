@@ -30,6 +30,7 @@ final class Injection {
         ButtonsModule(container).inject()
         TextFieldsModule(container).inject()
         TablesViewModule(container).inject()
+        SwitchModule(container).inject()
     }
     
     func getContainer() -> Container {

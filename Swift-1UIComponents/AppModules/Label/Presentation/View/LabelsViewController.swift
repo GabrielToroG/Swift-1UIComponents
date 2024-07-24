@@ -102,13 +102,14 @@ extension LabelsViewController {
             .assign(to: \.text, on: reactiveCompactMapLabel)
             .store(in: &anyCancellable)
     }
+
     private func configUI() {
         configBasic(L10n.Label.title, Asset.Colors.brandColor.color)
         configLabels()
         configConstraints()
         let backButton = UIBarButtonItem()
-         backButton.title = "Regresar" // Cambia el texto del botón aquí
-         navigationItem.backBarButtonItem = backButton
+        backButton.title = "Regresar" // Cambia el texto del botón aquí
+        navigationItem.backBarButtonItem = backButton
     }
 
     private func configLabels() {

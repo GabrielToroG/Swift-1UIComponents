@@ -16,6 +16,7 @@ final class HomeCoordinator: Coordinator {
         case buttonsView
         case textFieldsView
         case tablesMenu
+        case switchView
     }
 
     func goToScene(
@@ -63,6 +64,12 @@ final class HomeCoordinator: Coordinator {
             pushViewController(
                 viewController: viewController,
                 newViewControllerType: TablesMenuViewController.self,
+                animated: true
+            )
+        case .switchView:
+            pushViewController(
+                viewController: viewController,
+                newViewControllerType: SwitchViewController.self,
                 animated: true
             )
         }

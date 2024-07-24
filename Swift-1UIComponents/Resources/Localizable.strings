@@ -74,6 +74,11 @@
 "textfield.phone_correct" = "Teléfono válido";
 "textfield.phone_error" = "El teléfono ingresado no es válido";
 
+// Switch
+"switch.title" = "Interruptores";
+"switch.label" = "Cobertura";
+"switch.reactive_label" = "Daño sobre objetos de limpieza";
+
 // Tables
 "tableview.title" = "Tablas";
 "tableview.sticky_headers" = "Encabezados pegadizos";

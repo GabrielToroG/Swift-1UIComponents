@@ -111,7 +111,7 @@ extension HomeViewModel {
     }
 
     func goToSwitchView() {
-        
+        self.goTo = .switchView
     }
 
     func goToProgressBarsView() {
